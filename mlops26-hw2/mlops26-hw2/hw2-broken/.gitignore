@@ -1,4 +1,8 @@
 __pycache__/
 .venv/
-docs/report.json
-uv.lock
+~$*
+*.html
+out1.txt
+out2.txt
+*.bak
+.DS_Store
