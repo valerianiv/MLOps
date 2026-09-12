@@ -12,13 +12,11 @@ def set_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
 
 
 def load_model(params: dict):
     """Загрузить токенизатор и модель по имени из конфига."""
-    name = params["model"]["name"] 
+    name = params["model"]["name"]
     tokenizer = AutoTokenizer.from_pretrained(name)
     model = AutoModelForCausalLM.from_pretrained(
         name,
@@ -48,8 +46,6 @@ def build_prompt(tokenizer, params: dict, text: str) -> str:
 
 def generate(tokenizer, model, params: dict, text: str) -> tuple[str, int]:
     """Сгенерировать ответ. Возвращает текст и число новых токенов."""
-    # Фиксируем seed перед генерацией
-    set_seed(params["generate"]["seed"]) 
     prompt = build_prompt(tokenizer, params, text)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     temperature = params["generate"]["temperature"]
