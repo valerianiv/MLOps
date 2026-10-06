@@ -1,0 +1,66 @@
+# Единственная точка конфигурации ДЗ 5. В src/ нет ни имени модели,
+# ни learning rate, ни путей.
+model:
+  name: "Qwen/Qwen3-0.6B"
+  device: "auto"            # auto | cpu | cuda | mps
+  # Базовые веса в bfloat16: они заморожены, точность им не нужна, а память
+  # и время уходят вдвое. Сами матрицы LoRA peft держит в float32 — там идут
+  # крошечные обновления AdamW. На старом CPU без bf16 ставьте float32.
+  dtype: "bfloat16"
+  enable_thinking: false    # как в ДЗ 4: шаблон должен совпадать с обучением
+
+data:
+  # Выход стадии tokenize из ДЗ 4. У студента — свой путь.
+  train: "data/tokenized/train.pt"
+  val: "data/tokenized/val.pt"
+
+lora:
+  r: 8
+  alpha: 16                 # итоговый масштаб апдейта alpha / r = 2
+  dropout: 0.05
+  # Только проекции внимания и MLP. embed_tokens и lm_head — это 155 млн
+  # параметров каждый; в modules_to_save они уезжают в адаптер целиком.
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+train:
+  seed: 42
+  epochs: 1
+  batch_size: 1
+  grad_accum: 8             # эффективный батч = 8 при микробатче 1
+  lr: 2.0e-4
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  eval_every: 10            # шагов оптимизатора между замерами val loss
+  # Логиты на весь словарь: 1 пример x 1024 токена x 151 936 x 4 байта = 0,6 ГБ.
+  # Больший батч на оценке увеличивает память пропорционально числу примеров.
+  eval_batch_size: 1
+  gradient_checkpointing: true   # без него на ноутбуке с 16–32 ГБ не влезает
+  max_steps: null           # null — по эпохам; число — обрезать (smoke-тесты)
+  sample_max_tokens: 1024   # берём готовые короткие примеры, не обрезая ответы
+  train_limit: 500          # фиксированный срез train для полного прогона
+  val_limit: 40             # фиксированный срез val для полного прогона
+
+# Эксперимент по слоям: второй прогон без адаптеров на первых N слоях.
+variants:
+  - name: "all_layers"
+    freeze_first: 0
+  - name: "freeze14"
+    freeze_first: 14
+
+compare:
+  max_new_tokens: 256
+  # Пять фиксированных заданий из val-сплита (индексы 6, 21, 46, 51, 56).
+  prompts:
+    - 'Explain the importance of maintaining a child’s best interests during custody mediation to a high school student using no more than 5 sentences. Use formal language and conclude with a summary paragraph starting with "In conclusion,".'
+    - "Help me brainstorm ideas for mythical creatures in a video game setting:  \n1. Your response should be formatted with exactly 3 highlighted sections.  \n2. The total word count should not exceed 150 words."
+    - 'Provide a comprehensive list of THREE key benefits of deploying mobile medical units in disaster-affected areas. Ensure that you use the word "EFFECTIVE" only ONCE and exclude any mention of "technology" or "transport".'
+    - 'Describe the strategic importance of radar systems in naval defense to a new fleet recruit using exactly 4 sentences.'
+    - "List four factors that an appraiser might consider when evaluating a home's value that can help ensure a fair assessment use no comma."
+  system: "You are a knowledgeable assistant who provides accurate, well-structured answers."
+
+paths:
+  models: "models"
+  metrics: "metrics"
+  curves: "docs/curves.png"
+  compare: "docs/compare.md"
