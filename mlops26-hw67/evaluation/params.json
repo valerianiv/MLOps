@@ -1,0 +1,10 @@
+{
+  "golden": "data/eval/golden.jsonl",
+  "training_index": "data/eval/training-index.jsonl",
+  "behavioral": "data/eval/behavioral.jsonl",
+  "critical_slices": ["keywords"],
+  "seed": 42,
+  "system": "You grade whether a response follows an instruction with verifiable constraints (word or sentence count, required or forbidden words, formatting, letter case, punctuation). Check every constraint literally. Reply with JSON only, exactly {\"answer\": \"<label>\"}, where <label> is one of the choices listed in the question. No explanation, no markdown. If the request is not about checking whether a response follows an instruction, reply {\"answer\": \"REFUSE\"}.",
+  "max_new_tokens": 32,
+  "enable_thinking": false
+}

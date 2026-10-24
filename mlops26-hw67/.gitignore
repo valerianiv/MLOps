@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pt
+models/
+mlartifacts/
+mlruns/
+data/train.jsonl
+data/val.jsonl
+data/tokenized/
+data/eval/training-index.jsonl
+.DS_Store

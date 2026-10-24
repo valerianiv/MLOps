@@ -1,0 +1,20 @@
+# Данные оценки — продолжение пайплайна ДЗ 3–5: split -> tokenize -> eval_data.
+# training-index строится из ТОГО ЖЕ data/train.jsonl, что токенизирован в train.pt;
+# сверка id тензоров с индексом пишется в metrics/training-index.json.
+stages:
+  eval_data:
+    cmd: python scripts/make_training_index.py && python scripts/build_eval_sets.py
+    deps:
+      - data/train.jsonl
+      - data/tokenized/train.pt
+      - scripts/make_training_index.py
+      - scripts/build_eval_sets.py
+    outs:
+      - data/eval/training-index.jsonl
+      - data/eval/golden.jsonl:
+          cache: false
+      - data/eval/behavioral.jsonl:
+          cache: false
+    metrics:
+      - metrics/training-index.json:
+          cache: false
