@@ -1,0 +1,47 @@
+schema: '2.0'
+stages:
+  eval_data:
+    cmd: uv run python scripts/make_training_index.py && uv run python 
+      scripts/build_eval_sets.py
+    deps:
+    - path: data/tokenized/train.pt
+      hash: md5
+      md5: 706b3ab251e45c6d91ac5cdb6596a5a8
+      size: 5447009
+      isexec: true
+    - path: data/train.jsonl
+      hash: md5
+      md5: 28d84951eb00a081699dc8cf33b155f0
+      size: 3234665
+      isexec: true
+    - path: scripts/build_eval_sets.py
+      hash: md5
+      md5: d0a622fde2ebc1d75c73a444e36a89fc
+      size: 21196
+      isexec: true
+    - path: scripts/make_training_index.py
+      hash: md5
+      md5: cd40e638b2492c862d4562e497e6d10c
+      size: 3540
+      isexec: true
+    outs:
+    - path: data/eval/behavioral.jsonl
+      hash: md5
+      md5: c75c0bece87feda20f0314d80da60fdc
+      size: 1543
+      isexec: true
+    - path: data/eval/golden.jsonl
+      hash: md5
+      md5: bddf3a1ac14f498274cbfadd0342dc1f
+      size: 33845
+      isexec: true
+    - path: data/eval/training-index.jsonl
+      hash: md5
+      md5: 59fe26bcc4bd8059ea67ad2d16c1e840
+      size: 420115
+      isexec: true
+    - path: metrics/training-index.json
+      hash: md5
+      md5: b29aa932901a16c525250ed4c9b2dd50
+      size: 269
+      isexec: true
