@@ -1,8 +1,9 @@
 # Разбор дефектов части A
 
 Каждый раздел: в чём был дефект, как проявлялся, как исправлен и каким
-наблюдением/числом подтверждается. Числа в квадратных скобках — из моего
-прогона (`make sweep`, `make check-storage`, `make check`).
+наблюдением/числом подтверждается. Числа — из моего прогона: sweep
+`2b1ef4f21ba942c4b48b9a574307e6b0`, `make check-storage`, `make check` — 9/9,
+отпечаток `tests/` `c42ac7788026`.
 
 ## 1. Все кандидаты sweep писались в один дочерний run
 
@@ -25,9 +26,10 @@
 `log_params` вызывается безусловно — в свежем run параметров ещё нет, и
 каждый кандидат пишет только свои.
 
-**Подтверждение.** В эксперименте `hw6-lora` под `sweep` [6] дочерних run с
-`tags.kind = candidate`, у каждого свои `r`, `lr`, `target_modules` и
-[4] точки `train_loss`; `check.py` №1 и №3 — PASS.
+**Подтверждение.** В эксперименте `hw6-lora` под `sweep` 6 дочерних run с
+`tags.kind = candidate`, у каждого свои `r`, `lr`, `target_modules`, 4 точки
+`train_loss` и своя кривая `val_loss` (например, `qv-r4-low`: 2.2733 → 2.2613 →
+2.2472; `all-r8-high`: 2.2733 → … → 2.0299); `check.py` №1 и №3 — PASS.
 
 ## 2. Артефакты MLflow не переживали пересоздание контейнера
 
@@ -48,8 +50,9 @@ volume `artifacts` объявлен в корне файла, но к серви
 `volumes: - artifacts:/mlartifacts` — путь совпадает с `--artifacts-destination`.
 
 **Подтверждение.** `make check-storage`: «PASS: новый контейнер вернул тот же
-артефакт, SHA256 совпал»; в `metrics/storage-check.json` sha256 [вставить] и
-`compose_sha256` текущего `compose.yaml`; `check.py` №8 — PASS.
+артефакт, SHA256 совпал»; run `storage-probe` в MLflow, в
+`metrics/storage-check.json` — sha256 артефакта и `compose_sha256` текущего
+`compose.yaml`; `check.py` №8 — PASS.
 
 ## 3. В происхождение run не попадали версии данных
 
@@ -68,9 +71,9 @@ volume `artifacts` объявлен в корне файла, но к серви
 **Как исправлено.** `versions = provenance(p)` — теги run содержат все шесть
 ключей происхождения, включая хеши данных.
 
-**Подтверждение.** У каждого кандидата тег `data_train_sha256` =
-`sha256sum data/tokenized/train.pt` [первые 12 символов: вставить];
-`check.py` №2 — PASS.
+**Подтверждение.** У каждого кандидата теги `data_train_sha256` =
+`c033c65440bb…` и `data_val_sha256` = `9d9672f76d56…` — совпадают с
+`sha256sum data/tokenized/train.pt` / `val.pt`; `check.py` №2 — PASS.
 
 ## 4. Порог качества не проверялся перед регистрацией модели
 
@@ -92,4 +95,5 @@ run существовала, но `promote()` её не вызывал: отн�
 не меняется.
 
 **Подтверждение.** `check.py` №6 — PASS (порог 0.0 → `ValueError`, версия не
-создана); у принятой версии тег `val_ratio` = [вставить] ≤ `max_val_ratio` 1.0.
+создана); у зарегистрированной версии `my-qwen-adapter/1` (`all-r8-high`) тег
+`val_ratio` = 2.0299 / 2.2733 ≈ 0.893 ≤ `max_val_ratio` 1.0.

@@ -1,0 +1,21 @@
+{
+  "improved": [
+    "ifc-len-05",
+    "ifc-len-07",
+    "ifc-kw-02",
+    "ifc-kw-08",
+    "ifc-kw-09"
+  ],
+  "regressed": [
+    "ifc-kw-03",
+    "ifc-kw-05",
+    "ifc-fmt-01",
+    "ifc-cp-09",
+    "ifc-pick-len-05",
+    "ifc-pick-kw-02",
+    "ifc-pick-kw-04",
+    "ifc-pick-fmt-01",
+    "ifc-pick-fmt-04",
+    "ifc-pick-fmt-05"
+  ]
+}

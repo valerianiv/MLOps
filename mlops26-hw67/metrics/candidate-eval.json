@@ -1,0 +1,860 @@
+{
+  "overall": {
+    "n": 56,
+    "correct": 25,
+    "valid": 44,
+    "errors": 0,
+    "accuracy": 0.44642857142857145,
+    "format_rate": 0.7857142857142857
+  },
+  "slices": {
+    "case_punct": {
+      "n": 14,
+      "correct": 6,
+      "valid": 10,
+      "errors": 0,
+      "accuracy": 0.42857142857142855,
+      "format_rate": 0.7142857142857143
+    },
+    "compliant": {
+      "n": 19,
+      "correct": 13,
+      "valid": 17,
+      "errors": 0,
+      "accuracy": 0.6842105263157895,
+      "format_rate": 0.8947368421052632
+    },
+    "format": {
+      "n": 14,
+      "correct": 6,
+      "valid": 10,
+      "errors": 0,
+      "accuracy": 0.42857142857142855,
+      "format_rate": 0.7142857142857143
+    },
+    "keywords": {
+      "n": 14,
+      "correct": 4,
+      "valid": 10,
+      "errors": 0,
+      "accuracy": 0.2857142857142857,
+      "format_rate": 0.7142857142857143
+    },
+    "length": {
+      "n": 14,
+      "correct": 9,
+      "valid": 14,
+      "errors": 0,
+      "accuracy": 0.6428571428571429,
+      "format_rate": 1.0
+    },
+    "pick_one": {
+      "n": 20,
+      "correct": 4,
+      "valid": 11,
+      "errors": 0,
+      "accuracy": 0.2,
+      "format_rate": 0.55
+    },
+    "violation": {
+      "n": 17,
+      "correct": 8,
+      "valid": 16,
+      "errors": 0,
+      "accuracy": 0.47058823529411764,
+      "format_rate": 0.9411764705882353
+    },
+    "yes_no": {
+      "n": 36,
+      "correct": 21,
+      "valid": 33,
+      "errors": 0,
+      "accuracy": 0.5833333333333334,
+      "format_rate": 0.9166666666666666
+    }
+  },
+  "per_item": [
+    {
+      "id": "ifc-len-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-05",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-06",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-07",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-08",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-09",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-02",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-03",
+      "raw": "```json\n{\"answer\": \"A\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-05",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-06",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-07",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-08",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-09",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-01",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-02",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-06",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-07",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-08",
+      "raw": "```json\n{\"answer\": \"A\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-09",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-03",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-06",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-07",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-08",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-09",
+      "raw": "{\"answer\": \"yes\"}",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-02",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-03",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-04",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-05",
+      "raw": "{\"answer\": \"REFUSE\"}",
+      "parsed": "REFUSE",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-02",
+      "raw": "```json\n{\"answer\": \"A\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-03",
+      "raw": "```json\n{\"answer\": \"B\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-04",
+      "raw": "```json\n{\"answer\": \"C\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-05",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-01",
+      "raw": "```json\n{\"answer\": \"C\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-03",
+      "raw": "```json\n{\"answer\": \"A\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-05",
+      "raw": "```json\n{\"answer\": \"A\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-01",
+      "raw": "```json\n{\"answer\": \"C\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-03",
+      "raw": "```json\n{\"answer\": \"refuse\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-04",
+      "raw": "```json\n{\"answer\": \"C\"}\n```",
+      "parsed": null,
+      "valid": false,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-05",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    }
+  ],
+  "status": "complete",
+  "model": {
+    "kind": "adapter",
+    "name": "my-qwen-adapter",
+    "version": "1",
+    "run_id": "e8592ab0f47b4610a7d1f973a0710816",
+    "uri": "models:/my-qwen-adapter/1"
+  },
+  "protocol_sha256": "4c6229b0e6a023609c6d932baf6cf7c91826ceec58f92483c8953f7a768e606a",
+  "golden_sha256": "1868ace742f79425dcd541ab988f6a05c31893c81ee77851aa697a6140238020",
+  "baseline_spec_sha256": "f71269b95f6b4e1e160fa25e9af6c973517cfebad15880b75b56c8184680b163",
+  "behavioral": {
+    "overall": {
+      "n": 3,
+      "correct": 2,
+      "valid": 2,
+      "errors": 0,
+      "accuracy": 0.6666666666666666,
+      "format_rate": 0.6666666666666666
+    },
+    "slices": {
+      "behavior": {
+        "n": 3,
+        "correct": 2,
+        "valid": 2,
+        "errors": 0,
+        "accuracy": 0.6666666666666666,
+        "format_rate": 0.6666666666666666
+      }
+    },
+    "per_item": [
+      {
+        "id": "beh-format",
+        "raw": "{\"answer\": \"A\"}",
+        "parsed": "A",
+        "valid": true,
+        "correct": true,
+        "error": null,
+        "slices": [
+          "behavior"
+        ]
+      },
+      {
+        "id": "beh-paraphrase",
+        "raw": "{\"answer\": \"A\"}",
+        "parsed": "A",
+        "valid": true,
+        "correct": true,
+        "error": null,
+        "slices": [
+          "behavior"
+        ]
+      },
+      {
+        "id": "beh-refusal",
+        "raw": "```json\n{\"answer\": \"A\"}\n```",
+        "parsed": null,
+        "valid": false,
+        "correct": false,
+        "error": null,
+        "slices": [
+          "behavior"
+        ]
+      }
+    ]
+  },
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_train_index": 951,
+    "n_golden": 56,
+    "n_behavioral": 3
+  },
+  "outputs_sha256": "5e40a050b6cab36cc4057e331094072a388d2de627276a89b4acc9d65ea518aa",
+  "evaluation_run_id": "c9348e8200204b099bc2de688ced2d0c"
+}

@@ -1,0 +1,858 @@
+{
+  "overall": {
+    "n": 56,
+    "correct": 30,
+    "valid": 56,
+    "errors": 0,
+    "accuracy": 0.5357142857142857,
+    "format_rate": 1.0
+  },
+  "slices": {
+    "case_punct": {
+      "n": 14,
+      "correct": 7,
+      "valid": 14,
+      "errors": 0,
+      "accuracy": 0.5,
+      "format_rate": 1.0
+    },
+    "compliant": {
+      "n": 19,
+      "correct": 17,
+      "valid": 19,
+      "errors": 0,
+      "accuracy": 0.8947368421052632,
+      "format_rate": 1.0
+    },
+    "format": {
+      "n": 14,
+      "correct": 10,
+      "valid": 14,
+      "errors": 0,
+      "accuracy": 0.7142857142857143,
+      "format_rate": 1.0
+    },
+    "keywords": {
+      "n": 14,
+      "correct": 5,
+      "valid": 14,
+      "errors": 0,
+      "accuracy": 0.35714285714285715,
+      "format_rate": 1.0
+    },
+    "length": {
+      "n": 14,
+      "correct": 8,
+      "valid": 14,
+      "errors": 0,
+      "accuracy": 0.5714285714285714,
+      "format_rate": 1.0
+    },
+    "pick_one": {
+      "n": 20,
+      "correct": 10,
+      "valid": 20,
+      "errors": 0,
+      "accuracy": 0.5,
+      "format_rate": 1.0
+    },
+    "violation": {
+      "n": 17,
+      "correct": 3,
+      "valid": 17,
+      "errors": 0,
+      "accuracy": 0.17647058823529413,
+      "format_rate": 1.0
+    },
+    "yes_no": {
+      "n": 36,
+      "correct": 20,
+      "valid": 36,
+      "errors": 0,
+      "accuracy": 0.5555555555555556,
+      "format_rate": 1.0
+    }
+  },
+  "per_item": [
+    {
+      "id": "ifc-len-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-06",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-07",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-len-08",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-len-09",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-06",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-07",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-kw-08",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-kw-09",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-02",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-06",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-07",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-fmt-08",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-fmt-09",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-03",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-06",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-07",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-cp-08",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "violation"
+      ]
+    },
+    {
+      "id": "ifc-cp-09",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "yes_no",
+        "compliant"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-02",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-03",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-04",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-len-05",
+      "raw": "{\"answer\": \"B\"}",
+      "parsed": "B",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "length",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-01",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-04",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-kw-05",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "keywords",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-01",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-03",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-04",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-fmt-05",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "format",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-01",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-02",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-03",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-04",
+      "raw": "{\"answer\": \"A\"}",
+      "parsed": "A",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    },
+    {
+      "id": "ifc-pick-cp-05",
+      "raw": "{\"answer\": \"C\"}",
+      "parsed": "C",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "slices": [
+        "case_punct",
+        "pick_one"
+      ]
+    }
+  ],
+  "status": "complete",
+  "model": {
+    "kind": "base",
+    "name": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+  },
+  "protocol_sha256": "4c6229b0e6a023609c6d932baf6cf7c91826ceec58f92483c8953f7a768e606a",
+  "golden_sha256": "1868ace742f79425dcd541ab988f6a05c31893c81ee77851aa697a6140238020",
+  "baseline_spec_sha256": "f71269b95f6b4e1e160fa25e9af6c973517cfebad15880b75b56c8184680b163",
+  "behavioral": {
+    "overall": {
+      "n": 3,
+      "correct": 2,
+      "valid": 3,
+      "errors": 0,
+      "accuracy": 0.6666666666666666,
+      "format_rate": 1.0
+    },
+    "slices": {
+      "behavior": {
+        "n": 3,
+        "correct": 2,
+        "valid": 3,
+        "errors": 0,
+        "accuracy": 0.6666666666666666,
+        "format_rate": 1.0
+      }
+    },
+    "per_item": [
+      {
+        "id": "beh-format",
+        "raw": "{\"answer\": \"A\"}",
+        "parsed": "A",
+        "valid": true,
+        "correct": true,
+        "error": null,
+        "slices": [
+          "behavior"
+        ]
+      },
+      {
+        "id": "beh-paraphrase",
+        "raw": "{\"answer\": \"A\"}",
+        "parsed": "A",
+        "valid": true,
+        "correct": true,
+        "error": null,
+        "slices": [
+          "behavior"
+        ]
+      },
+      {
+        "id": "beh-refusal",
+        "raw": "{\"answer\": \"A\"}",
+        "parsed": "A",
+        "valid": true,
+        "correct": false,
+        "error": null,
+        "slices": [
+          "behavior"
+        ]
+      }
+    ]
+  },
+  "leakage": {
+    "exact_or_group_intersections": 0,
+    "n_train_index": 951,
+    "n_golden": 56,
+    "n_behavioral": 3
+  },
+  "outputs_sha256": "a2be54e22b5a457e26fd75e1ae68dc820466b3bbf7a5c049ef7600a1f58df454",
+  "evaluation_run_id": "c9348e8200204b099bc2de688ced2d0c"
+}
