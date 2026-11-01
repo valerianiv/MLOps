@@ -1,0 +1,24 @@
+{
+  "model_id": "my-qwen-adapter/1",
+  "note": "Проверка загрузчика, не выпуск: кандидат отклонён gate",
+  "rows": [
+    {
+      "id": "ifc-len-01",
+      "answer": "{\"answer\": \"A\"}",
+      "saved": "{\"answer\": \"A\"}",
+      "match": true
+    },
+    {
+      "id": "ifc-len-02",
+      "answer": "{\"answer\": \"A\"}",
+      "saved": "{\"answer\": \"A\"}",
+      "match": true
+    },
+    {
+      "id": "ifc-len-03",
+      "answer": "{\"answer\": \"A\"}",
+      "saved": "{\"answer\": \"A\"}",
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Интеграционные тесты, исправленная версия
+# exit code: 0
+
+
+test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend)
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает. ... ok
+test_http_ready_and_generate_wait_for_warmup (integration_tests.test_http.HttpTests.test_http_ready_and_generate_wait_for_warmup)
+Дефект 5: health жив сразу, а обслуживание — только после прогрева. ... ok
+test_http_refuses_artifact_with_wrong_hash (integration_tests.test_http.HttpTests.test_http_refuses_artifact_with_wrong_hash)
+Перед загрузкой хеши пересчитываются: подмена файла оставляет сервис неготовым. ... ok
+test_http_serves_loaded_version_until_restart_then_rollback (integration_tests.test_http.HttpTests.test_http_serves_loaded_version_until_restart_then_rollback)
+Дефект 6: A → публикация B → всё ещё A → перезапуск → B → откат → перезапуск → A. ... ok
+test_cli_crash_between_pointer_and_journal_recovers_once (integration_tests.test_process.ProcessTests.test_cli_crash_between_pointer_and_journal_recovers_once)
+Дефект 4: сбой между указателем и журналом; повторы дают ровно одно событие. ... ok
+test_cli_disk_error_keeps_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_disk_error_keeps_pointer_bytes)
+Дефект 3: ошибка замены не портит указатель, не оставляет временных файлов и событий. ... ok
+test_cli_preparation_settings_invalidate_cache (integration_tests.test_process.ProcessTests.test_cli_preparation_settings_invalidate_cache)
+Дефект 1: каждая настройка подготовки участвует в идентичности результата. ... ok
+test_cli_recovery_uses_cache_and_input_change_invalidates (integration_tests.test_process.ProcessTests.test_cli_recovery_uses_cache_and_input_change_invalidates)
+Дефект 1: сбой → новый процесс берёт кеш; те же путь и новые байты → пересчёт. ... ok
+test_cli_rejected_reports_keep_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes)
+Дефект 2: неполный, отклонённый, чужой отчёт и NaN не меняют принятую версию. ... ok
+test_cli_repeat_release_single_event (integration_tests.test_process.ProcessTests.test_cli_repeat_release_single_event)
+Дефект 4: повторы в других процессах → одно событие выпуска и неизменный указатель. ... ok
+test_cli_tampered_artifact_blocks_release (integration_tests.test_process.ProcessTests.test_cli_tampered_artifact_blocks_release)
+Хеши файлов пересчитываются перед выпуском, отчёт не заменяет проверку весов. ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 293.979s
+
+OK

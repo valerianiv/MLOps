@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/[
+  {
+    "concurrency": 1,
+    "n": 8,
+    "success": 8,
+    "errors": 0,
+    "batch_seconds": 27.858,
+    "success_rps": 0.2872,
+    "latency_mean_s": 3.482,
+    "latency_max_s": 3.631,
+    "queue_mean_s": 0.0,
+    "generation_mean_s": 3.478,
+    "output_tokens_total": 56,
+    "error_latency_max_s": null
+  },
+  {
+    "concurrency": 2,
+    "n": 8,
+    "success": 8,
+    "errors": 0,
+    "batch_seconds": 27.586,
+    "success_rps": 0.29,
+    "latency_mean_s": 6.441,
+    "latency_max_s": 7.021,
+    "queue_mean_s": 2.985,
+    "generation_mean_s": 3.447,
+    "output_tokens_total": 56,
+    "error_latency_max_s": null
+  }
+]

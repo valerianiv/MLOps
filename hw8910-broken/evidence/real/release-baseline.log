@@ -1,0 +1,13 @@
+13:33:34.515 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8547
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+13:33:46.203 | INFO    | Flow run 'crazy-agama' - Beginning flow run 'crazy-agama' for flow 'model-release'
+13:33:46.255 | INFO    | Task run 'prepare-input-d9d' - Подготовка выполняется: golden.jsonl
+13:33:52.982 | INFO    | Task run 'prepare-input-d9d' - Finished in state Completed()
+PREPARED 229e99353feacbc23dc88a6b2a3fad5fbc24ab84e4d1900d6aa56befdc82368e
+13:33:56.498 | INFO    | Task run 'fetch-artifact-c99' - Файлы артефакта проверены: Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca
+13:33:56.501 | INFO    | Task run 'fetch-artifact-c99' - Finished in state Completed()
+13:33:56.645 | INFO    | Task run 'evaluate-gate-85e' - Finished in state Completed()
+13:33:56.661 | INFO    | Task run 'publish-release-b6a' - Finished in state Completed()
+13:33:57.240 | INFO    | Flow run 'crazy-agama' - Finished in state Completed()
+PUBLISHED Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca release_id=c194ead04f5628007a0e0a37d3928206e064ebc938016d9803204d16436856eb attempt=d638d061-d2d8-4ff0-a63e-a8f0fe1271d2
+13:33:57.254 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8547

@@ -1,0 +1,65 @@
+{
+  "green": {
+    "test_cli_crash_between_pointer_and_journal_recovers_once": "ok",
+    "test_cli_disk_error_keeps_pointer_bytes": "ok",
+    "test_cli_preparation_settings_invalidate_cache": "ok",
+    "test_cli_recovery_uses_cache_and_input_change_invalidates": "ok",
+    "test_cli_rejected_reports_keep_pointer_bytes": "ok",
+    "test_cli_repeat_release_single_event": "ok",
+    "test_cli_tampered_artifact_blocks_release": "ok",
+    "test_http_bad_requests_never_reach_backend": "ok",
+    "test_http_ready_and_generate_wait_for_warmup": "ok",
+    "test_http_refuses_artifact_with_wrong_hash": "ok",
+    "test_http_serves_loaded_version_until_restart_then_rollback": "ok"
+  },
+  "mutants": {
+    "1": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_process.ProcessTests.test_cli_recovery_uses_cache_and_input_change_invalidates"
+    },
+    "2": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes"
+    },
+    "3": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_process.ProcessTests.test_cli_disk_error_keeps_pointer_bytes"
+    },
+    "4": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_process.ProcessTests.test_cli_repeat_release_single_event"
+    },
+    "5": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_http.HttpTests.test_http_ready_and_generate_wait_for_warmup"
+    },
+    "6": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_http.HttpTests.test_http_serves_loaded_version_until_restart_then_rollback"
+    },
+    "7": {
+      "exit_code": 1,
+      "status": "FAIL",
+      "test": "test_http.HttpTests.test_http_bad_requests_never_reach_backend"
+    }
+  },
+  "red": {
+    "test_cli_crash_between_pointer_and_journal_recovers_once": "FAIL",
+    "test_cli_disk_error_keeps_pointer_bytes": "FAIL",
+    "test_cli_preparation_settings_invalidate_cache": "FAIL",
+    "test_cli_recovery_uses_cache_and_input_change_invalidates": "FAIL",
+    "test_cli_rejected_reports_keep_pointer_bytes": "FAIL",
+    "test_cli_repeat_release_single_event": "FAIL",
+    "test_cli_tampered_artifact_blocks_release": "FAIL",
+    "test_http_bad_requests_never_reach_backend": "FAIL",
+    "test_http_ready_and_generate_wait_for_warmup": "FAIL",
+    "test_http_refuses_artifact_with_wrong_hash": "FAIL",
+    "test_http_serves_loaded_version_until_restart_then_rollback": "FAIL"
+  }
+}

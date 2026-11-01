@@ -1,0 +1,83 @@
+13:34:49.667 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8379
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+13:34:55.473 | INFO    | Flow run 'ivory-myna' - Beginning flow run 'ivory-myna' for flow 'model-release'
+13:34:55.523 | INFO    | Task run 'prepare-input-e29' - Finished in state Cached(type=COMPLETED)
+CACHE_HIT 229e99353feacbc23dc88a6b2a3fad5fbc24ab84e4d1900d6aa56befdc82368e
+13:34:57.357 | ERROR   | Task run 'fetch-artifact-88d' - Finished in state Failed('Task run encountered an exception ValueError: Файлы Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca не совпали с закреплёнными хешами model-pins.json')
+13:34:57.499 | ERROR   | Flow run 'ivory-myna' - Encountered exception during execution: ValueError('Файлы Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca не совпали с закреплёнными хешами model-pins.json')
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 103, in release_flow
+    artifact = fetch_artifact(spec, manifest_ref)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\tasks.py", line 1240, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1988, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1758, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 622, in result
+    raise self._raised
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 23, in _is_transient
+    state.result()
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\_internal\compatibility\async_dispatch.py", line 94, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\client\schemas\objects.py", line 394, in result
+    return run_coro_as_sync(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\asyncutils\__init__.py", line 207, in run_coro_as_sync
+    return call.result()
+           ^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\_internal\concurrency\calls.py", line 365, in result
+    return self.future.result(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\_internal\concurrency\calls.py", line 192, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lera_\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\_internal\concurrency\calls.py", line 441, in _run_async
+    result = await coro
+             ^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\asyncutils\__init__.py", line 188, in coroutine_wrapper
+    return await task
+           ^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\states.py", line 89, in get_state_result
+    return await _get_state_result(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\states.py", line 161, in _get_state_result
+    raise await aget_state_exception(state)
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1058, in run_context
+    yield self
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1755, in run_task_sync
+    engine.call_task_fn(txn)
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1075, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 40, in fetch_artifact
+    path = sources.load(spec).fetch(manifest_ref)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\sources.py", line 189, in fetch
+    self.check_pins(manifest['model_id'], files)
+  File "D:\mlops\MLOps\hw8910-broken\sources.py", line 128, in check_pins
+    raise ValueError(f'Файлы {model_id} не совпали с закреплёнными хешами {PINS.name}')
+ValueError: Файлы Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca не совпали с закреплёнными хешами model-pins.json
+13:34:57.543 | INFO    | Flow run 'ivory-myna' - Finished in state Failed('Flow run encountered an exception: ValueError: Файлы Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca не совпали с закреплёнными хешами model-pins.json')
+REJECTED: Файлы Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca не совпали с закреплёнными хешами model-pins.json
+13:34:57.555 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8379

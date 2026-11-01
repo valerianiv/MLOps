@@ -1,0 +1,3 @@
+concurrency,n,success,errors,batch_seconds,success_rps,latency_mean_s,latency_max_s,queue_mean_s,generation_mean_s,output_tokens_total,error_latency_max_s
+1,8,8,0,27.858,0.2872,3.482,3.631,0.0,3.478,56,
+2,8,8,0,27.586,0.29,6.441,7.021,2.985,3.447,56,

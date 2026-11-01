@@ -1,0 +1,83 @@
+13:34:02.745 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8096
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+13:34:08.576 | INFO    | Flow run 'marigold-monkey' - Beginning flow run 'marigold-monkey' for flow 'model-release'
+13:34:08.630 | INFO    | Task run 'prepare-input-1de' - Finished in state Cached(type=COMPLETED)
+CACHE_HIT 229e99353feacbc23dc88a6b2a3fad5fbc24ab84e4d1900d6aa56befdc82368e
+13:34:09.358 | INFO    | Task run 'fetch-artifact-351' - Файлы артефакта проверены: my-qwen-adapter/1
+13:34:09.358 | INFO    | Task run 'fetch-artifact-351' - Finished in state Completed()
+13:34:09.508 | ERROR   | Task run 'evaluate-gate-12c' - Task run failed with exception: ValueError('Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56')
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 56, in evaluate_gate
+    release.validate_release(manifest, report)
+  File "D:\mlops\MLOps\hw8910-broken\release.py", line 69, in validate_release
+    raise ValueError(f'Кандидат отклонён: passed={report.get("passed")!r}')
+ValueError: Кандидат отклонён: passed=False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1058, in run_context
+    yield self
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1755, in run_task_sync
+    engine.call_task_fn(txn)
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1075, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 60, in evaluate_gate
+    raise ValueError(f'{exc}: {reason}' if reason else str(exc)) from exc
+ValueError: Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56
+13:34:09.511 | ERROR   | Task run 'evaluate-gate-12c' - Finished in state Failed('Task run encountered an exception ValueError: Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56')
+13:34:09.595 | ERROR   | Flow run 'marigold-monkey' - Encountered exception during execution: ValueError('Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56')
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 56, in evaluate_gate
+    release.validate_release(manifest, report)
+  File "D:\mlops\MLOps\hw8910-broken\release.py", line 69, in validate_release
+    raise ValueError(f'Кандидат отклонён: passed={report.get("passed")!r}')
+ValueError: Кандидат отклонён: passed=False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 106, in release_flow
+    decision = evaluate_gate(spec, artifact, report_ref, attempt_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\tasks.py", line 1240, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1988, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1758, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 622, in result
+    raise self._raised
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1058, in run_context
+    yield self
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1755, in run_task_sync
+    engine.call_task_fn(txn)
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1075, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\mlops\MLOps\hw8910-broken\flow.py", line 60, in evaluate_gate
+    raise ValueError(f'{exc}: {reason}' if reason else str(exc)) from exc
+ValueError: Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56
+13:34:09.625 | INFO    | Flow run 'marigold-monkey' - Finished in state Failed('Flow run encountered an exception: ValueError: Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56')
+REJECTED: Кандидат отклонён: passed=False: Регрессия accuracy: 25/56 < 30/56
+13:34:09.640 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8096
