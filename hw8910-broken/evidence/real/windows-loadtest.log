@@ -1,0 +1,32 @@
+transformers: http://127.0.0.1:37786
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 43/311 [00:00<00:01, 231.90it/s]Loading weights:  22%|██▏       | 67/311 [00:00<00:01, 178.18it/s]Loading weights:  35%|███▌      | 110/311 [00:00<00:00, 237.96it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 565.47it/s]
+[
+  {
+    "concurrency": 1,
+    "n": 8,
+    "success": 8,
+    "errors": 0,
+    "batch_seconds": 28.902,
+    "success_rps": 0.2768,
+    "latency_mean_s": 3.612,
+    "latency_max_s": 3.929,
+    "queue_mean_s": 0.0,
+    "generation_mean_s": 3.598,
+    "output_tokens_total": 56,
+    "error_latency_max_s": null
+  },
+  {
+    "concurrency": 2,
+    "n": 8,
+    "success": 8,
+    "errors": 0,
+    "batch_seconds": 28.869,
+    "success_rps": 0.2771,
+    "latency_mean_s": 6.777,
+    "latency_max_s": 7.617,
+    "queue_mean_s": 3.159,
+    "generation_mean_s": 3.608,
+    "output_tokens_total": 56,
+    "error_latency_max_s": null
+  }
+]

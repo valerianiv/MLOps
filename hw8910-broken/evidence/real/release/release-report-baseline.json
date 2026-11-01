@@ -1,0 +1,97 @@
+{
+  "behavioral": {
+    "accuracy": 0.6666666666666666,
+    "correct": 2,
+    "errors": 0,
+    "format_rate": 1.0,
+    "n": 3,
+    "valid": 3
+  },
+  "decision_basis": "baseline-reference: полная оценка ДЗ 6+7 пересчитана по сырым ответам, ошибок нет; quality_gate сравнивает кандидата с этой версией и к ней самой не применяется",
+  "evaluation_run_id": "c9348e8200204b099bc2de688ced2d0c",
+  "evidence": {
+    "evaluation/baseline.json": {
+      "path": "mlops26-hw67/evaluation/baseline.json",
+      "sha256": "da0ace0ea269b2d9e5c0cad79ab54823d7bae8b4a65ece6446fa6adbbfed787e"
+    },
+    "evaluation/params.json": {
+      "path": "mlops26-hw67/evaluation/params.json",
+      "sha256": "2e4c801a8cfaa8d6843b4d1ac0246bf3f96a86555695485a9bac8e9b122d9695"
+    },
+    "metrics/baseline-eval.json": {
+      "path": "mlops26-hw67/metrics/baseline-eval.json",
+      "sha256": "f64862ca170be8957cedfabaf590b9a52aa83241ca50937b7d8e86f5fe6d57b6"
+    },
+    "metrics/baseline-outputs.json": {
+      "path": "mlops26-hw67/metrics/baseline-outputs.json",
+      "sha256": "870f8a0eae5bb7a364ae9baf9b5cb47027dceed58f5789c346d281d082448d14"
+    },
+    "metrics/candidate-eval.json": {
+      "path": "mlops26-hw67/metrics/candidate-eval.json",
+      "sha256": "d5893d6017df66ef863ee0c5d7f17bdb95be2f88b9901779a5f32371eaca34e6"
+    },
+    "metrics/candidate-outputs.json": {
+      "path": "mlops26-hw67/metrics/candidate-outputs.json",
+      "sha256": "e61a479a243b386fcdeab4e15054d87541c9686fb664647dd285d6e187092e28"
+    }
+  },
+  "gate_result": null,
+  "golden_sha256": "1868ace742f79425dcd541ab988f6a05c31893c81ee77851aa697a6140238020",
+  "metrics": {
+    "accuracy": 0.5357142857142857,
+    "correct": 30,
+    "errors": 0,
+    "format_rate": 1.0,
+    "n": 56,
+    "valid": 56
+  },
+  "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+  "model_sha256": "052d8c0b8c31f61d79bcbbcca49c85414118746986773d57fb6a56f58e5a0c09",
+  "passed": true,
+  "protocol_sha256": "4c6229b0e6a023609c6d932baf6cf7c91826ceec58f92483c8953f7a768e606a",
+  "reason": null,
+  "runtime_sha256": "c1d90c7c005562795d620a8226e8b7b3a22ea4d6da281438a06f8d31c5ec8e5f",
+  "slices": {
+    "case_punct": {
+      "accuracy": 0.5,
+      "correct": 7,
+      "n": 14
+    },
+    "compliant": {
+      "accuracy": 0.8947368421052632,
+      "correct": 17,
+      "n": 19
+    },
+    "format": {
+      "accuracy": 0.7142857142857143,
+      "correct": 10,
+      "n": 14
+    },
+    "keywords": {
+      "accuracy": 0.35714285714285715,
+      "correct": 5,
+      "n": 14
+    },
+    "length": {
+      "accuracy": 0.5714285714285714,
+      "correct": 8,
+      "n": 14
+    },
+    "pick_one": {
+      "accuracy": 0.5,
+      "correct": 10,
+      "n": 20
+    },
+    "violation": {
+      "accuracy": 0.17647058823529413,
+      "correct": 3,
+      "n": 17
+    },
+    "yes_no": {
+      "accuracy": 0.5555555555555556,
+      "correct": 20,
+      "n": 36
+    }
+  },
+  "status": "complete"
+}

@@ -1,0 +1,108 @@
+STUB-опыты: управление процессом; PASS в фикстурах не является оценкой модели.
+
+===== 1. Сбой после подготовки, восстановление в новом процессе, изменение входа
+$ python lab.py --workspace <ws> init
+  exit=0  
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+$ python lab.py --workspace <ws> run --fail-after-prepare
+  exit=1  PREPARED 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | RuntimeError: Инъекция сбоя после подготовки
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+  попытка 2ce8b27f: outcome=failed tasks={'prepare-input': 'Completed'}
+$ python lab.py --workspace <ws> run
+  exit=0  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | PUBLISHED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=19de114d-56a7-415c-a5a5-a641dea5e4e8
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка 19de114d: outcome=published tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Cached', 'publish-release': 'Completed'}
+# изменены байты input.txt по прежнему пути
+$ python lab.py --workspace <ws> run
+  exit=0  PREPARED c1d0af08ddb9eb2a33c48f79d6bc237a7a64df97dd86c49cd6c3da78b32e7b23 | ALREADY_PUBLISHED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=910792e4-ab6f-41fe-8a74-6b44cde3a8c1
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка 910792e4: outcome=noop tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Completed', 'publish-release': 'Completed'}
+# изменён max_length
+$ python lab.py --workspace <ws> run
+  exit=0  PREPARED c1d0af08ddb9eb2a33c48f79d6bc237a7a64df97dd86c49cd6c3da78b32e7b23 | ALREADY_PUBLISHED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=e78be262-3158-4a87-bd59-ac15853b74bf
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка e78be262: outcome=noop tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Completed', 'publish-release': 'Completed'}
+publications: [(1, 'publish', 'fixture-A', ''), (2, 'publish', 'fixture-B', '')]
+
+===== 2. Отрицательные проверки: указатель побайтно неизменен
+$ python lab.py --workspace <ws> init
+  exit=0  
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+$ python lab.py --workspace <ws> run --report report-incomplete.json
+  exit=1  PREPARED 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | REJECTED: Отчёт неполный: status='running'
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+  попытка 4d193158: outcome=rejected tasks={'fetch-artifact': 'Completed', 'prepare-input': 'Completed'}
+$ python lab.py --workspace <ws> run --report report-A.json
+  exit=1  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | REJECTED: Отчёт относится к другой версии: различается model_id
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+  попытка 01dc8078: outcome=rejected tasks={'fetch-artifact': 'Completed', 'prepare-input': 'Cached'}
+$ python lab.py --workspace <ws> run --report report-reject.json
+  exit=1  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | REJECTED: Кандидат отклонён: passed=False
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+  попытка 88bf28cc: outcome=rejected tasks={'fetch-artifact': 'Completed', 'prepare-input': 'Cached'}
+$ python lab.py --workspace <ws> run --report report-nan.json
+  exit=1  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | REJECTED: metrics.accuracy: нужно конечное число от 0 до 1, получено nan
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+  попытка ddbeb2cc: outcome=rejected tasks={'fetch-artifact': 'Completed', 'prepare-input': 'Cached'}
+$ python lab.py --workspace <ws> run  [инъекция сбоя в subprocess]
+  exit=1  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | OSError: Инъекция ошибки диска при замене
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+  попытка a1bd43d6: outcome=failed tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Cached'}
+SHA-256 до:    dc11ca89bd848138b973acf9201c270bfa9ebe84bf8f045f5bb97b5ffd0c2f35
+SHA-256 после: dc11ca89bd848138b973acf9201c270bfa9ebe84bf8f045f5bb97b5ffd0c2f35
+publications: [(1, 'publish', 'fixture-A', '')]
+сохранено отказов: 4
+
+===== 3. Повтор выпуска и сбой между указателем и журналом
+$ python lab.py --workspace <ws> init
+  exit=0  
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+$ python lab.py --workspace <ws> run  [инъекция сбоя в subprocess]
+  exit=1  PREPARED 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | OSError: Инъекция сбоя между указателем и журналом
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка 03789dd1: outcome=failed tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Completed'}
+publications после сбоя: [(1, 'publish', 'fixture-A', '')]
+$ python lab.py --workspace <ws> run
+  exit=0  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | RECOVERED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=2003d161-d3cd-4a70-bb4e-ed9dfc242442
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка 2003d161: outcome=recovered tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Cached', 'publish-release': 'Completed'}
+publications после восстановления: [(1, 'publish', 'fixture-A', ''), (2, 'publish', 'fixture-B', 'recovered')]
+$ python lab.py --workspace <ws> run
+  exit=0  CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | ALREADY_PUBLISHED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=087c975d-6db6-4fd8-8527-fa38ee7dd9e4
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка 087c975d: outcome=noop tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Cached', 'publish-release': 'Completed'}
+publications после ещё одного повтора: [(1, 'publish', 'fixture-A', ''), (2, 'publish', 'fixture-B', 'recovered')]
+попыток в attempts.jsonl: 3
+
+===== 4. Готовность: прогрев 5 с
+$ python lab.py --workspace <ws> init
+  exit=0  
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+/health (200, {'alive': True})
+/ready  (503, {'ready': False, 'error': None})
+/generate до готовности: 503
+/debug {'loaded_id': 'fixture-A', 'calls': 0, 'warmup_finished': False}
+/ready после прогрева: 200
+/generate после: 200
+{"prompt": ""} -> 422
+{"prompt": "x", "max_new_tokens": 0} -> 422
+{"prompt": "x", "max_new_tokens": 100000} -> 422
+{"prompt": "x", "max_new_tokens": "4"} -> 422
+/debug {'loaded_id': 'fixture-A', 'calls': 1, 'warmup_finished': True}
+
+===== 5. A → B → перезапуск → откат A → перезапуск
+$ python lab.py --workspace <ws> init
+  exit=0  
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+работает на: ('fixture-A', 'STUB ONLY: fixture-A', 'bc7bd5a4806e')
+$ python lab.py --workspace <ws> run
+  exit=0  PREPARED 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac | PUBLISHED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=29dbcc45-1cee-42f9-b2ae-455b2c374bc7
+  accepted.json: fixture-B sha256=cab7c657b85b7767
+  попытка 29dbcc45: outcome=published tasks={'evaluate-gate': 'Completed', 'fetch-artifact': 'Completed', 'prepare-input': 'Completed', 'publish-release': 'Completed'}
+после публикации B, без перезапуска: ('fixture-A', 'STUB ONLY: fixture-A', 'bc7bd5a4806e')
+после перезапуска: ('fixture-B', 'STUB ONLY: fixture-B', 'bc7bd5a4806e')
+$ python lab.py --workspace <ws> rollback --to fixture-A
+  exit=0  ROLLED_BACK fixture-A
+  accepted.json: fixture-A sha256=dc11ca89bd848138
+после отката и перезапуска: ('fixture-A', 'STUB ONLY: fixture-A', 'bc7bd5a4806e')
+publications: [(1, 'publish', 'fixture-A', ''), (2, 'publish', 'fixture-B', ''), (3, 'rollback', 'fixture-A', '')]

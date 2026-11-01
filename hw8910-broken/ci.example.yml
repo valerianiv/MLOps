@@ -1,0 +1,18 @@
+# Шаблон, план автоматизации. Удалённо не запускался: основание сдачи — локальный
+# scripts/check.py. Без настроенной обязательной проверки merge не защищён.
+name: Fast release checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hw8910-broken
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v6
+      # Только быстрый контур: без extra model, весов и torch.
+      - run: uv sync --frozen --python 3.12
+      - run: uv run --frozen python scripts/check.py

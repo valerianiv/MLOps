@@ -1,0 +1,71 @@
+{
+  "accepted_sha256": "0562d4cfd413af69e48a1367b3891da9108ea5503badd4f89ff8c197ebd980db",
+  "health_at_start": [
+    200,
+    {
+      "alive": true
+    }
+  ],
+  "ready_during_load": [
+    503,
+    {
+      "ready": false,
+      "error": null
+    }
+  ],
+  "generate_during_load": [
+    503,
+    {
+      "detail": "Модель ещё не готова"
+    }
+  ],
+  "debug_route_status": 404,
+  "ready_after_load": {
+    "ready": true,
+    "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+    "runtime_sha256": "c1d90c7c005562795d620a8226e8b7b3a22ea4d6da281438a06f8d31c5ec8e5f"
+  },
+  "load_and_warmup_seconds": 15.031000000075437,
+  "bad_requests": {
+    "empty_prompt": {
+      "status": 422,
+      "client_seconds": 0.005624899989925325
+    },
+    "limit_zero": {
+      "status": 422,
+      "client_seconds": 0.013660399941727519
+    },
+    "limit_100000": {
+      "status": 422,
+      "client_seconds": 0.014038000022992492
+    },
+    "limit_string": {
+      "status": 422,
+      "client_seconds": 0.015942699974402785
+    },
+    "unknown_setting": {
+      "status": 422,
+      "client_seconds": 0.016504199942573905
+    },
+    "too_long": {
+      "status": 422,
+      "client_seconds": 0.01516569999512285
+    }
+  },
+  "real_response": {
+    "prompt_id": "ifc-len-01",
+    "status": 200,
+    "answer": "{\"answer\": \"A\"}",
+    "output_tokens": 7,
+    "request_id": "f9bc6d30-6b6a-45a3-8ce9-2b8d8bcb2259",
+    "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+    "runtime_sha256": "c1d90c7c005562795d620a8226e8b7b3a22ea4d6da281438a06f8d31c5ec8e5f",
+    "backend": "transformers",
+    "queue_seconds": 1.170008908957243e-05,
+    "generation_seconds": 2.982691299985163,
+    "total_seconds": 2.983996900031343,
+    "saved_eval_raw": "{\"answer\": \"A\"}",
+    "matches_saved_eval": true
+  },
+  "protocol_limit": 32
+}

@@ -1,0 +1,188 @@
+===== Дефект 1: release.py: test_process.ProcessTests.test_cli_recovery_uses_cache_and_input_change_invalidates exit=1
+test_cli_recovery_uses_cache_and_input_change_invalidates (integration_tests.test_process.ProcessTests.test_cli_recovery_uses_cache_and_input_change_invalidates)
+Дефект 1: сбой → новый процесс берёт кеш; те же путь и новые байты → пересчёт. ... FAIL
+
+======================================================================
+FAIL: test_cli_recovery_uses_cache_and_input_change_invalidates (integration_tests.test_process.ProcessTests.test_cli_recovery_uses_cache_and_input_change_invalidates)
+Дефект 1: сбой → новый процесс берёт кеш; те же путь и новые байты → пересчёт.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_process.py", line 21, in test_cli_recovery_uses_cache_and_input_change_invalidates
+    self.assertIn('PREPARED', changed.stdout, 'изменённый вход взят из старого кеша')
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nALREADY_PUBLISHED fixture-B release_id=0608118f0c17e1e57c6855a9cef01ab7a68899ee71d59c1c030fad7d7f514ee3 attempt=43b68602-2d0a-48ca-8bc2-e761df073fdd\n' : изменённый вход взят из старого кеша
+
+----------------------------------------------------------------------
+Ran 1 test in 40.318s
+
+FAILED (failures=1)
+
+
+===== Дефект 2: release.py: test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes exit=1
+test_cli_rejected_reports_keep_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes)
+Дефект 2: неполный, отклонённый, чужой отчёт и NaN не меняют принятую версию. ... 
+  test_cli_rejected_reports_keep_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes) (report='report-truthy.json')
+Дефект 2: неполный, отклонённый, чужой отчёт и NaN не меняют принятую версию. ... FAIL
+test_cli_rejected_reports_keep_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes)
+Дефект 2: неполный, отклонённый, чужой отчёт и NaN не меняют принятую версию. ... FAIL
+
+======================================================================
+FAIL: test_cli_rejected_reports_keep_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes) (report='report-truthy.json')
+Дефект 2: неполный, отклонённый, чужой отчёт и NaN не меняют принятую версию.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_process.py", line 49, in test_cli_rejected_reports_keep_pointer_bytes
+    self.assertNotEqual(done.returncode, 0, f'{name}: зелёный выпуск')
+AssertionError: 0 == 0 : report-truthy.json: зелёный выпуск
+
+======================================================================
+FAIL: test_cli_rejected_reports_keep_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_rejected_reports_keep_pointer_bytes)
+Дефект 2: неполный, отклонённый, чужой отчёт и NaN не меняют принятую версию.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_process.py", line 52, in test_cli_rejected_reports_keep_pointer_bytes
+    self.assertEqual(self.events('fixture-B'), [])
+AssertionError: Lists differ: [{'evaluation_run_id': 'fixture-eval-B', '[327 chars]: 2}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'evaluation_run_id': 'fixture-eval-B', 'kind': 'publish', 'model_id': 'fixture-B', 'previous_release_id': '1dbf1fcde97d3980867693affedfc0c87cbcab13cab277108c741f34c04a4dc5', 'recovered': False, 'release_id': '1bf4feb7964fabe6ca4776d1ee33c174bc4600bc94f15d4e166761fc1425de85', 'runtime_sha256': 'bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547', 'seq': 2}
+
++ []
+- [{'evaluation_run_id': 'fixture-eval-B',
+-   'kind': 'publish',
+-   'model_id': 'fixture-B',
+-   'previous_release_id': '1dbf1fcde97d3980867693affedfc0c87cbcab13cab277108c741f34c04a4dc5',
+-   'recovered': False,
+-   'release_id': '1bf4feb7964fabe6ca4776d1ee33c174bc4600bc94f15d4e166761fc1425de85',
+-   'runtime_sha256': 'bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547',
+-   'seq': 2}]
+
+----------------------------------------------------------------------
+Ran 1 test in 63.955s
+
+FAILED (failures=2)
+
+
+===== Дефект 3: release.py: test_process.ProcessTests.test_cli_disk_error_keeps_pointer_bytes exit=1
+test_cli_disk_error_keeps_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_disk_error_keeps_pointer_bytes)
+Дефект 3: ошибка замены не портит указатель, не оставляет временных файлов и событий. ... FAIL
+
+======================================================================
+FAIL: test_cli_disk_error_keeps_pointer_bytes (integration_tests.test_process.ProcessTests.test_cli_disk_error_keeps_pointer_bytes)
+Дефект 3: ошибка замены не портит указатель, не оставляет временных файлов и событий.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_process.py", line 58, in test_cli_disk_error_keeps_pointer_bytes
+    self.assertEqual(self.pointer.read_bytes(), before, 'указатель изменён при ошибке замены')
+AssertionError: b'{\n[20 chars]odel-B.txt",\n  "file_hashes": {\n    "model-B[1080 chars]n}\n' != b'{\n[20 chars]odel-A.txt",\n  "file_hashes": {\n    "model-A[1080 chars]n}\n' : указатель изменён при ошибке замены
+
+----------------------------------------------------------------------
+Ran 1 test in 16.934s
+
+FAILED (failures=1)
+
+
+===== Дефект 4: release.py: test_process.ProcessTests.test_cli_repeat_release_single_event exit=1
+test_cli_repeat_release_single_event (integration_tests.test_process.ProcessTests.test_cli_repeat_release_single_event)
+Дефект 4: повторы в других процессах → одно событие выпуска и неизменный указатель. ... FAIL
+
+======================================================================
+FAIL: test_cli_repeat_release_single_event (integration_tests.test_process.ProcessTests.test_cli_repeat_release_single_event)
+Дефект 4: повторы в других процессах → одно событие выпуска и неизменный указатель.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_process.py", line 83, in test_cli_repeat_release_single_event
+    self.assertEqual(len(self.events('fixture-B')), 1, 'повтор размножил публикацию')
+AssertionError: 2 != 1 : повтор размножил публикацию
+
+----------------------------------------------------------------------
+Ran 1 test in 28.996s
+
+FAILED (failures=1)
+
+
+===== Дефект 5: service.py: test_http.HttpTests.test_http_ready_and_generate_wait_for_warmup exit=1
+test_http_ready_and_generate_wait_for_warmup (integration_tests.test_http.HttpTests.test_http_ready_and_generate_wait_for_warmup)
+Дефект 5: health жив сразу, а обслуживание — только после прогрева. ... FAIL
+
+======================================================================
+FAIL: test_http_ready_and_generate_wait_for_warmup (integration_tests.test_http.HttpTests.test_http_ready_and_generate_wait_for_warmup)
+Дефект 5: health жив сразу, а обслуживание — только после прогрева.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_http.py", line 14, in test_http_ready_and_generate_wait_for_warmup
+    self.assertEqual(status, 503, 'ready успешен до завершения прогрева')
+AssertionError: 200 != 503 : ready успешен до завершения прогрева
+
+----------------------------------------------------------------------
+Ran 1 test in 1.306s
+
+FAILED (failures=1)
+
+
+===== Дефект 6: service.py: test_http.HttpTests.test_http_serves_loaded_version_until_restart_then_rollback exit=1
+test_http_serves_loaded_version_until_restart_then_rollback (integration_tests.test_http.HttpTests.test_http_serves_loaded_version_until_restart_then_rollback)
+Дефект 6: A → публикация B → всё ещё A → перезапуск → B → откат → перезапуск → A. ... FAIL
+
+======================================================================
+FAIL: test_http_serves_loaded_version_until_restart_then_rollback (integration_tests.test_http.HttpTests.test_http_serves_loaded_version_until_restart_then_rollback)
+Дефект 6: A → публикация B → всё ещё A → перезапуск → B → откат → перезапуск → A.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_http.py", line 60, in test_http_serves_loaded_version_until_restart_then_rollback
+    self.assertEqual(body['model_id'], 'fixture-A', 'метаданные не соответствуют модели в памяти')
+AssertionError: 'fixture-B' != 'fixture-A'
+- fixture-B
+?         ^
++ fixture-A
+?         ^
+ : метаданные не соответствуют модели в памяти
+
+----------------------------------------------------------------------
+Ran 1 test in 19.661s
+
+FAILED (failures=1)
+
+
+===== Дефект 7: service.py: test_http.HttpTests.test_http_bad_requests_never_reach_backend exit=1
+test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend)
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает. ... 
+  test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend) (payload="{'prompt': 'x', 'max_new_tokens': 33}")
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает. ... FAIL
+  test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend) (payload="{'prompt': 'x', 'max_new_tokens': 100000}")
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает. ... FAIL
+test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend)
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает. ... FAIL
+
+======================================================================
+FAIL: test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend) (payload="{'prompt': 'x', 'max_new_tokens': 33}")
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_http.py", line 35, in test_http_bad_requests_never_reach_backend
+    self.assertTrue(400 <= status < 500, f'{status} вместо 4xx')
+AssertionError: False is not true : 200 вместо 4xx
+
+======================================================================
+FAIL: test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend) (payload="{'prompt': 'x', 'max_new_tokens': 100000}")
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_http.py", line 35, in test_http_bad_requests_never_reach_backend
+    self.assertTrue(400 <= status < 500, f'{status} вместо 4xx')
+AssertionError: False is not true : 200 вместо 4xx
+
+======================================================================
+FAIL: test_http_bad_requests_never_reach_backend (integration_tests.test_http.HttpTests.test_http_bad_requests_never_reach_backend)
+Дефект 7: 4xx до генерации, счётчик backend не меняется; валидный запрос работает.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\mlops\MLOps\hw8910-broken\integration_tests\test_http.py", line 36, in test_http_bad_requests_never_reach_backend
+    self.assertEqual(service.get('/debug')[1]['calls'], before, 'неверный запрос дошёл до backend')
+AssertionError: 2 != 0 : неверный запрос дошёл до backend
+
+----------------------------------------------------------------------
+Ran 1 test in 1.574s
+
+FAILED (failures=3)
+

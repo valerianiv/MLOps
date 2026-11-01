@@ -1,0 +1,39 @@
+{
+  "artifact_dir": "artifacts/my-qwen-adapter-1",
+  "artifact_uri": "models:/my-qwen-adapter/1",
+  "file_hashes": {
+    "README.md": "6f2723201f761fbea8933f9a41ec49cd0d30ce753731a4fde634a7550fe50550",
+    "adapter_config.json": "f0f6dce3825a29c256e01aeb9159f36c04d4bacc7a8cb1557a7d422aa6aebeee",
+    "adapter_model.safetensors": "125c5f2bec158740b5ddfc21a7ea213a54cc00f32b4c7df0371ffb8d1de151e9",
+    "chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "manifest.json": "68babf795d8360fe23cbba28b097162ab8669d8074a4ddda42e7d5e44b5810e6",
+    "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+    "tokenizer_config.json": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+  },
+  "golden_sha256": "1868ace742f79425dcd541ab988f6a05c31893c81ee77851aa697a6140238020",
+  "kind": "adapter",
+  "model_id": "my-qwen-adapter/1",
+  "model_sha256": "b64c3f70412ec907ccbe18f5061d404566950bc4496649fde8e9351d9d158c63",
+  "protocol_sha256": "4c6229b0e6a023609c6d932baf6cf7c91826ceec58f92483c8953f7a768e606a",
+  "provenance": {
+    "code_sha256": "f01c4b0212b0bdeb71f8ea36040c6147d112133301a1edee2a68e49cddc1d39b",
+    "note": "чтение готового run ДЗ 6+7, не повторное обучение",
+    "training_run_id": "e8592ab0f47b4610a7d1f973a0710816"
+  },
+  "runtime": {
+    "base_name": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "dtype": "bfloat16",
+    "generation": {
+      "do_sample": false,
+      "enable_thinking": false,
+      "max_new_tokens": 32,
+      "seed": 42,
+      "system": "You grade whether a response follows an instruction with verifiable constraints (word or sentence count, required or forbidden words, formatting, letter case, punctuation). Check every constraint literally. Reply with JSON only, exactly {\"answer\": \"<label>\"}, where <label> is one of the choices listed in the question. No explanation, no markdown. If the request is not about checking whether a response follows an instruction, reply {\"answer\": \"REFUSE\"}."
+    },
+    "template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "tokenizer_sha256": "bc00d09c791693ed90acf0ed6f34fbcdfee24e370a7d6df80d450cf3295ee474"
+  },
+  "runtime_sha256": "aa58aae23688b1b22e20b6ceae8e2ac365d9aaf447bc06ff1da47e9e8b3f8993",
+  "schema_version": 1
+}

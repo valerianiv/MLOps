@@ -1,0 +1,64 @@
+transformers: http://127.0.0.1:55162
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 24/311 [00:00<00:01, 227.26it/s]Loading weights:  15%|█▌        | 47/311 [00:00<00:01, 153.86it/s]Loading weights:  25%|██▌       | 79/311 [00:00<00:01, 207.78it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 239.37it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 236.18it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 500.26it/s]
+ifc-len-01 True
+ifc-len-02 True
+ifc-len-03 True
+ifc-len-04 True
+ifc-len-05 True
+ifc-len-06 True
+ifc-len-07 True
+ifc-len-08 True
+ifc-len-09 True
+ifc-kw-01 True
+ifc-kw-02 True
+ifc-kw-03 True
+ifc-kw-04 True
+ifc-kw-05 True
+ifc-kw-06 True
+ifc-kw-07 True
+ifc-kw-08 True
+ifc-kw-09 True
+ifc-fmt-01 True
+ifc-fmt-02 True
+ifc-fmt-03 True
+ifc-fmt-04 True
+ifc-fmt-05 True
+ifc-fmt-06 True
+ifc-fmt-07 True
+ifc-fmt-08 True
+ifc-fmt-09 True
+ifc-cp-01 True
+ifc-cp-02 True
+ifc-cp-03 True
+ifc-cp-04 True
+ifc-cp-05 True
+ifc-cp-06 True
+ifc-cp-07 True
+ifc-cp-08 True
+ifc-cp-09 True
+ifc-pick-len-01 True
+ifc-pick-len-02 True
+ifc-pick-len-03 True
+ifc-pick-len-04 True
+ifc-pick-len-05 True
+ifc-pick-kw-01 True
+ifc-pick-kw-02 True
+ifc-pick-kw-03 True
+ifc-pick-kw-04 True
+ifc-pick-kw-05 True
+ifc-pick-fmt-01 True
+ifc-pick-fmt-02 True
+ifc-pick-fmt-03 True
+ifc-pick-fmt-04 False
+ifc-pick-fmt-05 True
+ifc-pick-cp-01 True
+ifc-pick-cp-02 True
+ifc-pick-cp-03 True
+ifc-pick-cp-04 True
+ifc-pick-cp-05 True
+beh-format True
+beh-paraphrase True
+beh-refusal True
+{'n': 59, 'matched': 58, 'errors': 0}
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 29/311 [00:00<00:01, 275.79it/s]Loading weights:  18%|█▊        | 57/311 [00:00<00:01, 146.86it/s]Loading weights:  25%|██▍       | 77/311 [00:00<00:01, 156.05it/s]Loading weights:  36%|███▌      | 111/311 [00:00<00:01, 193.83it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 505.40it/s]
+{'model_id': 'my-qwen-adapter/1', 'note': 'Проверка загрузчика, не выпуск: кандидат отклонён gate', 'rows': [{'id': 'ifc-len-01', 'answer': '{"answer": "A"}', 'saved': '{"answer": "A"}', 'match': True}, {'id': 'ifc-len-02', 'answer': '{"answer": "A"}', 'saved': '{"answer": "A"}', 'match': True}, {'id': 'ifc-len-03', 'answer': '{"answer": "A"}', 'saved': '{"answer": "A"}', 'match': True}]}
