@@ -8,7 +8,11 @@ ORIGINAL ?= 72a7c67
 export PYTHONUTF8 = 1
 WSL = MSYS_NO_PATHCONV=1 wsl -d Debian --cd /mnt/d/mlops/MLOps/hw8910-broken -- bash scripts/wsl_serve.sh
 REAL_ENV = HF_HOME="$(CURDIR)/models/hf-home" HF_HUB_OFFLINE=1
-.PHONY: check check-public red red-green break-demo experiments real-init evidence-real serve-real smoke-real replay-real loadtest-real
+.PHONY: video check check-public red red-green break-demo experiments real-init evidence-real serve-real smoke-real replay-real loadtest-real
+
+# Показ для видео одной командой: тесты, процесс, отказ, API, измерения. Нужен Docker Desktop.
+video:
+	bash scripts/video_demo.sh
 
 # Быстрые проверки без весов, около 5 минут.
 check:
