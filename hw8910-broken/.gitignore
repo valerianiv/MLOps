@@ -8,3 +8,5 @@ models/
 *.bin
 *.pt
 .lab*/
+.red_green_run.txt
+VIDEO-PLAN.txt

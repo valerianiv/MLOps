@@ -1,0 +1,22 @@
+[project]
+name = "mlops-hw8910"
+version = "0.1.0"
+description = "ДЗ 8+9+10: процесс выпуска модели и сервис"
+requires-python = ">=3.12,<3.13"
+# Быстрый контур: без весов, torch и transformers.
+dependencies = [
+  "prefect==3.9.*",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+]
+
+[project.optional-dependencies]
+# Те же версии, что в оценке ДЗ 6+7 (mlops26-hw67/pyproject.toml).
+model = [
+  "torch==2.14.0",
+  "transformers==5.17.0",
+  "peft==0.21.0",
+]
+
+[tool.uv]
+package = false
