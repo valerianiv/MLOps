@@ -6,6 +6,16 @@
 Команды для PowerShell. В Git Bash используйте .venv/Scripts/python.exe
 и export вместо $env:. Задание предполагает Python 3.12.
 
+Короткие команды (нужен make, запускать из Git Bash)
+  make check          все быстрые тесты, около 5 минут
+  make red            те же 11 тестов на исходном коммите, должны упасть, около 7 секунд
+  make break-demo     намеренная поломка в копии, ожидается ошибка
+  make red-green      красный и зелёный прогоны и 7 мутаций, около 9 минут; перезаписывает evidence/
+  make real-init      настоящий выпуск baseline
+  make evidence-real  настоящая попытка выпуска кандидата, отказ ожидаем; нужен Docker
+  make serve-real     настоящий API в WSL на порту 8091, остановка Ctrl+C
+  make smoke-real     опыт с настоящим API; перезаписывает evidence/real/smoke.json
+
 Быстрые проверки: без весов, torch и сети
   uv sync --frozen --python 3.12
   .venv\Scripts\python.exe scripts\check.py               # около 5 минут
