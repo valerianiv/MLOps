@@ -1,0 +1,2 @@
+2026-11-17T00:28:45+03:00
+Error response from daemon: failed to calculate image disk usage: lstat /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/104/fs: no such file or directory

@@ -1,0 +1,76 @@
+[
+    {
+        "Architecture": "amd64",
+        "Author": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Config": {
+            "ArgsEscaped": true,
+            "AttachStderr": false,
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "Cmd": [
+                "python",
+                "-m",
+                "app.server"
+            ],
+            "Domainname": "",
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.9",
+                "PYTHON_SHA256=7220835d9f90b37c006e9842a8dff4580aaca4318674f947302b8d28f3f81112",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1"
+            ],
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Hostname": "",
+            "Image": "",
+            "Labels": null,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Tty": false,
+            "User": "10001:10001",
+            "Volumes": null,
+            "WorkingDir": "/lab"
+        },
+        "Created": "2026-11-16T11:48:05.256342712Z",
+        "DockerVersion": "",
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Id": "sha256:cc722caab8f7870926403b7c727366b1aaaf1d3cbb809cb025a35500479b474e",
+        "Metadata": {
+            "LastTagTime": "2026-11-16T11:48:06.34780956Z"
+        },
+        "Os": "linux",
+        "Parent": "",
+        "RepoDigests": [
+            "lab11-api@sha256:cc722caab8f7870926403b7c727366b1aaaf1d3cbb809cb025a35500479b474e"
+        ],
+        "RepoTags": [
+            "lab11-api:1.0.0"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:ea680fbff095473bb8a6c867938d6d851e11ef0c177fce983ccc83440172bd72",
+                "sha256:8f752ea4c4bdbd4d6ad369e9d5fa1fb05008f63252c8187cf8025653b8d7b7b3",
+                "sha256:0d3e139ff0286aee05a5abbfe1b318f46d4d53030d046cf815be874d0a7fc197",
+                "sha256:de4389417aed217eaa76e2b8362b44d79f3e81d4d2593f41ef7ba34607a13b46",
+                "sha256:f35b05c666a0024d94fe2a6728999bad7922f2648bd2b9999dba6725aed33124",
+                "sha256:32bc9c23f6a2b4cd7501a32999db691460e73997f149d12b5cb5fcbb9371d3ac",
+                "sha256:5e3ca7b7ee0ee1a90705b7b95f280f4c1b0237c200ff67780090498dfaf6aebe",
+                "sha256:fc3a5201d983711e861fdd581cda7429e6dac4ae2f6450d5de46ef9602a2a63c",
+                "sha256:3ded8f4ca59a7376796482c71184f0906be66332591e2b3440cd3a8d934c090e",
+                "sha256:89db234f09e72666bcd96ca1bf25d05adc811eed6e1a766e1e8d9debdba7932e"
+            ],
+            "Type": "layers"
+        },
+        "Size": 52197233
+    }
+]
