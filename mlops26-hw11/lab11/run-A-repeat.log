@@ -1,0 +1,13 @@
+Load: broken; service=api; planned=140; epoch in ~10s
+PASS warmup-broken
+Load: fixed; service=api; planned=140; epoch in ~10s
+PASS warmup-fixed
+Load: rollout-A-B; service=api; planned=100; epoch in ~10s
+PASS graceful rollout has no lost responses
+PASS never-ready release excluded
+Load: rollback-to-A; service=api; planned=16; epoch in ~10s
+PASS loaded version after rollback
+Load: forced-kill; service=10.244.0.79; planned=1; epoch in ~10s
+PASS forced kill is counted as aborted
+Load: after-kill; service=api; planned=6; epoch in ~10s
+PASS service recovers after process kill

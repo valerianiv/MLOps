@@ -1,0 +1,114 @@
+2026-11-16T12:20:25.090348281Z stderr F Error: unable to load configmap based request-header-client-ca-file: Get "https://10.96.0.1:443/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication": dial tcp 10.96.0.1:443: i/o timeout
+2026-11-16T12:20:25.091106587Z stderr F Usage:
+2026-11-16T12:20:25.091126107Z stderr F    [flags]
+2026-11-16T12:20:25.09113076Z stderr F 
+2026-11-16T12:20:25.091135594Z stderr F Metrics server flags:
+2026-11-16T12:20:25.091138776Z stderr F 
+2026-11-16T12:20:25.09114335Z stderr F       --kubeconfig string            The path to the kubeconfig used to connect to the Kubernetes API server and the Kubelets (defaults to in-cluster config)
+2026-11-16T12:20:25.091147764Z stderr F       --metric-resolution duration   The resolution at which metrics-server will retain metrics, must set value at least 10s. (default 1m0s)
+2026-11-16T12:20:25.091152009Z stderr F       --version                      Show version
+2026-11-16T12:20:25.091155375Z stderr F 
+2026-11-16T12:20:25.091158996Z stderr F Kubelet client flags:
+2026-11-16T12:20:25.091162035Z stderr F 
+2026-11-16T12:20:25.091170422Z stderr F       --deprecated-kubelet-completely-insecure    DEPRECATED: Do not use any encryption, authorization, or authentication when communicating with the Kubelet. This is rarely the right option, since it leaves kubelet communication completely insecure.  If you encounter auth errors, make sure you've enabled token webhook auth on the Kubelet, and if you're in a test cluster with self-signed Kubelet certificates, consider using kubelet-insecure-tls instead.
+2026-11-16T12:20:25.091176855Z stderr F       --kubelet-certificate-authority string      Path to the CA to use to validate the Kubelet's serving certificates.
+2026-11-16T12:20:25.091181092Z stderr F       --kubelet-client-certificate string         Path to a client cert file for TLS.
+2026-11-16T12:20:25.091184832Z stderr F       --kubelet-client-key string                 Path to a client key file for TLS.
+2026-11-16T12:20:25.091188633Z stderr F       --kubelet-insecure-tls                      Do not verify CA of serving certificates presented by Kubelets.  For testing purposes only.
+2026-11-16T12:20:25.09119374Z stderr F       --kubelet-port int                          The port to use to connect to Kubelets. (default 10250)
+2026-11-16T12:20:25.091198449Z stderr F       --kubelet-preferred-address-types strings   The priority of node address types to use when determining which address to use to connect to a particular node (default [Hostname,InternalDNS,InternalIP,ExternalDNS,ExternalIP])
+2026-11-16T12:20:25.091202696Z stderr F       --kubelet-request-timeout duration          The length of time to wait before giving up on a single request to Kubelet. Non-zero values should contain a corresponding time unit (e.g. 1s, 2m, 3h). (default 10s)
+2026-11-16T12:20:25.091205292Z stderr F       --kubelet-use-node-status-port              Use the port in the node status. Takes precedence over --kubelet-port flag.
+2026-11-16T12:20:25.09120841Z stderr F   -l, --node-selector string                      Selector (label query) to filter on, not including uninitialized ones, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2).
+2026-11-16T12:20:25.0912104Z stderr F 
+2026-11-16T12:20:25.091213272Z stderr F Apiserver secure serving flags:
+2026-11-16T12:20:25.091215352Z stderr F 
+2026-11-16T12:20:25.09121834Z stderr F       --bind-address ip                        The IP address on which to listen for the --secure-port port. The associated interface(s) must be reachable by the rest of the cluster, and by CLI/web clients. If blank or an unspecified address (0.0.0.0 or ::), all interfaces and IP address families will be used. (default 0.0.0.0)
+2026-11-16T12:20:25.091220697Z stderr F       --cert-dir string                        The directory where the TLS certs are located. If --tls-cert-file and --tls-private-key-file are provided, this flag will be ignored. (default "apiserver.local.config/certificates")
+2026-11-16T12:20:25.091223062Z stderr F       --http2-max-streams-per-connection int   The limit that the server gives to clients for the maximum number of streams in an HTTP/2 connection. Zero means to use golang's default.
+2026-11-16T12:20:25.091247365Z stderr F       --permit-address-sharing                 If true, SO_REUSEADDR will be used when binding the port. This allows binding to wildcard IPs like 0.0.0.0 and specific IPs in parallel, and it avoids waiting for the kernel to release sockets in TIME_WAIT state. [default=false]
+2026-11-16T12:20:25.091254113Z stderr F       --permit-port-sharing                    If true, SO_REUSEPORT will be used when binding the port, which allows more than one instance to bind on the same address and port. [default=false]
+2026-11-16T12:20:25.091258245Z stderr F       --secure-port int                        The port on which to serve HTTPS with authentication and authorization. If 0, don't serve HTTPS at all. (default 443)
+2026-11-16T12:20:25.0912626Z stderr F       --tls-cert-file string                   File containing the default x509 Certificate for HTTPS. (CA cert, if any, concatenated after server cert). If HTTPS serving is enabled, and --tls-cert-file and --tls-private-key-file are not provided, a self-signed certificate and key are generated for the public address and saved to the directory specified by --cert-dir.
+2026-11-16T12:20:25.09130371Z stderr F       --tls-cipher-suites strings              Comma-separated list of cipher suites for the server. If omitted, the default Go cipher suites will be used. 
+2026-11-16T12:20:25.09131691Z stderr F                                                Preferred values: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256. 
+2026-11-16T12:20:25.091322932Z stderr F                                                Insecure values: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_RC4_128_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_RC4_128_SHA, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_RC4_128_SHA.
+2026-11-16T12:20:25.091326882Z stderr F       --tls-min-version string                 Minimum TLS version supported. Possible values: VersionTLS10, VersionTLS11, VersionTLS12, VersionTLS13
+2026-11-16T12:20:25.091330588Z stderr F       --tls-private-key-file string            File containing the default x509 private key matching --tls-cert-file.
+2026-11-16T12:20:25.091337181Z stderr F       --tls-sni-cert-key namedCertKey          A pair of x509 certificate and private key file paths, optionally suffixed with a list of domain patterns which are fully qualified domain names, possibly with prefixed wildcard segments. The domain patterns also allow IP addresses, but IPs should only be used if the apiserver has visibility to the IP address requested by a client. If no domain patterns are provided, the names of the certificate are extracted. Non-wildcard matches trump over wildcard matches, explicit domain patterns trump over extracted names. For multiple key/certificate pairs, use the --tls-sni-cert-key multiple times. Examples: "example.crt,example.key" or "foo.crt,foo.key:*.foo.com,foo.com". (default [])
+2026-11-16T12:20:25.091340639Z stderr F 
+2026-11-16T12:20:25.091344344Z stderr F Apiserver authentication flags:
+2026-11-16T12:20:25.091347833Z stderr F 
+2026-11-16T12:20:25.091351962Z stderr F       --authentication-kubeconfig string                  kubeconfig file pointing at the 'core' kubernetes server with enough rights to create tokenreviews.authentication.k8s.io.
+2026-11-16T12:20:25.091366209Z stderr F       --authentication-skip-lookup                        If false, the authentication-kubeconfig will be used to lookup missing authentication configuration from the cluster.
+2026-11-16T12:20:25.091370083Z stderr F       --authentication-token-webhook-cache-ttl duration   The duration to cache responses from the webhook token authenticator. (default 10s)
+2026-11-16T12:20:25.091374777Z stderr F       --authentication-tolerate-lookup-failure            If true, failures to look up missing authentication configuration from the cluster are not considered fatal. Note that this can result in authentication that treats all requests as anonymous.
+2026-11-16T12:20:25.091378616Z stderr F       --client-ca-file string                             If set, any request presenting a client certificate signed by one of the authorities in the client-ca-file is authenticated with an identity corresponding to the CommonName of the client certificate.
+2026-11-16T12:20:25.091382773Z stderr F       --requestheader-allowed-names strings               List of client certificate common names to allow to provide usernames in headers specified by --requestheader-username-headers. If empty, any client certificate validated by the authorities in --requestheader-client-ca-file is allowed.
+2026-11-16T12:20:25.091386432Z stderr F       --requestheader-client-ca-file string               Root certificate bundle to use to verify client certificates on incoming requests before trusting usernames in headers specified by --requestheader-username-headers. WARNING: generally do not depend on authorization being already done for incoming requests.
+2026-11-16T12:20:25.091390267Z stderr F       --requestheader-extra-headers-prefix strings        List of request header prefixes to inspect. X-Remote-Extra- is suggested. (default [x-remote-extra-])
+2026-11-16T12:20:25.091401296Z stderr F       --requestheader-group-headers strings               List of request headers to inspect for groups. X-Remote-Group is suggested. (default [x-remote-group])
+2026-11-16T12:20:25.091405174Z stderr F       --requestheader-username-headers strings            List of request headers to inspect for usernames. X-Remote-User is common. (default [x-remote-user])
+2026-11-16T12:20:25.091408353Z stderr F 
+2026-11-16T12:20:25.091412043Z stderr F Apiserver authorization flags:
+2026-11-16T12:20:25.091415037Z stderr F 
+2026-11-16T12:20:25.091418414Z stderr F       --authorization-always-allow-paths strings                A list of HTTP paths to skip during authorization, i.e. these are authorized without contacting the 'core' kubernetes server. (default [/healthz,/readyz,/livez])
+2026-11-16T12:20:25.091422288Z stderr F       --authorization-kubeconfig string                         kubeconfig file pointing at the 'core' kubernetes server with enough rights to create subjectaccessreviews.authorization.k8s.io.
+2026-11-16T12:20:25.091426029Z stderr F       --authorization-webhook-cache-authorized-ttl duration     The duration to cache 'authorized' responses from the webhook authorizer. (default 10s)
+2026-11-16T12:20:25.091429826Z stderr F       --authorization-webhook-cache-unauthorized-ttl duration   The duration to cache 'unauthorized' responses from the webhook authorizer. (default 10s)
+2026-11-16T12:20:25.091433082Z stderr F 
+2026-11-16T12:20:25.091436831Z stderr F Apiserver audit log flags:
+2026-11-16T12:20:25.091439949Z stderr F 
+2026-11-16T12:20:25.091443583Z stderr F       --audit-log-batch-buffer-size int             The size of the buffer to store events before batching and writing. Only used in batch mode. (default 10000)
+2026-11-16T12:20:25.091447215Z stderr F       --audit-log-batch-max-size int                The maximum size of a batch. Only used in batch mode. (default 1)
+2026-11-16T12:20:25.0914509Z stderr F       --audit-log-batch-max-wait duration           The amount of time to wait before force writing the batch that hadn't reached the max size. Only used in batch mode.
+2026-11-16T12:20:25.09146205Z stderr F       --audit-log-batch-throttle-burst int          Maximum number of requests sent at the same moment if ThrottleQPS was not utilized before. Only used in batch mode.
+2026-11-16T12:20:25.09146598Z stderr F       --audit-log-batch-throttle-enable             Whether batching throttling is enabled. Only used in batch mode.
+2026-11-16T12:20:25.091469981Z stderr F       --audit-log-batch-throttle-qps float32        Maximum average number of batches per second. Only used in batch mode.
+2026-11-16T12:20:25.091473644Z stderr F       --audit-log-compress                          If set, the rotated log files will be compressed using gzip.
+2026-11-16T12:20:25.091477264Z stderr F       --audit-log-format string                     Format of saved audits. "legacy" indicates 1-line text format for each event. "json" indicates structured json format. Known formats are legacy,json. (default "json")
+2026-11-16T12:20:25.091480725Z stderr F       --audit-log-maxage int                        The maximum number of days to retain old audit log files based on the timestamp encoded in their filename.
+2026-11-16T12:20:25.091484692Z stderr F       --audit-log-maxbackup int                     The maximum number of old audit log files to retain. Setting a value of 0 will mean there's no restriction on the number of files.
+2026-11-16T12:20:25.091491558Z stderr F       --audit-log-maxsize int                       The maximum size in megabytes of the audit log file before it gets rotated.
+2026-11-16T12:20:25.091495222Z stderr F       --audit-log-mode string                       Strategy for sending audit events. Blocking indicates sending events should block server responses. Batch causes the backend to buffer and write events asynchronously. Known modes are batch,blocking,blocking-strict. (default "blocking")
+2026-11-16T12:20:25.091498881Z stderr F       --audit-log-path string                       If set, all requests coming to the apiserver will be logged to this file.  '-' means standard out.
+2026-11-16T12:20:25.091502789Z stderr F       --audit-log-truncate-enabled                  Whether event and batch truncating is enabled.
+2026-11-16T12:20:25.091506447Z stderr F       --audit-log-truncate-max-batch-size int       Maximum size of the batch sent to the underlying backend. Actual serialized size can be several hundreds of bytes greater. If a batch exceeds this limit, it is split into several batches of smaller size. (default 10485760)
+2026-11-16T12:20:25.091510039Z stderr F       --audit-log-truncate-max-event-size int       Maximum size of the audit event sent to the underlying backend. If the size of an event is greater than this number, first request and response are removed, and if this doesn't reduce the size enough, event is discarded. (default 102400)
+2026-11-16T12:20:25.091513777Z stderr F       --audit-log-version string                    API group and version used for serializing audit events written to log. (default "audit.k8s.io/v1")
+2026-11-16T12:20:25.091599062Z stderr F       --audit-policy-file string                    Path to the file that defines the audit policy configuration.
+2026-11-16T12:20:25.09160577Z stderr F       --audit-webhook-batch-buffer-size int         The size of the buffer to store events before batching and writing. Only used in batch mode. (default 10000)
+2026-11-16T12:20:25.09161023Z stderr F       --audit-webhook-batch-max-size int            The maximum size of a batch. Only used in batch mode. (default 400)
+2026-11-16T12:20:25.091614479Z stderr F       --audit-webhook-batch-max-wait duration       The amount of time to wait before force writing the batch that hadn't reached the max size. Only used in batch mode. (default 30s)
+2026-11-16T12:20:25.091618794Z stderr F       --audit-webhook-batch-throttle-burst int      Maximum number of requests sent at the same moment if ThrottleQPS was not utilized before. Only used in batch mode. (default 15)
+2026-11-16T12:20:25.091622778Z stderr F       --audit-webhook-batch-throttle-enable         Whether batching throttling is enabled. Only used in batch mode. (default true)
+2026-11-16T12:20:25.091635595Z stderr F       --audit-webhook-batch-throttle-qps float32    Maximum average number of batches per second. Only used in batch mode. (default 10)
+2026-11-16T12:20:25.091639662Z stderr F       --audit-webhook-config-file string            Path to a kubeconfig formatted file that defines the audit webhook configuration.
+2026-11-16T12:20:25.091643272Z stderr F       --audit-webhook-initial-backoff duration      The amount of time to wait before retrying the first failed request. (default 10s)
+2026-11-16T12:20:25.091647215Z stderr F       --audit-webhook-mode string                   Strategy for sending audit events. Blocking indicates sending events should block server responses. Batch causes the backend to buffer and write events asynchronously. Known modes are batch,blocking,blocking-strict. (default "batch")
+2026-11-16T12:20:25.09164986Z stderr F       --audit-webhook-truncate-enabled              Whether event and batch truncating is enabled.
+2026-11-16T12:20:25.0916522Z stderr F       --audit-webhook-truncate-max-batch-size int   Maximum size of the batch sent to the underlying backend. Actual serialized size can be several hundreds of bytes greater. If a batch exceeds this limit, it is split into several batches of smaller size. (default 10485760)
+2026-11-16T12:20:25.091654558Z stderr F       --audit-webhook-truncate-max-event-size int   Maximum size of the audit event sent to the underlying backend. If the size of an event is greater than this number, first request and response are removed, and if this doesn't reduce the size enough, event is discarded. (default 102400)
+2026-11-16T12:20:25.091656836Z stderr F       --audit-webhook-version string                API group and version used for serializing audit events written to webhook. (default "audit.k8s.io/v1")
+2026-11-16T12:20:25.091658841Z stderr F 
+2026-11-16T12:20:25.09166125Z stderr F Features flags:
+2026-11-16T12:20:25.091663336Z stderr F 
+2026-11-16T12:20:25.091665617Z stderr F       --contention-profiling           Enable block profiling, if profiling is enabled
+2026-11-16T12:20:25.091668058Z stderr F       --debug-socket-path string       Use an unprotected (no authn/authz) unix-domain socket for profiling with the given path
+2026-11-16T12:20:25.091670423Z stderr F       --enable-priority-and-fairness   If true, replace the max-in-flight handler with an enhanced one that queues and dispatches with priority and fairness (default true)
+2026-11-16T12:20:25.091672605Z stderr F       --profiling                      Enable profiling via web interface host:port/debug/pprof/ (default true)
+2026-11-16T12:20:25.091674586Z stderr F 
+2026-11-16T12:20:25.091676861Z stderr F Logging flags:
+2026-11-16T12:20:25.091679827Z stderr F 
+2026-11-16T12:20:25.091683473Z stderr F       --log-flush-frequency duration         Maximum number of seconds between log flushes (default 5s)
+2026-11-16T12:20:25.091689223Z stderr F       --log-json-info-buffer-size quantity   [Alpha] In JSON format with split output streams, the info messages can be buffered for a while to increase performance. The default value of zero bytes disables buffering. The size can be specified as number of bytes (512), multiples of 1000 (1K), multiples of 1024 (2Ki), or powers of those (3M, 4G, 5Mi, 6Gi). Enable the LoggingAlphaOptions feature gate to use this.
+2026-11-16T12:20:25.091693146Z stderr F       --log-json-split-stream                [Alpha] In JSON format, write error messages to stderr and info messages to stdout. The default is to write a single stream to stdout. Enable the LoggingAlphaOptions feature gate to use this.
+2026-11-16T12:20:25.091697058Z stderr F       --logging-format string                Sets the log format. Permitted formats: "json" (gated by LoggingBetaOptions), "text". (default "text")
+2026-11-16T12:20:25.091701112Z stderr F   -v, --v Level                              number for the log level verbosity
+2026-11-16T12:20:25.091705793Z stderr F       --vmodule pattern=N,...                comma-separated list of pattern=N settings for file-filtered logging (only works for text log format)
+2026-11-16T12:20:25.091715136Z stderr F 
+2026-11-16T12:20:25.09326604Z stderr F panic: unable to load configmap based request-header-client-ca-file: Get "https://10.96.0.1:443/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication": dial tcp 10.96.0.1:443: i/o timeout
+2026-11-16T12:20:25.093279003Z stderr F 
+2026-11-16T12:20:25.093283619Z stderr F goroutine 1 [running]:
+2026-11-16T12:20:25.093287381Z stderr F main.main()
+2026-11-16T12:20:25.093297773Z stderr F 	sigs.k8s.io/metrics-server/cmd/metrics-server/metrics-server.go:37 +0x8b

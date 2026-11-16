@@ -1,0 +1,311 @@
+2026-11-16T12:19:47.490672448Z stderr F W1116 12:19:47.489872       1 registry.go:256] calling componentGlobalsRegistry.AddFlags more than once, the registry will be set by the latest flags
+2026-11-16T12:19:47.492664944Z stderr F I1116 12:19:47.492362       1 options.go:238] external host was not specified, using 172.19.0.2
+2026-11-16T12:19:47.50966556Z stderr F I1116 12:19:47.509476       1 server.go:143] Version: v1.32.2
+2026-11-16T12:19:47.509965585Z stderr F I1116 12:19:47.509798       1 server.go:145] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-11-16T12:19:48.331267288Z stderr F I1116 12:19:48.330932       1 shared_informer.go:313] Waiting for caches to sync for node_authorizer
+2026-11-16T12:19:48.346019068Z stderr F I1116 12:19:48.345793       1 shared_informer.go:313] Waiting for caches to sync for *generic.policySource[*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicy,*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicyBinding,k8s.io/apiserver/pkg/admission/plugin/policy/validating.Validator]
+2026-11-16T12:19:48.357803601Z stderr F I1116 12:19:48.357514       1 plugins.go:157] Loaded 13 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,MutatingAdmissionPolicy,MutatingAdmissionWebhook.
+2026-11-16T12:19:48.357863959Z stderr F I1116 12:19:48.357625       1 plugins.go:160] Loaded 13 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,PodSecurity,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,ClusterTrustBundleAttest,CertificateSubjectRestriction,ValidatingAdmissionPolicy,ValidatingAdmissionWebhook,ResourceQuota.
+2026-11-16T12:19:48.358770064Z stderr F I1116 12:19:48.358599       1 instance.go:233] Using reconciler: lease
+2026-11-16T12:19:48.744369187Z stderr F I1116 12:19:48.743986       1 handler.go:286] Adding GroupVersion apiextensions.k8s.io v1 to ResourceManager
+2026-11-16T12:19:48.744407228Z stderr F W1116 12:19:48.744043       1 genericapiserver.go:767] Skipping API apiextensions.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:48.934155332Z stderr F I1116 12:19:48.933917       1 handler.go:286] Adding GroupVersion  v1 to ResourceManager
+2026-11-16T12:19:48.934312735Z stderr F I1116 12:19:48.934196       1 apis.go:106] API group "internal.apiserver.k8s.io" is not enabled, skipping.
+2026-11-16T12:19:49.134772121Z stderr F I1116 12:19:49.134596       1 apis.go:106] API group "storagemigration.k8s.io" is not enabled, skipping.
+2026-11-16T12:19:49.250896837Z stderr F I1116 12:19:49.250690       1 apis.go:106] API group "resource.k8s.io" is not enabled, skipping.
+2026-11-16T12:19:49.272577938Z stderr F I1116 12:19:49.272301       1 handler.go:286] Adding GroupVersion authentication.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.272617456Z stderr F W1116 12:19:49.272361       1 genericapiserver.go:767] Skipping API authentication.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.272620938Z stderr F W1116 12:19:49.272372       1 genericapiserver.go:767] Skipping API authentication.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.273161819Z stderr F I1116 12:19:49.272967       1 handler.go:286] Adding GroupVersion authorization.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.273169692Z stderr F W1116 12:19:49.273006       1 genericapiserver.go:767] Skipping API authorization.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.274240721Z stderr F I1116 12:19:49.274041       1 handler.go:286] Adding GroupVersion autoscaling v2 to ResourceManager
+2026-11-16T12:19:49.275297761Z stderr F I1116 12:19:49.275136       1 handler.go:286] Adding GroupVersion autoscaling v1 to ResourceManager
+2026-11-16T12:19:49.275319856Z stderr F W1116 12:19:49.275222       1 genericapiserver.go:767] Skipping API autoscaling/v2beta1 because it has no resources.
+2026-11-16T12:19:49.275343609Z stderr F W1116 12:19:49.275231       1 genericapiserver.go:767] Skipping API autoscaling/v2beta2 because it has no resources.
+2026-11-16T12:19:49.277142728Z stderr F I1116 12:19:49.276930       1 handler.go:286] Adding GroupVersion batch v1 to ResourceManager
+2026-11-16T12:19:49.277155066Z stderr F W1116 12:19:49.276968       1 genericapiserver.go:767] Skipping API batch/v1beta1 because it has no resources.
+2026-11-16T12:19:49.278291721Z stderr F I1116 12:19:49.278040       1 handler.go:286] Adding GroupVersion certificates.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.278306141Z stderr F W1116 12:19:49.278088       1 genericapiserver.go:767] Skipping API certificates.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.278308831Z stderr F W1116 12:19:49.278094       1 genericapiserver.go:767] Skipping API certificates.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.2793242Z stderr F I1116 12:19:49.279017       1 handler.go:286] Adding GroupVersion coordination.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.279363982Z stderr F W1116 12:19:49.279075       1 genericapiserver.go:767] Skipping API coordination.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.279367461Z stderr F W1116 12:19:49.279083       1 genericapiserver.go:767] Skipping API coordination.k8s.io/v1alpha2 because it has no resources.
+2026-11-16T12:19:49.280229796Z stderr F I1116 12:19:49.280041       1 handler.go:286] Adding GroupVersion discovery.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.280237673Z stderr F W1116 12:19:49.280084       1 genericapiserver.go:767] Skipping API discovery.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.290628059Z stderr F I1116 12:19:49.288215       1 handler.go:286] Adding GroupVersion networking.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.290659398Z stderr F W1116 12:19:49.288259       1 genericapiserver.go:767] Skipping API networking.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.290661935Z stderr F W1116 12:19:49.288266       1 genericapiserver.go:767] Skipping API networking.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.290664066Z stderr F I1116 12:19:49.289300       1 handler.go:286] Adding GroupVersion node.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.290666167Z stderr F W1116 12:19:49.289323       1 genericapiserver.go:767] Skipping API node.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.290668381Z stderr F W1116 12:19:49.289328       1 genericapiserver.go:767] Skipping API node.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.291815489Z stderr F I1116 12:19:49.291679       1 handler.go:286] Adding GroupVersion policy v1 to ResourceManager
+2026-11-16T12:19:49.291829032Z stderr F W1116 12:19:49.291782       1 genericapiserver.go:767] Skipping API policy/v1beta1 because it has no resources.
+2026-11-16T12:19:49.297340215Z stderr F I1116 12:19:49.297122       1 handler.go:286] Adding GroupVersion rbac.authorization.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.297379886Z stderr F W1116 12:19:49.297183       1 genericapiserver.go:767] Skipping API rbac.authorization.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.297382098Z stderr F W1116 12:19:49.297195       1 genericapiserver.go:767] Skipping API rbac.authorization.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.298218678Z stderr F I1116 12:19:49.298017       1 handler.go:286] Adding GroupVersion scheduling.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.298230385Z stderr F W1116 12:19:49.298067       1 genericapiserver.go:767] Skipping API scheduling.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.298232678Z stderr F W1116 12:19:49.298073       1 genericapiserver.go:767] Skipping API scheduling.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.3002013Z stderr F I1116 12:19:49.299977       1 handler.go:286] Adding GroupVersion storage.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.300224969Z stderr F W1116 12:19:49.300039       1 genericapiserver.go:767] Skipping API storage.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.300247631Z stderr F W1116 12:19:49.300046       1 genericapiserver.go:767] Skipping API storage.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.301158671Z stderr F I1116 12:19:49.300962       1 handler.go:286] Adding GroupVersion flowcontrol.apiserver.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.30116719Z stderr F W1116 12:19:49.301008       1 genericapiserver.go:767] Skipping API flowcontrol.apiserver.k8s.io/v1beta3 because it has no resources.
+2026-11-16T12:19:49.301169461Z stderr F W1116 12:19:49.301014       1 genericapiserver.go:767] Skipping API flowcontrol.apiserver.k8s.io/v1beta2 because it has no resources.
+2026-11-16T12:19:49.301171391Z stderr F W1116 12:19:49.301016       1 genericapiserver.go:767] Skipping API flowcontrol.apiserver.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.304046852Z stderr F I1116 12:19:49.303858       1 handler.go:286] Adding GroupVersion apps v1 to ResourceManager
+2026-11-16T12:19:49.304067586Z stderr F W1116 12:19:49.303938       1 genericapiserver.go:767] Skipping API apps/v1beta2 because it has no resources.
+2026-11-16T12:19:49.304069935Z stderr F W1116 12:19:49.303946       1 genericapiserver.go:767] Skipping API apps/v1beta1 because it has no resources.
+2026-11-16T12:19:49.305664711Z stderr F I1116 12:19:49.305465       1 handler.go:286] Adding GroupVersion admissionregistration.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.305674531Z stderr F W1116 12:19:49.305509       1 genericapiserver.go:767] Skipping API admissionregistration.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.305676572Z stderr F W1116 12:19:49.305515       1 genericapiserver.go:767] Skipping API admissionregistration.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T12:19:49.306214596Z stderr F I1116 12:19:49.306044       1 handler.go:286] Adding GroupVersion events.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.306221116Z stderr F W1116 12:19:49.306086       1 genericapiserver.go:767] Skipping API events.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.317624792Z stderr F I1116 12:19:49.316622       1 handler.go:286] Adding GroupVersion apiregistration.k8s.io v1 to ResourceManager
+2026-11-16T12:19:49.317653794Z stderr F W1116 12:19:49.316656       1 genericapiserver.go:767] Skipping API apiregistration.k8s.io/v1beta1 because it has no resources.
+2026-11-16T12:19:49.803201921Z stderr F I1116 12:19:49.802948       1 secure_serving.go:213] Serving securely on [::]:6443
+2026-11-16T12:19:49.803251411Z stderr F I1116 12:19:49.803030       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-11-16T12:19:49.803265632Z stderr F I1116 12:19:49.803151       1 remote_available_controller.go:411] Starting RemoteAvailability controller
+2026-11-16T12:19:49.80353683Z stderr F I1116 12:19:49.803219       1 cache.go:32] Waiting for caches to sync for RemoteAvailability controller
+2026-11-16T12:19:49.803548655Z stderr F I1116 12:19:49.803265       1 apiservice_controller.go:100] Starting APIServiceRegistrationController
+2026-11-16T12:19:49.803551939Z stderr F I1116 12:19:49.803270       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+2026-11-16T12:19:49.803555335Z stderr F I1116 12:19:49.803294       1 aggregator.go:169] waiting for initial CRD sync...
+2026-11-16T12:19:49.803558591Z stderr F I1116 12:19:49.803354       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+2026-11-16T12:19:49.803566863Z stderr F I1116 12:19:49.803421       1 dynamic_serving_content.go:135] "Starting controller" name="serving-cert::/etc/kubernetes/pki/apiserver.crt::/etc/kubernetes/pki/apiserver.key"
+2026-11-16T12:19:49.818912939Z stderr F I1116 12:19:49.818665       1 controller.go:78] Starting OpenAPI AggregationController
+2026-11-16T12:19:49.818941673Z stderr F I1116 12:19:49.818763       1 controller.go:80] Starting OpenAPI V3 AggregationController
+2026-11-16T12:19:49.819655661Z stderr F I1116 12:19:49.819548       1 customresource_discovery_controller.go:292] Starting DiscoveryController
+2026-11-16T12:19:49.819908822Z stderr F I1116 12:19:49.819740       1 apf_controller.go:377] Starting API Priority and Fairness config controller
+2026-11-16T12:19:49.819979413Z stderr F I1116 12:19:49.819838       1 system_namespaces_controller.go:66] Starting system namespaces controller
+2026-11-16T12:19:49.820713697Z stderr F I1116 12:19:49.820574       1 controller.go:119] Starting legacy_token_tracking_controller
+2026-11-16T12:19:49.820732708Z stderr F I1116 12:19:49.820591       1 shared_informer.go:313] Waiting for caches to sync for configmaps
+2026-11-16T12:19:49.820740013Z stderr F I1116 12:19:49.820628       1 dynamic_serving_content.go:135] "Starting controller" name="aggregator-proxy-cert::/etc/kubernetes/pki/front-proxy-client.crt::/etc/kubernetes/pki/front-proxy-client.key"
+2026-11-16T12:19:49.820847363Z stderr F I1116 12:19:49.820730       1 local_available_controller.go:156] Starting LocalAvailability controller
+2026-11-16T12:19:49.820850925Z stderr F I1116 12:19:49.820740       1 cache.go:32] Waiting for caches to sync for LocalAvailability controller
+2026-11-16T12:19:49.822990304Z stderr F I1116 12:19:49.822632       1 gc_controller.go:78] Starting apiserver lease garbage collector
+2026-11-16T12:19:49.82302207Z stderr F I1116 12:19:49.822707       1 crdregistration_controller.go:114] Starting crd-autoregister controller
+2026-11-16T12:19:49.823024759Z stderr F I1116 12:19:49.822716       1 shared_informer.go:313] Waiting for caches to sync for crd-autoregister
+2026-11-16T12:19:49.824052945Z stderr F I1116 12:19:49.823863       1 cluster_authentication_trust_controller.go:462] Starting cluster_authentication_trust_controller controller
+2026-11-16T12:19:49.824115299Z stderr F I1116 12:19:49.823907       1 shared_informer.go:313] Waiting for caches to sync for cluster_authentication_trust_controller
+2026-11-16T12:19:49.824118392Z stderr F I1116 12:19:49.823944       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+2026-11-16T12:19:49.824124065Z stderr F I1116 12:19:49.824043       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+2026-11-16T12:19:49.830052385Z stderr F I1116 12:19:49.827126       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+2026-11-16T12:19:49.894026756Z stderr F I1116 12:19:49.889788       1 controller.go:142] Starting OpenAPI controller
+2026-11-16T12:19:49.894174096Z stderr F I1116 12:19:49.889963       1 controller.go:90] Starting OpenAPI V3 controller
+2026-11-16T12:19:49.894178285Z stderr F I1116 12:19:49.891327       1 naming_controller.go:294] Starting NamingConditionController
+2026-11-16T12:19:49.89418032Z stderr F I1116 12:19:49.891395       1 establishing_controller.go:81] Starting EstablishingController
+2026-11-16T12:19:49.894182957Z stderr F I1116 12:19:49.891467       1 nonstructuralschema_controller.go:195] Starting NonStructuralSchemaConditionController
+2026-11-16T12:19:49.894184726Z stderr F I1116 12:19:49.891614       1 apiapproval_controller.go:189] Starting KubernetesAPIApprovalPolicyConformantConditionController
+2026-11-16T12:19:49.894186705Z stderr F I1116 12:19:49.891639       1 crd_finalizer.go:269] Starting CRDFinalizer
+2026-11-16T12:19:50.004940697Z stderr F I1116 12:19:50.004715       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+2026-11-16T12:19:50.004988881Z stderr F I1116 12:19:50.004879       1 cache.go:39] Caches are synced for RemoteAvailability controller
+2026-11-16T12:19:50.01754675Z stderr F I1116 12:19:50.016187       1 handler_discovery.go:451] Starting ResourceDiscoveryManager
+2026-11-16T12:19:50.027345159Z stderr F I1116 12:19:50.023243       1 shared_informer.go:320] Caches are synced for crd-autoregister
+2026-11-16T12:19:50.027380573Z stderr F I1116 12:19:50.024203       1 shared_informer.go:320] Caches are synced for cluster_authentication_trust_controller
+2026-11-16T12:19:50.027409983Z stderr F I1116 12:19:50.024308       1 aggregator.go:171] initial CRD sync complete...
+2026-11-16T12:19:50.027412132Z stderr F I1116 12:19:50.024320       1 autoregister_controller.go:144] Starting autoregister controller
+2026-11-16T12:19:50.02741485Z stderr F I1116 12:19:50.024329       1 cache.go:32] Waiting for caches to sync for autoregister controller
+2026-11-16T12:19:50.027416721Z stderr F I1116 12:19:50.024335       1 cache.go:39] Caches are synced for autoregister controller
+2026-11-16T12:19:50.035024433Z stderr F I1116 12:19:50.028290       1 apf_controller.go:382] Running API Priority and Fairness config worker
+2026-11-16T12:19:50.035064393Z stderr F I1116 12:19:50.028320       1 apf_controller.go:385] Running API Priority and Fairness periodic rebalancing process
+2026-11-16T12:19:50.035067917Z stderr F I1116 12:19:50.028517       1 shared_informer.go:320] Caches are synced for configmaps
+2026-11-16T12:19:50.035070091Z stderr F I1116 12:19:50.028605       1 cache.go:39] Caches are synced for LocalAvailability controller
+2026-11-16T12:19:50.035072078Z stderr F I1116 12:19:50.032646       1 shared_informer.go:320] Caches are synced for node_authorizer
+2026-11-16T12:19:50.049788209Z stderr F E1116 12:19:50.049550       1 controller.go:97] Error removing old endpoints from kubernetes service: no API server IP addresses were listed in storage, refusing to erase all endpoints for the kubernetes Service
+2026-11-16T12:19:50.051200851Z stderr F I1116 12:19:50.050945       1 shared_informer.go:320] Caches are synced for *generic.policySource[*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicy,*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicyBinding,k8s.io/apiserver/pkg/admission/plugin/policy/validating.Validator]
+2026-11-16T12:19:50.051225509Z stderr F I1116 12:19:50.051004       1 policy_source.go:240] refreshing policies
+2026-11-16T12:19:50.056744535Z stderr F I1116 12:19:50.056185       1 controller.go:615] quota admission added evaluator for: leases.coordination.k8s.io
+2026-11-16T12:19:50.652286697Z stderr F I1116 12:19:50.651028       1 controller.go:615] quota admission added evaluator for: serviceaccounts
+2026-11-16T12:19:50.834025678Z stderr F I1116 12:19:50.832700       1 storage_scheduling.go:111] all system priority classes are created successfully or already exist.
+2026-11-16T12:19:53.097335609Z stderr F E1116 12:19:53.047055       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:19:53.097371786Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: error trying to reach service: EOF
+2026-11-16T12:19:53.09737444Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:19:53.097376346Z stderr F  > logger="UnhandledError"
+2026-11-16T12:19:53.958531502Z stderr F I1116 12:19:53.958273       1 handler.go:286] Adding GroupVersion metrics.k8s.io v1beta1 to ResourceManager
+2026-11-16T12:19:54.12315602Z stderr F E1116 12:19:54.123018       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": EOF" logger="UnhandledError"
+2026-11-16T12:19:56.730119342Z stderr F E1116 12:19:56.729737       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T12:19:56.730153087Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: error trying to reach service: EOF
+2026-11-16T12:19:56.730156144Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:19:56.730159017Z stderr F  > logger="UnhandledError"
+2026-11-16T12:19:56.731365178Z stderr F I1116 12:19:56.731194       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:19:56.960441746Z stderr F E1116 12:19:56.960179       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T12:19:56.960528734Z stderr F W1116 12:19:56.960366       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:19:56.960533945Z stderr F E1116 12:19:56.960476       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:19:56.960540217Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:19:56.960542609Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:19:56.960545624Z stderr F  > logger="UnhandledError"
+2026-11-16T12:19:56.963205135Z stderr F I1116 12:19:56.961586       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:19:57.962894549Z stderr F W1116 12:19:57.962644       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:19:57.96294468Z stderr F E1116 12:19:57.962803       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T12:19:57.962948559Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:19:57.962950965Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:19:57.962953435Z stderr F  > logger="UnhandledError"
+2026-11-16T12:19:57.964274026Z stderr F I1116 12:19:57.964144       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:19:59.133851912Z stderr F W1116 12:19:59.132543       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:19:59.133886371Z stderr F E1116 12:19:59.132686       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:19:59.133891952Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:19:59.133894452Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:19:59.133897251Z stderr F  > logger="UnhandledError"
+2026-11-16T12:19:59.133900894Z stderr F E1116 12:19:59.133250       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)" logger="UnhandledError"
+2026-11-16T12:19:59.140020746Z stderr F W1116 12:19:59.139657       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:19:59.140065038Z stderr F E1116 12:19:59.139746       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:19:59.140071319Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:19:59.140073444Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:19:59.140076391Z stderr F  > logger="UnhandledError"
+2026-11-16T12:19:59.142516517Z stderr F E1116 12:19:59.142034       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:19:59.144905334Z stderr F E1116 12:19:59.144760       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:19:59.14793108Z stderr F E1116 12:19:59.147491       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:19:59.187857145Z stderr F E1116 12:19:59.187516       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:19:59.351282516Z stderr F E1116 12:19:59.350817       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:19:59.674135874Z stderr F E1116 12:19:59.673765       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:00.13479791Z stderr F W1116 12:20:00.134529       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:00.134838357Z stderr F E1116 12:20:00.134581       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T12:20:00.134995612Z stderr F W1116 12:20:00.134912       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:00.135006625Z stderr F E1116 12:20:00.134966       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T12:20:00.135009536Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:20:00.135011538Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:20:00.135014033Z stderr F  > logger="UnhandledError"
+2026-11-16T12:20:00.135835003Z stderr F I1116 12:20:00.135644       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:20:00.136382433Z stderr F I1116 12:20:00.136214       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:20:00.317513018Z stderr F E1116 12:20:00.317098       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:01.60205953Z stderr F E1116 12:20:01.601667       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:04.1657159Z stderr F E1116 12:20:04.165418       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:09.437961737Z stderr F E1116 12:20:09.434941       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:10.710375488Z stderr F I1116 12:20:10.709989       1 controller.go:615] quota admission added evaluator for: endpoints
+2026-11-16T12:20:10.730336321Z stderr F W1116 12:20:10.730078       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:10.730363845Z stderr F E1116 12:20:10.730142       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:20:10.730369384Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:20:10.730372904Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:20:10.73037749Z stderr F  > logger="UnhandledError"
+2026-11-16T12:20:10.960303339Z stderr F I1116 12:20:10.959618       1 controller.go:615] quota admission added evaluator for: endpointslices.discovery.k8s.io
+2026-11-16T12:20:11.003316486Z stderr F I1116 12:20:11.003085       1 controller.go:615] quota admission added evaluator for: replicasets.apps
+2026-11-16T12:20:11.104330524Z stderr F I1116 12:20:11.104052       1 controller.go:615] quota admission added evaluator for: deployments.apps
+2026-11-16T12:20:11.732600698Z stderr F W1116 12:20:11.732383       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:11.732629348Z stderr F W1116 12:20:11.732451       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:11.732632077Z stderr F E1116 12:20:11.732480       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T12:20:11.732634739Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:20:11.732636945Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:20:11.732639469Z stderr F  > logger="UnhandledError"
+2026-11-16T12:20:11.73264175Z stderr F E1116 12:20:11.732488       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T12:20:11.733784839Z stderr F I1116 12:20:11.733619       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:20:11.73379997Z stderr F I1116 12:20:11.733666       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T12:20:47.181444783Z stderr F E1116 12:20:47.181240       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:47.18149663Z stderr F W1116 12:20:47.181257       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:47.18416022Z stderr F E1116 12:20:47.181533       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:20:47.184226963Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:20:47.184230294Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:20:47.184233364Z stderr F  > logger="UnhandledError"
+2026-11-16T12:20:47.184465682Z stderr F E1116 12:20:47.184267       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T12:20:47.955276231Z stderr F E1116 12:20:47.954883       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": EOF" logger="UnhandledError"
+2026-11-16T12:20:47.955315032Z stderr F W1116 12:20:47.954993       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T12:20:47.955318053Z stderr F E1116 12:20:47.955041       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T12:20:47.955321833Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T12:20:47.955323969Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T12:20:47.955326266Z stderr F  > logger="UnhandledError"
+2026-11-16T12:20:47.96895685Z stderr F I1116 12:20:47.968584       1 handler.go:286] Adding GroupVersion metrics.k8s.io v1beta1 to ResourceManager
+2026-11-16T12:29:27.987531377Z stderr F I1116 12:29:27.987258       1 controller.go:615] quota admission added evaluator for: namespaces
+2026-11-16T12:38:12.319510514Z stderr F E1116 12:38:12.319330       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:48812: use of closed network connection
+2026-11-16T12:38:22.482530761Z stderr F E1116 12:38:22.482348       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:48846: use of closed network connection
+2026-11-16T12:38:22.673749446Z stderr F E1116 12:38:22.673094       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:48860: use of closed network connection
+2026-11-16T12:38:22.763236622Z stderr F E1116 12:38:22.762909       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:48896: use of closed network connection
+2026-11-16T12:38:25.356014058Z stderr F E1116 12:38:25.355838       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:51290: use of closed network connection
+2026-11-16T12:38:44.997420049Z stderr F E1116 12:38:44.997347       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49096: use of closed network connection
+2026-11-16T12:38:45.091270293Z stderr F E1116 12:38:45.091184       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49104: use of closed network connection
+2026-11-16T12:38:45.188611625Z stderr F E1116 12:38:45.186541       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49136: use of closed network connection
+2026-11-16T12:38:45.278339646Z stderr F E1116 12:38:45.278198       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49082: use of closed network connection
+2026-11-16T12:38:46.206153022Z stderr F E1116 12:38:46.205925       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42050: use of closed network connection
+2026-11-16T12:38:46.209767563Z stderr F E1116 12:38:46.209384       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42044: use of closed network connection
+2026-11-16T12:38:56.298799164Z stderr F E1116 12:38:56.298447       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42078: use of closed network connection
+2026-11-16T12:38:56.991861981Z stderr F E1116 12:38:56.991717       1 upgradeaware.go:427] Error proxying data from client to backend: websocket: close 1006 (abnormal closure): unexpected EOF
+2026-11-16T12:40:37.590543195Z stderr F E1116 12:40:37.590402       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38736: use of closed network connection
+2026-11-16T12:40:38.085994887Z stderr F E1116 12:40:38.085299       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38732: use of closed network connection
+2026-11-16T12:40:38.578750503Z stderr F E1116 12:40:38.578534       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38726: use of closed network connection
+2026-11-16T12:40:39.091787164Z stderr F E1116 12:40:39.091465       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38738: use of closed network connection
+2026-11-16T12:42:59.569703492Z stderr F E1116 12:42:59.569488       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34522: use of closed network connection
+2026-11-16T12:43:00.066797177Z stderr F E1116 12:43:00.066662       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34536: use of closed network connection
+2026-11-16T12:43:00.567770367Z stderr F E1116 12:43:00.567659       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34548: use of closed network connection
+2026-11-16T12:43:01.064071685Z stderr F E1116 12:43:01.063889       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34552: use of closed network connection
+2026-11-16T12:45:49.127769148Z stderr F E1116 12:45:49.127583       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:46770: use of closed network connection
+2026-11-16T12:45:50.12995446Z stderr F E1116 12:45:50.129817       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:46800: use of closed network connection
+2026-11-16T12:45:51.134850828Z stderr F E1116 12:45:51.134702       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:46790: use of closed network connection
+2026-11-16T12:45:52.127508751Z stderr F E1116 12:45:52.127309       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:46774: use of closed network connection
+2026-11-16T12:47:38.645904882Z stderr F E1116 12:47:38.645761       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:60214: use of closed network connection
+2026-11-16T12:47:39.146039397Z stderr F E1116 12:47:39.145910       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:60166: use of closed network connection
+2026-11-16T12:47:39.649559217Z stderr F E1116 12:47:39.649435       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:60188: use of closed network connection
+2026-11-16T12:47:40.148433209Z stderr F E1116 12:47:40.148259       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:60178: use of closed network connection
+2026-11-16T12:47:41.138735259Z stderr F E1116 12:47:41.138633       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:54918: use of closed network connection
+2026-11-16T12:47:41.139791805Z stderr F E1116 12:47:41.139696       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:54934: use of closed network connection
+2026-11-16T12:47:54.999619688Z stderr F E1116 12:47:54.999356       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55474: use of closed network connection
+2026-11-16T12:47:55.047509789Z stderr F E1116 12:47:55.047243       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:54894: use of closed network connection
+2026-11-16T12:48:33.915458146Z stderr F E1116 12:48:33.915336       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:56960: use of closed network connection
+2026-11-16T12:48:34.913774354Z stderr F E1116 12:48:34.913645       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:56976: use of closed network connection
+2026-11-16T12:48:35.887713176Z stderr F E1116 12:48:35.887609       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:56978: use of closed network connection
+2026-11-16T12:48:36.887762722Z stderr F E1116 12:48:36.887584       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:56950: use of closed network connection
+2026-11-16T12:48:37.092162988Z stderr F E1116 12:48:37.091882       1 upgradeaware.go:427] Error proxying data from client to backend: websocket: close 1006 (abnormal closure): unexpected EOF
+2026-11-16T12:51:48.514673814Z stderr F E1116 12:51:48.514435       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:43536: use of closed network connection
+2026-11-16T12:51:48.629075936Z stderr F E1116 12:51:48.628984       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:43550: use of closed network connection
+2026-11-16T12:51:48.805680538Z stderr F E1116 12:51:48.805538       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:43564: use of closed network connection
+2026-11-16T12:51:49.104485634Z stderr F E1116 12:51:49.104403       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:43542: use of closed network connection
+2026-11-16T12:55:00.91791482Z stderr F E1116 12:55:00.917726       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55924: use of closed network connection
+2026-11-16T12:55:01.101427255Z stderr F E1116 12:55:01.100993       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55938: use of closed network connection
+2026-11-16T12:55:01.692660347Z stderr F E1116 12:55:01.692475       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55922: use of closed network connection
+2026-11-16T12:55:01.995514182Z stderr F E1116 12:55:01.995317       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55910: use of closed network connection
+2026-11-16T12:58:13.585909225Z stderr F E1116 12:58:13.585745       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34212: use of closed network connection
+2026-11-16T12:58:13.874297236Z stderr F E1116 12:58:13.874020       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34206: use of closed network connection
+2026-11-16T12:58:14.169483544Z stderr F E1116 12:58:14.169311       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34250: use of closed network connection
+2026-11-16T12:58:14.460413413Z stderr F E1116 12:58:14.460301       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34224: use of closed network connection
+2026-11-16T13:01:25.703481823Z stderr F E1116 13:01:25.703335       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:40924: use of closed network connection
+2026-11-16T13:01:26.000447433Z stderr F E1116 13:01:26.000215       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:40952: use of closed network connection
+2026-11-16T13:01:26.032628264Z stderr F E1116 13:01:26.032478       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:40910: use of closed network connection
+2026-11-16T13:01:26.326013989Z stderr F E1116 13:01:26.325919       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:40938: use of closed network connection
+2026-11-16T13:04:37.346079763Z stderr F E1116 13:04:37.346003       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49444: use of closed network connection
+2026-11-16T13:04:46.325431439Z stderr F E1116 13:04:46.325311       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49418: use of closed network connection
+2026-11-16T13:04:46.619447295Z stderr F E1116 13:04:46.619095       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49438: use of closed network connection
+2026-11-16T13:04:46.909947139Z stderr F E1116 13:04:46.909820       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:49428: use of closed network connection
+2026-11-16T13:07:58.277797807Z stderr F E1116 13:07:58.275783       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42920: use of closed network connection
+2026-11-16T13:08:06.150563946Z stderr F E1116 13:08:06.150432       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42950: use of closed network connection
+2026-11-16T13:08:07.058727341Z stderr F E1116 13:08:07.058485       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42930: use of closed network connection
+2026-11-16T13:08:07.348215275Z stderr F E1116 13:08:07.348058       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:42942: use of closed network connection
+2026-11-16T13:11:17.468466581Z stderr F E1116 13:11:17.468387       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59346: use of closed network connection
+2026-11-16T13:11:18.645448573Z stderr F E1116 13:11:18.645365       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59360: use of closed network connection
+2026-11-16T13:11:18.93376964Z stderr F E1116 13:11:18.933657       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59364: use of closed network connection
+2026-11-16T13:11:19.246430677Z stderr F E1116 13:11:19.246239       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59330: use of closed network connection
+2026-11-16T13:14:30.312560747Z stderr F E1116 13:14:30.312470       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55266: use of closed network connection
+2026-11-16T13:14:31.797524478Z stderr F E1116 13:14:31.797385       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55252: use of closed network connection
+2026-11-16T13:14:32.106305485Z stderr F E1116 13:14:32.106180       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55282: use of closed network connection
+2026-11-16T13:14:32.406841763Z stderr F E1116 13:14:32.405690       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:55240: use of closed network connection
+2026-11-16T13:17:42.123298494Z stderr F E1116 13:17:42.123176       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59718: use of closed network connection
+2026-11-16T13:17:44.464514661Z stderr F E1116 13:17:44.462862       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59702: use of closed network connection
+2026-11-16T13:17:44.753766931Z stderr F E1116 13:17:44.753668       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59688: use of closed network connection
+2026-11-16T13:17:46.481991325Z stderr F E1116 13:17:46.481859       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:59668: use of closed network connection
+2026-11-16T13:20:57.73834228Z stderr F E1116 13:20:57.738194       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:41962: use of closed network connection
+2026-11-16T13:20:58.030839445Z stderr F E1116 13:20:58.030699       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:41986: use of closed network connection
+2026-11-16T13:21:05.52032149Z stderr F E1116 13:21:05.520188       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:41972: use of closed network connection
+2026-11-16T13:21:07.005145639Z stderr F E1116 13:21:07.005045       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:41996: use of closed network connection
+2026-11-16T13:24:16.837765681Z stderr F E1116 13:24:16.837572       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38450: use of closed network connection
+2026-11-16T13:24:24.731531356Z stderr F E1116 13:24:24.731404       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38452: use of closed network connection
+2026-11-16T13:24:27.737826271Z stderr F E1116 13:24:27.737725       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38448: use of closed network connection
+2026-11-16T13:24:28.028415855Z stderr F E1116 13:24:28.027726       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:38472: use of closed network connection
+2026-11-16T13:27:37.621532093Z stderr F E1116 13:27:37.621385       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:33438: use of closed network connection
+2026-11-16T13:27:39.447806222Z stderr F E1116 13:27:39.446960       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:33452: use of closed network connection
+2026-11-16T13:27:48.403320018Z stderr F E1116 13:27:48.403146       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:33450: use of closed network connection
+2026-11-16T13:27:48.701804774Z stderr F E1116 13:27:48.701706       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:33468: use of closed network connection
+2026-11-16T13:27:48.919221142Z stderr F E1116 13:27:48.919061       1 upgradeaware.go:427] Error proxying data from client to backend: websocket: close 1006 (abnormal closure): unexpected EOF
+2026-11-16T13:27:49.592385009Z stderr F I1116 13:27:49.591635       1 controller.go:615] quota admission added evaluator for: horizontalpodautoscalers.autoscaling
+2026-11-16T13:32:48.474406079Z stderr F E1116 13:32:48.473954       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:50148: use of closed network connection
+2026-11-16T13:32:50.189284313Z stderr F E1116 13:32:50.189136       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:50102: use of closed network connection
+2026-11-16T13:32:50.632379052Z stderr F E1116 13:32:50.632232       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:50134: use of closed network connection
+2026-11-16T13:32:51.271589633Z stderr F E1116 13:32:51.271435       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:50158: use of closed network connection
+2026-11-16T13:36:28.829640137Z stderr F E1116 13:36:28.829411       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:37070: use of closed network connection
+2026-11-16T13:36:30.648568163Z stderr F E1116 13:36:30.648398       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:37100: use of closed network connection
+2026-11-16T13:36:43.222513959Z stderr F E1116 13:36:43.222223       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:37110: use of closed network connection
+2026-11-16T13:36:43.639914936Z stderr F E1116 13:36:43.639747       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:37086: use of closed network connection
+2026-11-16T13:40:14.933889183Z stderr F E1116 13:40:14.933773       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34554: use of closed network connection
+2026-11-16T13:40:15.016566841Z stderr F E1116 13:40:15.016115       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34532: use of closed network connection
+2026-11-16T13:40:17.347024565Z stderr F E1116 13:40:17.346868       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34536: use of closed network connection
+2026-11-16T13:40:21.037224685Z stderr F E1116 13:40:21.037134       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:34556: use of closed network connection
+2026-11-16T13:42:07.081895963Z stderr F E1116 13:42:07.081818       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:57664: use of closed network connection
+2026-11-16T13:42:08.081512079Z stderr F E1116 13:42:08.081361       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:57674: use of closed network connection
+2026-11-16T13:42:09.081776706Z stderr F E1116 13:42:09.081671       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:57652: use of closed network connection
+2026-11-16T13:42:10.079066017Z stderr F E1116 13:42:10.078661       1 conn.go:339] Error on socket receive: read tcp 172.19.0.2:6443->172.19.0.1:57682: use of closed network connection
+2026-11-16T13:43:20.294594478Z stderr F E1116 13:43:20.294321       1 upgradeaware.go:427] Error proxying data from client to backend: websocket: close 1006 (abnormal closure): unexpected EOF

@@ -1,0 +1,18 @@
+2026-11-16T12:19:55.128077208Z stderr F I1116 12:19:55.127692       1 server.go:698] "Successfully retrieved node IP(s)" IPs=["172.19.0.2"]
+2026-11-16T12:19:55.133489143Z stderr F I1116 12:19:55.133094       1 conntrack.go:121] "Set sysctl" entry="net/netfilter/nf_conntrack_tcp_timeout_established" value=86400
+2026-11-16T12:19:55.133567764Z stderr F I1116 12:19:55.133348       1 conntrack.go:121] "Set sysctl" entry="net/netfilter/nf_conntrack_tcp_timeout_close_wait" value=3600
+2026-11-16T12:19:55.133579037Z stderr F E1116 12:19:55.133415       1 server.go:234] "Kube-proxy configuration may be incomplete or incorrect" err="nodePortAddresses is unset; NodePort connections will be accepted on all local IPs. Consider using `--nodeport-addresses primary`"
+2026-11-16T12:19:55.205515848Z stderr F I1116 12:19:55.205283       1 server.go:243] "kube-proxy running in dual-stack mode" primary ipFamily="IPv4"
+2026-11-16T12:19:55.205545431Z stderr F I1116 12:19:55.205365       1 server_linux.go:170] "Using iptables Proxier"
+2026-11-16T12:19:55.210846358Z stderr F I1116 12:19:55.210586       1 proxier.go:255] "Setting route_localnet=1 to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses" ipFamily="IPv4"
+2026-11-16T12:19:55.227473315Z stderr F I1116 12:19:55.227206       1 server.go:497] "Version info" version="v1.32.2"
+2026-11-16T12:19:55.227535657Z stderr F I1116 12:19:55.227266       1 server.go:499] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-11-16T12:19:55.252405616Z stderr F I1116 12:19:55.252113       1 config.go:329] "Starting node config controller"
+2026-11-16T12:19:55.253829454Z stderr F I1116 12:19:55.252692       1 shared_informer.go:313] Waiting for caches to sync for node config
+2026-11-16T12:19:55.256482211Z stderr F I1116 12:19:55.256251       1 config.go:199] "Starting service config controller"
+2026-11-16T12:19:55.257735227Z stderr F I1116 12:19:55.256704       1 shared_informer.go:313] Waiting for caches to sync for service config
+2026-11-16T12:19:55.257749578Z stderr F I1116 12:19:55.257286       1 config.go:105] "Starting endpoint slice config controller"
+2026-11-16T12:19:55.257751764Z stderr F I1116 12:19:55.257427       1 shared_informer.go:313] Waiting for caches to sync for endpoint slice config
+2026-11-16T12:19:55.355023691Z stderr F I1116 12:19:55.354571       1 shared_informer.go:320] Caches are synced for node config
+2026-11-16T12:19:55.357053977Z stderr F I1116 12:19:55.356902       1 shared_informer.go:320] Caches are synced for service config
+2026-11-16T12:19:55.359886438Z stderr F I1116 12:19:55.358323       1 shared_informer.go:320] Caches are synced for endpoint slice config

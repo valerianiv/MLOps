@@ -1,0 +1,14 @@
+2026-11-16T14:11:28.422815465Z INFO:     Started server process [1]
+2026-11-16T14:11:28.422877306Z INFO:     Waiting for application startup.
+2026-11-16T14:11:28.428630946Z INFO:     Application startup complete.
+2026-11-16T14:11:28.428947495Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-16T14:11:48.507101311Z {"event": "warmup_complete", "wall": 1794838308.506882, "pod": "api-b4596f8d8-97zkw", "version": "A", "backend_mode": "simulated", "artifact_sha256": "df38b7ce299d0a1f99bf6e36149624c63b92b9edad8942c42ca2440a2f94c196"}
+2026-11-16T14:11:59.285676155Z {"event": "received", "wall": 1794838319.2853634, "pod": "api-b4596f8d8-97zkw", "version": "A", "backend_mode": "simulated", "request_id": "req-000001", "client_ip": "10.244.0.11", "warm": true}
+2026-11-16T14:11:59.639166124Z {"event": "terminal", "wall": 1794838319.6389148, "pod": "api-b4596f8d8-97zkw", "version": "A", "backend_mode": "simulated", "request_id": "req-000001", "outcome": "completed", "queue_seconds": 0.00011077899944211822, "duration": 0.3535694330003025, "ttfc": 0.09748439099985262, "chunks": 8, "cache_hit": false}
+2026-11-16T14:12:02.756823315Z {"event": "received", "wall": 1794838322.756592, "pod": "api-b4596f8d8-97zkw", "version": "A", "backend_mode": "simulated", "request_id": "req-000008", "client_ip": "10.244.0.12", "warm": true}
+2026-11-16T14:12:03.095720813Z {"event": "terminal", "wall": 1794838323.0955563, "pod": "api-b4596f8d8-97zkw", "version": "A", "backend_mode": "simulated", "request_id": "req-000008", "outcome": "completed", "queue_seconds": 0.00015946900020935573, "duration": 0.33898440500070137, "ttfc": 0.09022937300051126, "chunks": 8, "cache_hit": false}
+2026-11-16T14:12:03.119164060Z {"event": "drain_started", "wall": 1794838323.1185024, "pod": "api-b4596f8d8-97zkw", "version": "A", "backend_mode": "simulated"}
+2026-11-16T14:12:11.225266255Z INFO:     Shutting down
+2026-11-16T14:12:11.326260396Z INFO:     Waiting for application shutdown.
+2026-11-16T14:12:11.326312053Z INFO:     Application shutdown complete.
+2026-11-16T14:12:11.326316920Z INFO:     Finished server process [1]

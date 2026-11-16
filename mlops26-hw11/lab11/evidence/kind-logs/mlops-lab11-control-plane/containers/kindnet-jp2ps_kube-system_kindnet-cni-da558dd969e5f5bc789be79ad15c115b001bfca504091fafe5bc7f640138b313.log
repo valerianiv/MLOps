@@ -1,0 +1,344 @@
+2026-11-16T11:38:44.019447127Z stderr F I1116 11:38:43.580147       1 main.go:390] probe TCP address mlops-lab11-control-plane:6443
+2026-11-16T11:38:44.021283127Z stderr F I1116 11:38:44.020936       1 main.go:109] connected to apiserver: https://mlops-lab11-control-plane:6443
+2026-11-16T11:38:44.021622039Z stderr F I1116 11:38:44.021373       1 main.go:139] hostIP = 172.19.0.2
+2026-11-16T11:38:44.021630992Z stderr F podIP = 172.19.0.2
+2026-11-16T11:38:44.021633112Z stderr F I1116 11:38:44.021508       1 main.go:148] setting mtu 1500 for CNI 
+2026-11-16T11:38:44.021634664Z stderr F I1116 11:38:44.021520       1 main.go:178] kindnetd IP family: "ipv4"
+2026-11-16T11:38:44.021636296Z stderr F I1116 11:38:44.021548       1 main.go:182] noMask IPv4 subnets: [10.244.0.0/16]
+2026-11-16T11:38:44.42180487Z stderr F I1116 11:38:44.421619       1 controller.go:361] Starting controller kube-network-policies
+2026-11-16T11:38:44.42182773Z stderr F I1116 11:38:44.421659       1 controller.go:365] Waiting for informer caches to sync
+2026-11-16T11:38:44.42183044Z stderr F I1116 11:38:44.421665       1 shared_informer.go:313] Waiting for caches to sync for kube-network-policies
+2026-11-16T11:38:44.722878769Z stderr F I1116 11:38:44.722643       1 shared_informer.go:320] Caches are synced for kube-network-policies
+2026-11-16T11:38:44.722913828Z stderr F I1116 11:38:44.722700       1 metrics.go:61] Registering metrics
+2026-11-16T11:38:44.722930505Z stderr F I1116 11:38:44.722793       1 controller.go:401] Syncing nftables rules
+2026-11-16T11:38:44.723198909Z stderr F I1116 11:38:44.723024       1 controller.go:386] error reading nfqueue stats: open /proc/net/netfilter/nfnetlink_queue: no such file or directory
+2026-11-16T11:38:54.422258548Z stderr F I1116 11:38:54.422031       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:38:54.422277912Z stderr F I1116 11:38:54.422090       1 main.go:301] handling current node
+2026-11-16T11:39:04.425409527Z stderr F I1116 11:39:04.425162       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:39:04.425444797Z stderr F I1116 11:39:04.425226       1 main.go:301] handling current node
+2026-11-16T11:39:14.42748627Z stderr F I1116 11:39:14.427307       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:39:14.427511128Z stderr F I1116 11:39:14.427349       1 main.go:301] handling current node
+2026-11-16T11:39:24.419362561Z stderr F I1116 11:39:24.419083       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:39:24.419384423Z stderr F I1116 11:39:24.419133       1 main.go:301] handling current node
+2026-11-16T11:39:34.420028569Z stderr F I1116 11:39:34.419704       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:39:34.420053084Z stderr F I1116 11:39:34.419810       1 main.go:301] handling current node
+2026-11-16T11:39:44.417987197Z stderr F I1116 11:39:44.417617       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:39:44.418020063Z stderr F I1116 11:39:44.417715       1 main.go:301] handling current node
+2026-11-16T11:39:54.421731849Z stderr F I1116 11:39:54.421560       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:39:54.421758161Z stderr F I1116 11:39:54.421599       1 main.go:301] handling current node
+2026-11-16T11:40:04.415655158Z stderr F I1116 11:40:04.415353       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:40:04.415692455Z stderr F I1116 11:40:04.415414       1 main.go:301] handling current node
+2026-11-16T11:40:14.4181666Z stderr F I1116 11:40:14.417970       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:40:14.418192269Z stderr F I1116 11:40:14.418012       1 main.go:301] handling current node
+2026-11-16T11:40:24.419164197Z stderr F I1116 11:40:24.418899       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:40:24.419194081Z stderr F I1116 11:40:24.418957       1 main.go:301] handling current node
+2026-11-16T11:40:34.421473502Z stderr F I1116 11:40:34.421222       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:40:34.421643591Z stderr F I1116 11:40:34.421264       1 main.go:301] handling current node
+2026-11-16T11:40:44.411702137Z stderr F I1116 11:40:44.411462       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:40:44.411735927Z stderr F I1116 11:40:44.411504       1 main.go:301] handling current node
+2026-11-16T11:40:54.416476071Z stderr F I1116 11:40:54.416328       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:40:54.416514759Z stderr F I1116 11:40:54.416376       1 main.go:301] handling current node
+2026-11-16T11:41:04.416211821Z stderr F I1116 11:41:04.415984       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:41:04.416239743Z stderr F I1116 11:41:04.416025       1 main.go:301] handling current node
+2026-11-16T11:41:14.410268886Z stderr F I1116 11:41:14.409872       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:41:14.410320498Z stderr F I1116 11:41:14.409940       1 main.go:301] handling current node
+2026-11-16T11:41:24.410621863Z stderr F I1116 11:41:24.410023       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:41:24.410672183Z stderr F I1116 11:41:24.410161       1 main.go:301] handling current node
+2026-11-16T11:41:34.417494647Z stderr F I1116 11:41:34.417227       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:41:34.417526898Z stderr F I1116 11:41:34.417304       1 main.go:301] handling current node
+2026-11-16T11:41:44.407582803Z stderr F I1116 11:41:44.407313       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:41:44.407609059Z stderr F I1116 11:41:44.407371       1 main.go:301] handling current node
+2026-11-16T11:41:54.407506771Z stderr F I1116 11:41:54.406865       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:41:54.40760585Z stderr F I1116 11:41:54.407030       1 main.go:301] handling current node
+2026-11-16T11:42:04.414372207Z stderr F I1116 11:42:04.414034       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:42:04.414415815Z stderr F I1116 11:42:04.414118       1 main.go:301] handling current node
+2026-11-16T11:42:14.4054632Z stderr F I1116 11:42:14.404842       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:42:14.405523241Z stderr F I1116 11:42:14.405028       1 main.go:301] handling current node
+2026-11-16T11:42:24.409729531Z stderr F I1116 11:42:24.409106       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:42:24.409776827Z stderr F I1116 11:42:24.409279       1 main.go:301] handling current node
+2026-11-16T11:42:34.402924837Z stderr F I1116 11:42:34.402466       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:42:34.402986124Z stderr F I1116 11:42:34.402561       1 main.go:301] handling current node
+2026-11-16T11:42:44.403397923Z stderr F I1116 11:42:44.403074       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:42:44.403437038Z stderr F I1116 11:42:44.403134       1 main.go:301] handling current node
+2026-11-16T11:42:54.401844901Z stderr F I1116 11:42:54.401337       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:42:54.401887308Z stderr F I1116 11:42:54.401460       1 main.go:301] handling current node
+2026-11-16T11:43:04.406707504Z stderr F I1116 11:43:04.406446       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:43:04.406737112Z stderr F I1116 11:43:04.406488       1 main.go:301] handling current node
+2026-11-16T11:43:14.402147524Z stderr F I1116 11:43:14.401816       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:43:14.402190204Z stderr F I1116 11:43:14.401874       1 main.go:301] handling current node
+2026-11-16T11:43:24.404122924Z stderr F I1116 11:43:24.403920       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:43:24.404169121Z stderr F I1116 11:43:24.403960       1 main.go:301] handling current node
+2026-11-16T11:43:34.399522018Z stderr F I1116 11:43:34.399074       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:43:34.399597142Z stderr F I1116 11:43:34.399137       1 main.go:301] handling current node
+2026-11-16T11:43:44.397802142Z stderr F I1116 11:43:44.397443       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:43:44.397838914Z stderr F I1116 11:43:44.397513       1 main.go:301] handling current node
+2026-11-16T11:43:54.402235296Z stderr F I1116 11:43:54.401974       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:43:54.402264039Z stderr F I1116 11:43:54.402056       1 main.go:301] handling current node
+2026-11-16T11:44:04.396500954Z stderr F I1116 11:44:04.396014       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:44:04.396566544Z stderr F I1116 11:44:04.396118       1 main.go:301] handling current node
+2026-11-16T11:44:14.396748553Z stderr F I1116 11:44:14.396485       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:44:14.396780887Z stderr F I1116 11:44:14.396530       1 main.go:301] handling current node
+2026-11-16T11:44:24.403098931Z stderr F I1116 11:44:24.402871       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:44:24.403132316Z stderr F I1116 11:44:24.402911       1 main.go:301] handling current node
+2026-11-16T11:44:34.393603966Z stderr F I1116 11:44:34.393341       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:44:34.393638828Z stderr F I1116 11:44:34.393371       1 main.go:301] handling current node
+2026-11-16T11:44:44.393955932Z stderr F I1116 11:44:44.393782       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:44:44.393982125Z stderr F I1116 11:44:44.393819       1 main.go:301] handling current node
+2026-11-16T11:44:54.39214061Z stderr F I1116 11:44:54.391967       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:44:54.392164515Z stderr F I1116 11:44:54.392004       1 main.go:301] handling current node
+2026-11-16T11:45:04.393342249Z stderr F I1116 11:45:04.393098       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:45:04.393378284Z stderr F I1116 11:45:04.393140       1 main.go:301] handling current node
+2026-11-16T11:45:14.392616891Z stderr F I1116 11:45:14.392409       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:45:14.392648099Z stderr F I1116 11:45:14.392455       1 main.go:301] handling current node
+2026-11-16T11:45:24.397849175Z stderr F I1116 11:45:24.397586       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:45:24.397884453Z stderr F I1116 11:45:24.397625       1 main.go:301] handling current node
+2026-11-16T11:45:34.389099131Z stderr F I1116 11:45:34.388877       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:45:34.389145759Z stderr F I1116 11:45:34.388924       1 main.go:301] handling current node
+2026-11-16T11:45:44.38935162Z stderr F I1116 11:45:44.389075       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:45:44.389381586Z stderr F I1116 11:45:44.389146       1 main.go:301] handling current node
+2026-11-16T11:45:54.387304612Z stderr F I1116 11:45:54.387099       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:45:54.387331158Z stderr F I1116 11:45:54.387146       1 main.go:301] handling current node
+2026-11-16T11:46:04.387362232Z stderr F I1116 11:46:04.386917       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:46:04.387405709Z stderr F I1116 11:46:04.387026       1 main.go:301] handling current node
+2026-11-16T11:46:14.387859882Z stderr F I1116 11:46:14.387632       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:46:14.387889175Z stderr F I1116 11:46:14.387676       1 main.go:301] handling current node
+2026-11-16T11:46:24.385160896Z stderr F I1116 11:46:24.385009       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:46:24.385187202Z stderr F I1116 11:46:24.385044       1 main.go:301] handling current node
+2026-11-16T11:46:34.386067211Z stderr F I1116 11:46:34.385791       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:46:34.386098418Z stderr F I1116 11:46:34.385852       1 main.go:301] handling current node
+2026-11-16T11:46:44.384658011Z stderr F I1116 11:46:44.384446       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:46:44.384706118Z stderr F I1116 11:46:44.384496       1 main.go:301] handling current node
+2026-11-16T11:46:54.389507144Z stderr F I1116 11:46:54.389164       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:46:54.389548292Z stderr F I1116 11:46:54.389206       1 main.go:301] handling current node
+2026-11-16T11:47:04.384095282Z stderr F I1116 11:47:04.383858       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:47:04.384119899Z stderr F I1116 11:47:04.383915       1 main.go:301] handling current node
+2026-11-16T11:47:14.383479635Z stderr F I1116 11:47:14.383075       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:47:14.383528664Z stderr F I1116 11:47:14.383161       1 main.go:301] handling current node
+2026-11-16T11:47:24.383822553Z stderr F I1116 11:47:24.383533       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:47:24.383854574Z stderr F I1116 11:47:24.383594       1 main.go:301] handling current node
+2026-11-16T11:47:34.381427738Z stderr F I1116 11:47:34.381057       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:47:34.381538315Z stderr F I1116 11:47:34.381127       1 main.go:301] handling current node
+2026-11-16T11:47:44.379590055Z stderr F I1116 11:47:44.379390       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:47:44.379621658Z stderr F I1116 11:47:44.379421       1 main.go:301] handling current node
+2026-11-16T11:47:54.383643269Z stderr F I1116 11:47:54.383324       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:47:54.383676182Z stderr F I1116 11:47:54.383395       1 main.go:301] handling current node
+2026-11-16T11:48:04.379227075Z stderr F I1116 11:48:04.378942       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:48:04.3792605Z stderr F I1116 11:48:04.379002       1 main.go:301] handling current node
+2026-11-16T11:48:14.377715092Z stderr F I1116 11:48:14.377582       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:48:14.377739697Z stderr F I1116 11:48:14.377622       1 main.go:301] handling current node
+2026-11-16T11:48:24.381335628Z stderr F I1116 11:48:24.381135       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:48:24.38136272Z stderr F I1116 11:48:24.381170       1 main.go:301] handling current node
+2026-11-16T11:48:34.376710484Z stderr F I1116 11:48:34.376509       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:48:34.37673831Z stderr F I1116 11:48:34.376549       1 main.go:301] handling current node
+2026-11-16T11:48:44.376320156Z stderr F I1116 11:48:44.376034       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:48:44.376360823Z stderr F I1116 11:48:44.376096       1 main.go:301] handling current node
+2026-11-16T11:48:54.380019023Z stderr F I1116 11:48:54.379570       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:48:54.380109121Z stderr F I1116 11:48:54.379692       1 main.go:301] handling current node
+2026-11-16T11:49:04.375058076Z stderr F I1116 11:49:04.374845       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:49:04.37508528Z stderr F I1116 11:49:04.374888       1 main.go:301] handling current node
+2026-11-16T11:49:14.373673857Z stderr F I1116 11:49:14.373464       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:49:14.373704512Z stderr F I1116 11:49:14.373508       1 main.go:301] handling current node
+2026-11-16T11:49:24.37509683Z stderr F I1116 11:49:24.374692       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:49:24.37519256Z stderr F I1116 11:49:24.374758       1 main.go:301] handling current node
+2026-11-16T11:49:34.370700801Z stderr F I1116 11:49:34.370447       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:49:34.370727667Z stderr F I1116 11:49:34.370517       1 main.go:301] handling current node
+2026-11-16T11:49:44.371474051Z stderr F I1116 11:49:44.371251       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:49:44.371504097Z stderr F I1116 11:49:44.371316       1 main.go:301] handling current node
+2026-11-16T11:49:54.371626952Z stderr F I1116 11:49:54.371382       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:49:54.371654099Z stderr F I1116 11:49:54.371440       1 main.go:301] handling current node
+2026-11-16T11:50:04.370185165Z stderr F I1116 11:50:04.369970       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:50:04.370211737Z stderr F I1116 11:50:04.370011       1 main.go:301] handling current node
+2026-11-16T11:50:14.372766569Z stderr F I1116 11:50:14.372562       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:50:14.372798Z stderr F I1116 11:50:14.372605       1 main.go:301] handling current node
+2026-11-16T11:50:24.375488725Z stderr F I1116 11:50:24.375320       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:50:24.375515745Z stderr F I1116 11:50:24.375357       1 main.go:301] handling current node
+2026-11-16T11:50:34.36783706Z stderr F I1116 11:50:34.367567       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:50:34.367878909Z stderr F I1116 11:50:34.367650       1 main.go:301] handling current node
+2026-11-16T11:50:44.366896989Z stderr F I1116 11:50:44.366663       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:50:44.366925559Z stderr F I1116 11:50:44.366700       1 main.go:301] handling current node
+2026-11-16T11:50:54.366846261Z stderr F I1116 11:50:54.366546       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:50:54.366883525Z stderr F I1116 11:50:54.366631       1 main.go:301] handling current node
+2026-11-16T11:51:04.366496376Z stderr F I1116 11:51:04.366233       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:51:04.366524804Z stderr F I1116 11:51:04.366328       1 main.go:301] handling current node
+2026-11-16T11:51:14.364915659Z stderr F I1116 11:51:14.364684       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:51:14.364946897Z stderr F I1116 11:51:14.364739       1 main.go:301] handling current node
+2026-11-16T11:51:24.368323191Z stderr F I1116 11:51:24.368149       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:51:24.368360195Z stderr F I1116 11:51:24.368202       1 main.go:301] handling current node
+2026-11-16T11:51:34.362952169Z stderr F I1116 11:51:34.362792       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:51:34.362983642Z stderr F I1116 11:51:34.362817       1 main.go:301] handling current node
+2026-11-16T11:51:44.362270451Z stderr F I1116 11:51:44.362111       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:51:44.362305684Z stderr F I1116 11:51:44.362162       1 main.go:301] handling current node
+2026-11-16T11:51:54.360122725Z stderr F I1116 11:51:54.359865       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:51:54.360151757Z stderr F I1116 11:51:54.359982       1 main.go:301] handling current node
+2026-11-16T11:52:04.360961026Z stderr F I1116 11:52:04.360755       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:52:04.360994033Z stderr F I1116 11:52:04.360799       1 main.go:301] handling current node
+2026-11-16T11:52:14.363488212Z stderr F I1116 11:52:14.363270       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:52:14.363524336Z stderr F I1116 11:52:14.363316       1 main.go:301] handling current node
+2026-11-16T11:52:24.364443529Z stderr F I1116 11:52:24.364246       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:52:24.364494231Z stderr F I1116 11:52:24.364295       1 main.go:301] handling current node
+2026-11-16T11:52:34.358804595Z stderr F I1116 11:52:34.358542       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:52:34.358843444Z stderr F I1116 11:52:34.358622       1 main.go:301] handling current node
+2026-11-16T11:52:44.357776327Z stderr F I1116 11:52:44.357492       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:52:44.357811334Z stderr F I1116 11:52:44.357549       1 main.go:301] handling current node
+2026-11-16T11:52:54.359802975Z stderr F I1116 11:52:54.359464       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:52:54.359842577Z stderr F I1116 11:52:54.359597       1 main.go:301] handling current node
+2026-11-16T11:53:04.356142098Z stderr F I1116 11:53:04.355901       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:53:04.356169702Z stderr F I1116 11:53:04.355952       1 main.go:301] handling current node
+2026-11-16T11:53:14.357817975Z stderr F I1116 11:53:14.357507       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:53:14.357858198Z stderr F I1116 11:53:14.357579       1 main.go:301] handling current node
+2026-11-16T11:53:24.353978036Z stderr F I1116 11:53:24.353659       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:53:24.354018098Z stderr F I1116 11:53:24.353757       1 main.go:301] handling current node
+2026-11-16T11:53:34.354079461Z stderr F I1116 11:53:34.353835       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:53:34.354123578Z stderr F I1116 11:53:34.353889       1 main.go:301] handling current node
+2026-11-16T11:53:44.353494406Z stderr F I1116 11:53:44.353249       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:53:44.353533951Z stderr F I1116 11:53:44.353317       1 main.go:301] handling current node
+2026-11-16T11:53:54.35186887Z stderr F I1116 11:53:54.351629       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:53:54.351900597Z stderr F I1116 11:53:54.351703       1 main.go:301] handling current node
+2026-11-16T11:54:04.357756127Z stderr F I1116 11:54:04.357503       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:54:04.357793561Z stderr F I1116 11:54:04.357565       1 main.go:301] handling current node
+2026-11-16T11:54:14.355242786Z stderr F I1116 11:54:14.355075       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:54:14.355268553Z stderr F I1116 11:54:14.355141       1 main.go:301] handling current node
+2026-11-16T11:54:24.347787319Z stderr F I1116 11:54:24.347543       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:54:24.347819638Z stderr F I1116 11:54:24.347636       1 main.go:301] handling current node
+2026-11-16T11:54:34.348974497Z stderr F I1116 11:54:34.348798       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:54:34.349002356Z stderr F I1116 11:54:34.348833       1 main.go:301] handling current node
+2026-11-16T11:54:44.348807496Z stderr F I1116 11:54:44.348518       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:54:44.348871223Z stderr F I1116 11:54:44.348561       1 main.go:301] handling current node
+2026-11-16T11:54:54.349053856Z stderr F I1116 11:54:54.348867       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:54:54.349081417Z stderr F I1116 11:54:54.348899       1 main.go:301] handling current node
+2026-11-16T11:55:04.354445949Z stderr F I1116 11:55:04.354245       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:55:04.354464749Z stderr F I1116 11:55:04.354283       1 main.go:301] handling current node
+2026-11-16T11:55:14.355696408Z stderr F I1116 11:55:14.355507       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:55:14.355727868Z stderr F I1116 11:55:14.355550       1 main.go:301] handling current node
+2026-11-16T11:55:24.346937896Z stderr F I1116 11:55:24.346729       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:55:24.346980418Z stderr F I1116 11:55:24.346779       1 main.go:301] handling current node
+2026-11-16T11:55:34.345068735Z stderr F I1116 11:55:34.344764       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:55:34.345099737Z stderr F I1116 11:55:34.344882       1 main.go:301] handling current node
+2026-11-16T11:55:44.344770616Z stderr F I1116 11:55:44.344263       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:55:44.344817785Z stderr F I1116 11:55:44.344345       1 main.go:301] handling current node
+2026-11-16T11:55:54.347701201Z stderr F I1116 11:55:54.347120       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:55:54.34776014Z stderr F I1116 11:55:54.347210       1 main.go:301] handling current node
+2026-11-16T11:56:04.343177061Z stderr F I1116 11:56:04.342627       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:56:04.343227583Z stderr F I1116 11:56:04.342824       1 main.go:301] handling current node
+2026-11-16T11:56:14.34341728Z stderr F I1116 11:56:14.342949       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:56:14.343475935Z stderr F I1116 11:56:14.343048       1 main.go:301] handling current node
+2026-11-16T11:56:24.341451822Z stderr F I1116 11:56:24.340999       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:56:24.341492087Z stderr F I1116 11:56:24.341092       1 main.go:301] handling current node
+2026-11-16T11:56:34.340450374Z stderr F I1116 11:56:34.340243       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:56:34.340482638Z stderr F I1116 11:56:34.340290       1 main.go:301] handling current node
+2026-11-16T11:56:44.340322313Z stderr F I1116 11:56:44.340088       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:56:44.340354192Z stderr F I1116 11:56:44.340137       1 main.go:301] handling current node
+2026-11-16T11:56:54.338084566Z stderr F I1116 11:56:54.337549       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:56:54.338143548Z stderr F I1116 11:56:54.337659       1 main.go:301] handling current node
+2026-11-16T11:57:04.339634258Z stderr F I1116 11:57:04.339300       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:57:04.339689758Z stderr F I1116 11:57:04.339342       1 main.go:301] handling current node
+2026-11-16T11:57:14.34705284Z stderr F I1116 11:57:14.346424       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:57:14.347101123Z stderr F I1116 11:57:14.346516       1 main.go:301] handling current node
+2026-11-16T11:57:24.336008556Z stderr F I1116 11:57:24.335512       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:57:24.336056619Z stderr F I1116 11:57:24.335617       1 main.go:301] handling current node
+2026-11-16T11:57:34.336011643Z stderr F I1116 11:57:34.335566       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:57:34.336078468Z stderr F I1116 11:57:34.335669       1 main.go:301] handling current node
+2026-11-16T11:57:44.337058213Z stderr F I1116 11:57:44.336070       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:57:44.337113995Z stderr F I1116 11:57:44.336161       1 main.go:301] handling current node
+2026-11-16T11:57:54.335203177Z stderr F I1116 11:57:54.334752       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:57:54.335261898Z stderr F I1116 11:57:54.334836       1 main.go:301] handling current node
+2026-11-16T11:58:04.340924844Z stderr F I1116 11:58:04.340392       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:58:04.340989609Z stderr F I1116 11:58:04.340483       1 main.go:301] handling current node
+2026-11-16T11:58:14.337772411Z stderr F I1116 11:58:14.337256       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:58:14.337822009Z stderr F I1116 11:58:14.337343       1 main.go:301] handling current node
+2026-11-16T11:58:24.331807037Z stderr F I1116 11:58:24.331352       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:58:24.331863706Z stderr F I1116 11:58:24.331466       1 main.go:301] handling current node
+2026-11-16T11:58:34.333904451Z stderr F I1116 11:58:34.333312       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:58:34.333953636Z stderr F I1116 11:58:34.333387       1 main.go:301] handling current node
+2026-11-16T11:58:44.331017264Z stderr F I1116 11:58:44.330476       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:58:44.33106226Z stderr F I1116 11:58:44.330564       1 main.go:301] handling current node
+2026-11-16T11:58:54.329132984Z stderr F I1116 11:58:54.328824       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:58:54.329203207Z stderr F I1116 11:58:54.328893       1 main.go:301] handling current node
+2026-11-16T11:59:04.33617643Z stderr F I1116 11:59:04.335732       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:59:04.336238834Z stderr F I1116 11:59:04.335821       1 main.go:301] handling current node
+2026-11-16T11:59:14.332599961Z stderr F I1116 11:59:14.332339       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:59:14.332637714Z stderr F I1116 11:59:14.332396       1 main.go:301] handling current node
+2026-11-16T11:59:24.329211669Z stderr F I1116 11:59:24.328817       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:59:24.329244915Z stderr F I1116 11:59:24.328880       1 main.go:301] handling current node
+2026-11-16T11:59:34.329621207Z stderr F I1116 11:59:34.329395       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:59:34.329656542Z stderr F I1116 11:59:34.329443       1 main.go:301] handling current node
+2026-11-16T11:59:44.327698488Z stderr F I1116 11:59:44.327324       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:59:44.327736145Z stderr F I1116 11:59:44.327384       1 main.go:301] handling current node
+2026-11-16T11:59:54.328454322Z stderr F I1116 11:59:54.327946       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T11:59:54.328497391Z stderr F I1116 11:59:54.328029       1 main.go:301] handling current node
+2026-11-16T12:00:04.33178684Z stderr F I1116 12:00:04.331293       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:00:04.331849313Z stderr F I1116 12:00:04.331386       1 main.go:301] handling current node
+2026-11-16T12:00:14.324466967Z stderr F I1116 12:00:14.324296       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:00:14.324508897Z stderr F I1116 12:00:14.324348       1 main.go:301] handling current node
+2026-11-16T12:00:24.322702975Z stderr F I1116 12:00:24.322154       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:00:24.322755417Z stderr F I1116 12:00:24.322241       1 main.go:301] handling current node
+2026-11-16T12:00:34.320264621Z stderr F I1116 12:00:34.319771       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:00:34.320316768Z stderr F I1116 12:00:34.319874       1 main.go:301] handling current node
+2026-11-16T12:00:44.320399024Z stderr F I1116 12:00:44.319807       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:00:44.320480164Z stderr F I1116 12:00:44.319938       1 main.go:301] handling current node
+2026-11-16T12:00:54.320458002Z stderr F I1116 12:00:54.320180       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:00:54.320494628Z stderr F I1116 12:00:54.320242       1 main.go:301] handling current node
+2026-11-16T12:01:04.320291257Z stderr F I1116 12:01:04.319823       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:01:04.320516603Z stderr F I1116 12:01:04.319937       1 main.go:301] handling current node
+2026-11-16T12:01:14.320865903Z stderr F I1116 12:01:14.320361       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:01:14.321036732Z stderr F I1116 12:01:14.320457       1 main.go:301] handling current node
+2026-11-16T12:01:24.317160008Z stderr F I1116 12:01:24.316766       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:01:24.317213202Z stderr F I1116 12:01:24.316862       1 main.go:301] handling current node
+2026-11-16T12:01:34.318533918Z stderr F I1116 12:01:34.317970       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:01:34.318661865Z stderr F I1116 12:01:34.318087       1 main.go:301] handling current node
+2026-11-16T12:01:44.316537307Z stderr F I1116 12:01:44.316149       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:01:44.31660147Z stderr F I1116 12:01:44.316246       1 main.go:301] handling current node
+2026-11-16T12:01:54.315383114Z stderr F I1116 12:01:54.314996       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:01:54.315444509Z stderr F I1116 12:01:54.315110       1 main.go:301] handling current node
+2026-11-16T12:02:04.316772011Z stderr F I1116 12:02:04.316372       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:02:04.316842829Z stderr F I1116 12:02:04.316472       1 main.go:301] handling current node
+2026-11-16T12:02:14.322210556Z stderr F I1116 12:02:14.321744       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:02:14.322281173Z stderr F I1116 12:02:14.321867       1 main.go:301] handling current node
+2026-11-16T12:02:24.312522471Z stderr F I1116 12:02:24.312232       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:02:24.312565008Z stderr F I1116 12:02:24.312291       1 main.go:301] handling current node
+2026-11-16T12:02:34.317199876Z stderr F I1116 12:02:34.316696       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:02:34.317265416Z stderr F I1116 12:02:34.316800       1 main.go:301] handling current node
+2026-11-16T12:02:44.312484277Z stderr F I1116 12:02:44.312007       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:02:44.312566045Z stderr F I1116 12:02:44.312154       1 main.go:301] handling current node
+2026-11-16T12:02:54.311614361Z stderr F I1116 12:02:54.310933       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:02:54.31169053Z stderr F I1116 12:02:54.311108       1 main.go:301] handling current node
+2026-11-16T12:03:04.310093506Z stderr F I1116 12:03:04.309672       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:03:04.310139948Z stderr F I1116 12:03:04.309754       1 main.go:301] handling current node
+2026-11-16T12:03:14.313459233Z stderr F I1116 12:03:14.313146       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:03:14.313622897Z stderr F I1116 12:03:14.313214       1 main.go:301] handling current node
+2026-11-16T12:03:24.306302878Z stderr F I1116 12:03:24.305773       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:03:24.306374946Z stderr F I1116 12:03:24.305899       1 main.go:301] handling current node
+2026-11-16T12:03:34.306639848Z stderr F I1116 12:03:34.306313       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:03:34.30668648Z stderr F I1116 12:03:34.306372       1 main.go:301] handling current node
+2026-11-16T12:03:44.305304034Z stderr F I1116 12:03:44.304993       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:03:44.305351717Z stderr F I1116 12:03:44.305048       1 main.go:301] handling current node
+2026-11-16T12:03:54.310082563Z stderr F I1116 12:03:54.309725       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:03:54.310126525Z stderr F I1116 12:03:54.309779       1 main.go:301] handling current node
+2026-11-16T12:04:04.302557051Z stderr F I1116 12:04:04.302348       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:04:04.302591603Z stderr F I1116 12:04:04.302403       1 main.go:301] handling current node
+2026-11-16T12:04:14.302322225Z stderr F I1116 12:04:14.302054       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:04:14.302392849Z stderr F I1116 12:04:14.302123       1 main.go:301] handling current node
+2026-11-16T12:04:24.298953565Z stderr F I1116 12:04:24.298522       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:04:24.299007142Z stderr F I1116 12:04:24.298635       1 main.go:301] handling current node
+2026-11-16T12:04:34.300350868Z stderr F I1116 12:04:34.299347       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:04:34.300412373Z stderr F I1116 12:04:34.299434       1 main.go:301] handling current node
+2026-11-16T12:04:44.298644939Z stderr F I1116 12:04:44.298423       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:04:44.29896933Z stderr F I1116 12:04:44.298639       1 main.go:301] handling current node
+2026-11-16T12:04:54.295015877Z stderr F I1116 12:04:54.294505       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:04:54.29508315Z stderr F I1116 12:04:54.294606       1 main.go:301] handling current node
+2026-11-16T12:05:04.291764732Z stderr F I1116 12:05:04.291405       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:05:04.291808946Z stderr F I1116 12:05:04.291476       1 main.go:301] handling current node
+2026-11-16T12:05:14.29292922Z stderr F I1116 12:05:14.292432       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:05:14.292989967Z stderr F I1116 12:05:14.292581       1 main.go:301] handling current node
+2026-11-16T12:05:24.294636041Z stderr F I1116 12:05:24.294175       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:05:24.294683582Z stderr F I1116 12:05:24.294438       1 main.go:301] handling current node
+2026-11-16T12:05:34.289203797Z stderr F I1116 12:05:34.288654       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:05:34.289271196Z stderr F I1116 12:05:34.288743       1 main.go:301] handling current node
+2026-11-16T12:05:44.288193804Z stderr F I1116 12:05:44.287780       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:05:44.288274076Z stderr F I1116 12:05:44.287877       1 main.go:301] handling current node
+2026-11-16T12:05:54.282444777Z stderr F I1116 12:05:54.282148       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:05:54.282496749Z stderr F I1116 12:05:54.282234       1 main.go:301] handling current node
+2026-11-16T12:06:04.283067586Z stderr F I1116 12:06:04.282489       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:06:04.283137825Z stderr F I1116 12:06:04.282617       1 main.go:301] handling current node
+2026-11-16T12:06:14.281425151Z stderr F I1116 12:06:14.281023       1 main.go:297] Handling node with IPs: map[172.19.0.2:{}]
+2026-11-16T12:06:14.28147355Z stderr F I1116 12:06:14.281091       1 main.go:301] handling current node

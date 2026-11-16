@@ -1,0 +1,353 @@
+2026-11-16T11:38:29.307497293Z stderr F I1116 11:38:29.307233       1 serving.go:386] Generated self-signed cert in-memory
+2026-11-16T11:38:29.85646025Z stderr F I1116 11:38:29.856208       1 controllermanager.go:185] "Starting" version="v1.32.2"
+2026-11-16T11:38:29.856489879Z stderr F I1116 11:38:29.856243       1 controllermanager.go:187] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-11-16T11:38:29.857669921Z stderr F I1116 11:38:29.857486       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+2026-11-16T11:38:29.857680655Z stderr F I1116 11:38:29.857523       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-11-16T11:38:29.857681935Z stderr F I1116 11:38:29.857534       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+2026-11-16T11:38:29.857755975Z stderr F I1116 11:38:29.857509       1 secure_serving.go:213] Serving securely on 127.0.0.1:10257
+2026-11-16T11:38:29.858564016Z stderr F I1116 11:38:29.858334       1 leaderelection.go:257] attempting to acquire leader lease kube-system/kube-controller-manager...
+2026-11-16T11:38:31.155999824Z stderr F E1116 11:38:31.154340       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-11-16T11:38:35.064267207Z stderr F I1116 11:38:35.063997       1 leaderelection.go:271] successfully acquired lease kube-system/kube-controller-manager
+2026-11-16T11:38:35.064308897Z stderr F I1116 11:38:35.064240       1 event.go:389] "Event occurred" object="kube-system/kube-controller-manager" fieldPath="" kind="Lease" apiVersion="coordination.k8s.io/v1" type="Normal" reason="LeaderElection" message="mlops-lab11-control-plane_1eacb461-7235-4562-b1a2-8cfd576e7b84 became leader"
+2026-11-16T11:38:35.067511414Z stderr F I1116 11:38:35.067290       1 controllermanager.go:765] "Started controller" controller="serviceaccount-token-controller"
+2026-11-16T11:38:35.067652121Z stderr F I1116 11:38:35.067297       1 shared_informer.go:313] Waiting for caches to sync for tokens
+2026-11-16T11:38:35.096437555Z stderr F I1116 11:38:35.096136       1 controllermanager.go:765] "Started controller" controller="validatingadmissionpolicy-status-controller"
+2026-11-16T11:38:35.096473341Z stderr F I1116 11:38:35.096168       1 shared_informer.go:313] Waiting for caches to sync for validatingadmissionpolicy-status
+2026-11-16T11:38:35.107050176Z stderr F I1116 11:38:35.106703       1 controllermanager.go:765] "Started controller" controller="serviceaccount-controller"
+2026-11-16T11:38:35.107099221Z stderr F I1116 11:38:35.106882       1 serviceaccounts_controller.go:114] "Starting service account controller" logger="serviceaccount-controller"
+2026-11-16T11:38:35.107120454Z stderr F I1116 11:38:35.106951       1 shared_informer.go:313] Waiting for caches to sync for service account
+2026-11-16T11:38:35.1369205Z stderr F I1116 11:38:35.136431       1 controllermanager.go:765] "Started controller" controller="horizontal-pod-autoscaler-controller"
+2026-11-16T11:38:35.136947199Z stderr F I1116 11:38:35.136750       1 horizontal.go:201] "Starting HPA controller" logger="horizontal-pod-autoscaler-controller"
+2026-11-16T11:38:35.1369501Z stderr F I1116 11:38:35.136766       1 shared_informer.go:313] Waiting for caches to sync for HPA
+2026-11-16T11:38:35.160789424Z stderr F I1116 11:38:35.160536       1 controllermanager.go:765] "Started controller" controller="token-cleaner-controller"
+2026-11-16T11:38:35.16096224Z stderr F I1116 11:38:35.160772       1 tokencleaner.go:117] "Starting token cleaner controller" logger="token-cleaner-controller"
+2026-11-16T11:38:35.160971713Z stderr F I1116 11:38:35.160790       1 shared_informer.go:313] Waiting for caches to sync for token_cleaner
+2026-11-16T11:38:35.160974238Z stderr F I1116 11:38:35.160801       1 shared_informer.go:320] Caches are synced for token_cleaner
+2026-11-16T11:38:35.168263012Z stderr F I1116 11:38:35.168038       1 shared_informer.go:320] Caches are synced for tokens
+2026-11-16T11:38:35.177475637Z stderr F I1116 11:38:35.177268       1 controllermanager.go:765] "Started controller" controller="persistentvolume-binder-controller"
+2026-11-16T11:38:35.177518437Z stderr F I1116 11:38:35.177434       1 pv_controller_base.go:308] "Starting persistent volume controller" logger="persistentvolume-binder-controller"
+2026-11-16T11:38:35.177520923Z stderr F I1116 11:38:35.177457       1 shared_informer.go:313] Waiting for caches to sync for persistent volume
+2026-11-16T11:38:35.196608163Z stderr F I1116 11:38:35.194902       1 controllermanager.go:765] "Started controller" controller="persistentvolume-attach-detach-controller"
+2026-11-16T11:38:35.196648622Z stderr F I1116 11:38:35.195412       1 attach_detach_controller.go:338] "Starting attach detach controller" logger="persistentvolume-attach-detach-controller"
+2026-11-16T11:38:35.196651991Z stderr F I1116 11:38:35.195433       1 shared_informer.go:313] Waiting for caches to sync for attach detach
+2026-11-16T11:38:35.208957774Z stderr F I1116 11:38:35.208716       1 controllermanager.go:765] "Started controller" controller="ephemeral-volume-controller"
+2026-11-16T11:38:35.209004428Z stderr F I1116 11:38:35.208773       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="resourceclaim-controller" requiredFeatureGates=["DynamicResourceAllocation"]
+2026-11-16T11:38:35.209029783Z stderr F I1116 11:38:35.208931       1 controller.go:173] "Starting ephemeral volume controller" logger="ephemeral-volume-controller"
+2026-11-16T11:38:35.209039693Z stderr F I1116 11:38:35.208977       1 shared_informer.go:313] Waiting for caches to sync for ephemeral
+2026-11-16T11:38:35.221880827Z stderr F I1116 11:38:35.221564       1 controllermanager.go:765] "Started controller" controller="endpointslice-mirroring-controller"
+2026-11-16T11:38:35.222140041Z stderr F I1116 11:38:35.221945       1 endpointslicemirroring_controller.go:227] "Starting EndpointSliceMirroring controller" logger="endpointslice-mirroring-controller"
+2026-11-16T11:38:35.222150981Z stderr F I1116 11:38:35.221981       1 shared_informer.go:313] Waiting for caches to sync for endpoint_slice_mirroring
+2026-11-16T11:38:35.233989082Z stderr F I1116 11:38:35.233786       1 controllermanager.go:765] "Started controller" controller="certificatesigningrequest-approving-controller"
+2026-11-16T11:38:35.234152179Z stderr F I1116 11:38:35.234051       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-approving-controller" name="csrapproving"
+2026-11-16T11:38:35.234160808Z stderr F I1116 11:38:35.234107       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrapproving
+2026-11-16T11:38:35.319591259Z stderr F I1116 11:38:35.319379       1 controllermanager.go:765] "Started controller" controller="root-ca-certificate-publisher-controller"
+2026-11-16T11:38:35.319628258Z stderr F I1116 11:38:35.319424       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="kube-apiserver-serving-clustertrustbundle-publisher-controller" requiredFeatureGates=["ClusterTrustBundle"]
+2026-11-16T11:38:35.319629977Z stderr F I1116 11:38:35.319401       1 publisher.go:107] "Starting root CA cert publisher controller" logger="root-ca-certificate-publisher-controller"
+2026-11-16T11:38:35.319632127Z stderr F I1116 11:38:35.319481       1 shared_informer.go:313] Waiting for caches to sync for crt configmap
+2026-11-16T11:38:35.470288812Z stderr F I1116 11:38:35.470109       1 controllermanager.go:765] "Started controller" controller="endpoints-controller"
+2026-11-16T11:38:35.470326823Z stderr F I1116 11:38:35.470242       1 endpoints_controller.go:182] "Starting endpoint controller" logger="endpoints-controller"
+2026-11-16T11:38:35.470330038Z stderr F I1116 11:38:35.470275       1 shared_informer.go:313] Waiting for caches to sync for endpoint
+2026-11-16T11:38:35.620668423Z stderr F I1116 11:38:35.620463       1 controllermanager.go:765] "Started controller" controller="endpointslice-controller"
+2026-11-16T11:38:35.620702042Z stderr F I1116 11:38:35.620543       1 endpointslice_controller.go:281] "Starting endpoint slice controller" logger="endpointslice-controller"
+2026-11-16T11:38:35.620705649Z stderr F I1116 11:38:35.620560       1 shared_informer.go:313] Waiting for caches to sync for endpoint_slice
+2026-11-16T11:38:35.769076857Z stderr F I1116 11:38:35.768835       1 controllermanager.go:765] "Started controller" controller="pod-garbage-collector-controller"
+2026-11-16T11:38:35.769097176Z stderr F I1116 11:38:35.768863       1 gc_controller.go:99] "Starting GC controller" logger="pod-garbage-collector-controller"
+2026-11-16T11:38:35.769099085Z stderr F I1116 11:38:35.768879       1 shared_informer.go:313] Waiting for caches to sync for GC
+2026-11-16T11:38:35.920230548Z stderr F I1116 11:38:35.920048       1 controllermanager.go:765] "Started controller" controller="ttl-controller"
+2026-11-16T11:38:35.920265363Z stderr F I1116 11:38:35.920086       1 controllermanager.go:723] "Skipping a cloud provider controller" controller="cloud-node-lifecycle-controller"
+2026-11-16T11:38:35.920289814Z stderr F I1116 11:38:35.920191       1 ttl_controller.go:127] "Starting TTL controller" logger="ttl-controller"
+2026-11-16T11:38:35.920415242Z stderr F I1116 11:38:35.920222       1 shared_informer.go:313] Waiting for caches to sync for TTL
+2026-11-16T11:38:36.069981026Z stderr F I1116 11:38:36.069744       1 controllermanager.go:765] "Started controller" controller="persistentvolume-expander-controller"
+2026-11-16T11:38:36.070007975Z stderr F I1116 11:38:36.069834       1 expand_controller.go:329] "Starting expand controller" logger="persistentvolume-expander-controller"
+2026-11-16T11:38:36.070010679Z stderr F I1116 11:38:36.069846       1 shared_informer.go:313] Waiting for caches to sync for expand
+2026-11-16T11:38:36.219770229Z stderr F I1116 11:38:36.219512       1 controllermanager.go:765] "Started controller" controller="persistentvolumeclaim-protection-controller"
+2026-11-16T11:38:36.219806828Z stderr F I1116 11:38:36.219629       1 pvc_protection_controller.go:168] "Starting PVC protection controller" logger="persistentvolumeclaim-protection-controller"
+2026-11-16T11:38:36.219810306Z stderr F I1116 11:38:36.219642       1 shared_informer.go:313] Waiting for caches to sync for PVC protection
+2026-11-16T11:38:36.368751525Z stderr F I1116 11:38:36.368530       1 controllermanager.go:765] "Started controller" controller="legacy-serviceaccount-token-cleaner-controller"
+2026-11-16T11:38:36.368798985Z stderr F I1116 11:38:36.368601       1 legacy_serviceaccount_token_cleaner.go:103] "Starting legacy service account token cleaner controller" logger="legacy-serviceaccount-token-cleaner-controller"
+2026-11-16T11:38:36.368802775Z stderr F I1116 11:38:36.368614       1 shared_informer.go:313] Waiting for caches to sync for legacy-service-account-token-cleaner
+2026-11-16T11:38:36.520434319Z stderr F I1116 11:38:36.520241       1 controllermanager.go:765] "Started controller" controller="replicationcontroller-controller"
+2026-11-16T11:38:36.520469128Z stderr F I1116 11:38:36.520372       1 replica_set.go:217] "Starting controller" logger="replicationcontroller-controller" name="replicationcontroller"
+2026-11-16T11:38:36.52047589Z stderr F I1116 11:38:36.520392       1 shared_informer.go:313] Waiting for caches to sync for ReplicationController
+2026-11-16T11:38:36.774451739Z stderr F W1116 11:38:36.774196       1 type.go:183] The watchlist request for nodes ended with an error, falling back to the standard LIST semantics, err = nodes is forbidden: User "system:serviceaccount:kube-system:node-controller" cannot watch resource "nodes" in API group "" at the cluster scope
+2026-11-16T11:38:36.777640799Z stderr F I1116 11:38:36.777389       1 range_allocator.go:112] "No Secondary Service CIDR provided. Skipping filtering out secondary service addresses" logger="node-ipam-controller"
+2026-11-16T11:38:36.777689028Z stderr F I1116 11:38:36.777461       1 controllermanager.go:765] "Started controller" controller="node-ipam-controller"
+2026-11-16T11:38:36.777692363Z stderr F I1116 11:38:36.777467       1 controllermanager.go:723] "Skipping a cloud provider controller" controller="service-lb-controller"
+2026-11-16T11:38:36.777701174Z stderr F I1116 11:38:36.777594       1 node_ipam_controller.go:141] "Starting ipam controller" logger="node-ipam-controller"
+2026-11-16T11:38:36.777702786Z stderr F I1116 11:38:36.777629       1 shared_informer.go:313] Waiting for caches to sync for node
+2026-11-16T11:38:36.920118944Z stderr F I1116 11:38:36.919910       1 controllermanager.go:765] "Started controller" controller="persistentvolume-protection-controller"
+2026-11-16T11:38:36.920142518Z stderr F I1116 11:38:36.919996       1 pv_protection_controller.go:81] "Starting PV protection controller" logger="persistentvolume-protection-controller"
+2026-11-16T11:38:36.920145275Z stderr F I1116 11:38:36.920008       1 shared_informer.go:313] Waiting for caches to sync for PV protection
+2026-11-16T11:38:37.070211918Z stderr F I1116 11:38:37.069983       1 controllermanager.go:765] "Started controller" controller="bootstrap-signer-controller"
+2026-11-16T11:38:37.070243269Z stderr F I1116 11:38:37.070021       1 controllermanager.go:723] "Skipping a cloud provider controller" controller="node-route-controller"
+2026-11-16T11:38:37.070245928Z stderr F I1116 11:38:37.070084       1 shared_informer.go:313] Waiting for caches to sync for bootstrap_signer
+2026-11-16T11:38:37.219914068Z stderr F I1116 11:38:37.219667       1 controllermanager.go:765] "Started controller" controller="clusterrole-aggregation-controller"
+2026-11-16T11:38:37.219942958Z stderr F I1116 11:38:37.219711       1 clusterroleaggregation_controller.go:194] "Starting ClusterRoleAggregator controller" logger="clusterrole-aggregation-controller"
+2026-11-16T11:38:37.219945013Z stderr F I1116 11:38:37.219730       1 shared_informer.go:313] Waiting for caches to sync for ClusterRoleAggregator
+2026-11-16T11:38:37.370592126Z stderr F I1116 11:38:37.370387       1 controllermanager.go:765] "Started controller" controller="daemonset-controller"
+2026-11-16T11:38:37.370622443Z stderr F I1116 11:38:37.370510       1 daemon_controller.go:294] "Starting daemon sets controller" logger="daemonset-controller"
+2026-11-16T11:38:37.370625417Z stderr F I1116 11:38:37.370541       1 shared_informer.go:313] Waiting for caches to sync for daemon sets
+2026-11-16T11:38:37.518618673Z stderr F I1116 11:38:37.518392       1 controllermanager.go:765] "Started controller" controller="replicaset-controller"
+2026-11-16T11:38:37.518640558Z stderr F I1116 11:38:37.518458       1 replica_set.go:217] "Starting controller" logger="replicaset-controller" name="replicaset"
+2026-11-16T11:38:37.518642372Z stderr F I1116 11:38:37.518473       1 shared_informer.go:313] Waiting for caches to sync for ReplicaSet
+2026-11-16T11:38:37.71855631Z stderr F I1116 11:38:37.718332       1 controllermanager.go:765] "Started controller" controller="disruption-controller"
+2026-11-16T11:38:37.718585364Z stderr F I1116 11:38:37.718429       1 disruption.go:452] "Sending events to api server." logger="disruption-controller"
+2026-11-16T11:38:37.718587109Z stderr F I1116 11:38:37.718467       1 disruption.go:463] "Starting disruption controller" logger="disruption-controller"
+2026-11-16T11:38:37.718589142Z stderr F I1116 11:38:37.718495       1 shared_informer.go:313] Waiting for caches to sync for disruption
+2026-11-16T11:38:37.871772673Z stderr F I1116 11:38:37.871484       1 controllermanager.go:765] "Started controller" controller="statefulset-controller"
+2026-11-16T11:38:37.872236115Z stderr F I1116 11:38:37.872034       1 stateful_set.go:166] "Starting stateful set controller" logger="statefulset-controller"
+2026-11-16T11:38:37.872254594Z stderr F I1116 11:38:37.872073       1 shared_informer.go:313] Waiting for caches to sync for stateful set
+2026-11-16T11:38:38.019379303Z stderr F I1116 11:38:38.018942       1 controllermanager.go:765] "Started controller" controller="cronjob-controller"
+2026-11-16T11:38:38.019426627Z stderr F I1116 11:38:38.018974       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="selinux-warning-controller" requiredFeatureGates=["SELinuxChangePolicy"]
+2026-11-16T11:38:38.019429749Z stderr F I1116 11:38:38.019002       1 controllermanager.go:743] "Warning: skipping controller" controller="storage-version-migrator-controller"
+2026-11-16T11:38:38.019431968Z stderr F I1116 11:38:38.019080       1 cronjob_controllerv2.go:145] "Starting cronjob controller v2" logger="cronjob-controller"
+2026-11-16T11:38:38.019434154Z stderr F I1116 11:38:38.019111       1 shared_informer.go:313] Waiting for caches to sync for cronjob
+2026-11-16T11:38:38.273377831Z stderr F I1116 11:38:38.273169       1 controllermanager.go:765] "Started controller" controller="namespace-controller"
+2026-11-16T11:38:38.273399711Z stderr F I1116 11:38:38.273245       1 namespace_controller.go:202] "Starting namespace controller" logger="namespace-controller"
+2026-11-16T11:38:38.273401353Z stderr F I1116 11:38:38.273254       1 shared_informer.go:313] Waiting for caches to sync for namespace
+2026-11-16T11:38:38.425846065Z stderr F I1116 11:38:38.425597       1 controllermanager.go:765] "Started controller" controller="deployment-controller"
+2026-11-16T11:38:38.425902082Z stderr F I1116 11:38:38.425753       1 deployment_controller.go:173] "Starting controller" logger="deployment-controller" controller="deployment"
+2026-11-16T11:38:38.425912171Z stderr F I1116 11:38:38.425787       1 shared_informer.go:313] Waiting for caches to sync for deployment
+2026-11-16T11:38:38.472565841Z stderr F I1116 11:38:38.472014       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-kubelet-serving"
+2026-11-16T11:38:38.47267986Z stderr F I1116 11:38:38.472168       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-kubelet-serving
+2026-11-16T11:38:38.472684855Z stderr F I1116 11:38:38.472070       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-11-16T11:38:38.473850755Z stderr F I1116 11:38:38.473199       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-kubelet-client"
+2026-11-16T11:38:38.473884213Z stderr F I1116 11:38:38.473250       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-kubelet-client
+2026-11-16T11:38:38.473891382Z stderr F I1116 11:38:38.473320       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-11-16T11:38:38.473905377Z stderr F I1116 11:38:38.473723       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-kube-apiserver-client"
+2026-11-16T11:38:38.473910016Z stderr F I1116 11:38:38.473761       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-kube-apiserver-client
+2026-11-16T11:38:38.473911689Z stderr F I1116 11:38:38.473789       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-11-16T11:38:38.475373841Z stderr F I1116 11:38:38.475038       1 controllermanager.go:765] "Started controller" controller="certificatesigningrequest-signing-controller"
+2026-11-16T11:38:38.475394175Z stderr F I1116 11:38:38.475142       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-legacy-unknown"
+2026-11-16T11:38:38.475398484Z stderr F I1116 11:38:38.475181       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-legacy-unknown
+2026-11-16T11:38:38.47540079Z stderr F I1116 11:38:38.475230       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-11-16T11:38:38.517877956Z stderr F I1116 11:38:38.517675       1 controllermanager.go:765] "Started controller" controller="certificatesigningrequest-cleaner-controller"
+2026-11-16T11:38:38.517910771Z stderr F I1116 11:38:38.517717       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="service-cidr-controller" requiredFeatureGates=["MultiCIDRServiceAllocator"]
+2026-11-16T11:38:38.517913581Z stderr F I1116 11:38:38.517735       1 cleaner.go:83] "Starting CSR cleaner controller" logger="certificatesigningrequest-cleaner-controller"
+2026-11-16T11:38:38.669722786Z stderr F I1116 11:38:38.669417       1 controllermanager.go:765] "Started controller" controller="ttl-after-finished-controller"
+2026-11-16T11:38:38.669748221Z stderr F I1116 11:38:38.669464       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="storageversion-garbage-collector-controller" requiredFeatureGates=["APIServerIdentity","StorageVersionAPI"]
+2026-11-16T11:38:38.669751746Z stderr F I1116 11:38:38.669524       1 ttlafterfinished_controller.go:112] "Starting TTL after finished controller" logger="ttl-after-finished-controller"
+2026-11-16T11:38:38.669754168Z stderr F I1116 11:38:38.669543       1 shared_informer.go:313] Waiting for caches to sync for TTL after finished
+2026-11-16T11:38:38.718568683Z stderr F I1116 11:38:38.718286       1 controllermanager.go:765] "Started controller" controller="taint-eviction-controller"
+2026-11-16T11:38:38.71860097Z stderr F I1116 11:38:38.718382       1 taint_eviction.go:281] "Starting" logger="taint-eviction-controller" controller="taint-eviction-controller"
+2026-11-16T11:38:38.718603289Z stderr F I1116 11:38:38.718409       1 taint_eviction.go:287] "Sending events to api server" logger="taint-eviction-controller"
+2026-11-16T11:38:38.718606107Z stderr F I1116 11:38:38.718437       1 shared_informer.go:313] Waiting for caches to sync for taint-eviction-controller
+2026-11-16T11:38:39.024986154Z stderr F I1116 11:38:39.024705       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="endpoints"
+2026-11-16T11:38:39.025032825Z stderr F I1116 11:38:39.024821       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="rolebindings.rbac.authorization.k8s.io"
+2026-11-16T11:38:39.025043644Z stderr F I1116 11:38:39.024940       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="ingresses.networking.k8s.io"
+2026-11-16T11:38:39.025045607Z stderr F I1116 11:38:39.024985       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="networkpolicies.networking.k8s.io"
+2026-11-16T11:38:39.025049856Z stderr F W1116 11:38:39.025000       1 shared_informer.go:597] resyncPeriod 13h1m59.994344482s is smaller than resyncCheckPeriod 15h46m35.638725738s and the informer has already started. Changing it to 15h46m35.638725738s
+2026-11-16T11:38:39.025200151Z stderr F I1116 11:38:39.025061       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="serviceaccounts"
+2026-11-16T11:38:39.025211078Z stderr F I1116 11:38:39.025104       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="limitranges"
+2026-11-16T11:38:39.025231367Z stderr F I1116 11:38:39.025128       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="deployments.apps"
+2026-11-16T11:38:39.025235491Z stderr F I1116 11:38:39.025173       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="replicasets.apps"
+2026-11-16T11:38:39.025237158Z stderr F I1116 11:38:39.025185       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="daemonsets.apps"
+2026-11-16T11:38:39.025277263Z stderr F I1116 11:38:39.025199       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="statefulsets.apps"
+2026-11-16T11:38:39.02543778Z stderr F I1116 11:38:39.025278       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="horizontalpodautoscalers.autoscaling"
+2026-11-16T11:38:39.025444713Z stderr F I1116 11:38:39.025342       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="jobs.batch"
+2026-11-16T11:38:39.025468097Z stderr F I1116 11:38:39.025367       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="csistoragecapacities.storage.k8s.io"
+2026-11-16T11:38:39.025478524Z stderr F I1116 11:38:39.025432       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="endpointslices.discovery.k8s.io"
+2026-11-16T11:38:39.025678738Z stderr F I1116 11:38:39.025580       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="roles.rbac.authorization.k8s.io"
+2026-11-16T11:38:39.025684878Z stderr F I1116 11:38:39.025623       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="podtemplates"
+2026-11-16T11:38:39.025690573Z stderr F I1116 11:38:39.025637       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="controllerrevisions.apps"
+2026-11-16T11:38:39.025692276Z stderr F I1116 11:38:39.025670       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="cronjobs.batch"
+2026-11-16T11:38:39.025771982Z stderr F I1116 11:38:39.025690       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="leases.coordination.k8s.io"
+2026-11-16T11:38:39.025885289Z stderr F I1116 11:38:39.025758       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="poddisruptionbudgets.policy"
+2026-11-16T11:38:39.025891521Z stderr F I1116 11:38:39.025814       1 controllermanager.go:765] "Started controller" controller="resourcequota-controller"
+2026-11-16T11:38:39.026075304Z stderr F I1116 11:38:39.025898       1 resource_quota_controller.go:300] "Starting resource quota controller" logger="resourcequota-controller"
+2026-11-16T11:38:39.026081632Z stderr F I1116 11:38:39.025940       1 shared_informer.go:313] Waiting for caches to sync for resource quota
+2026-11-16T11:38:39.026083863Z stderr F I1116 11:38:39.025986       1 resource_quota_monitor.go:308] "QuotaMonitor running" logger="resourcequota-controller"
+2026-11-16T11:38:39.298413079Z stderr F I1116 11:38:39.298173       1 garbagecollector.go:144] "Starting controller" logger="garbage-collector-controller" controller="garbagecollector"
+2026-11-16T11:38:39.298447524Z stderr F I1116 11:38:39.298216       1 shared_informer.go:313] Waiting for caches to sync for garbage collector
+2026-11-16T11:38:39.298450796Z stderr F I1116 11:38:39.298184       1 controllermanager.go:765] "Started controller" controller="garbage-collector-controller"
+2026-11-16T11:38:39.298453091Z stderr F I1116 11:38:39.298263       1 graph_builder.go:351] "Running" logger="garbage-collector-controller" component="GraphBuilder"
+2026-11-16T11:38:39.521172245Z stderr F I1116 11:38:39.520916       1 controllermanager.go:765] "Started controller" controller="job-controller"
+2026-11-16T11:38:39.52216612Z stderr F I1116 11:38:39.521953       1 job_controller.go:243] "Starting job controller" logger="job-controller"
+2026-11-16T11:38:39.522215678Z stderr F I1116 11:38:39.522002       1 shared_informer.go:313] Waiting for caches to sync for job
+2026-11-16T11:38:39.567770545Z stderr F I1116 11:38:39.567497       1 node_lifecycle_controller.go:432] "Controller will reconcile labels" logger="node-lifecycle-controller"
+2026-11-16T11:38:39.567799625Z stderr F I1116 11:38:39.567665       1 controllermanager.go:765] "Started controller" controller="node-lifecycle-controller"
+2026-11-16T11:38:39.567808815Z stderr F I1116 11:38:39.567707       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="volumeattributesclass-protection-controller" requiredFeatureGates=["VolumeAttributesClass"]
+2026-11-16T11:38:39.567973933Z stderr F I1116 11:38:39.567841       1 node_lifecycle_controller.go:466] "Sending events to api server" logger="node-lifecycle-controller"
+2026-11-16T11:38:39.567981881Z stderr F I1116 11:38:39.567916       1 node_lifecycle_controller.go:477] "Starting node controller" logger="node-lifecycle-controller"
+2026-11-16T11:38:39.567986Z stderr F I1116 11:38:39.567929       1 shared_informer.go:313] Waiting for caches to sync for taint
+2026-11-16T11:38:39.571896606Z stderr F I1116 11:38:39.571682       1 shared_informer.go:313] Waiting for caches to sync for resource quota
+2026-11-16T11:38:39.580497584Z stderr F I1116 11:38:39.579923       1 shared_informer.go:313] Waiting for caches to sync for garbage collector
+2026-11-16T11:38:39.589957955Z stderr F I1116 11:38:39.589738       1 actual_state_of_world.go:541] "Failed to update statusUpdateNeeded field in actual state of world" logger="persistentvolume-attach-detach-controller" err="Failed to set statusUpdateNeeded to needed true, because nodeName=\"mlops-lab11-control-plane\" does not exist"
+2026-11-16T11:38:39.596696585Z stderr F I1116 11:38:39.596493       1 shared_informer.go:320] Caches are synced for attach detach
+2026-11-16T11:38:39.596724552Z stderr F I1116 11:38:39.596532       1 shared_informer.go:320] Caches are synced for validatingadmissionpolicy-status
+2026-11-16T11:38:39.599218045Z stderr F I1116 11:38:39.599026       1 shared_informer.go:320] Caches are synced for garbage collector
+2026-11-16T11:38:39.59923359Z stderr F I1116 11:38:39.599067       1 garbagecollector.go:154] "Garbage collector: all resource monitors have synced" logger="garbage-collector-controller"
+2026-11-16T11:38:39.599235994Z stderr F I1116 11:38:39.599075       1 garbagecollector.go:157] "Proceeding to collect garbage" logger="garbage-collector-controller"
+2026-11-16T11:38:39.607531173Z stderr F I1116 11:38:39.607297       1 shared_informer.go:320] Caches are synced for service account
+2026-11-16T11:38:39.609776723Z stderr F I1116 11:38:39.609618       1 shared_informer.go:320] Caches are synced for ephemeral
+2026-11-16T11:38:39.620711259Z stderr F I1116 11:38:39.619452       1 shared_informer.go:320] Caches are synced for taint-eviction-controller
+2026-11-16T11:38:39.620743689Z stderr F I1116 11:38:39.619482       1 shared_informer.go:320] Caches are synced for cronjob
+2026-11-16T11:38:39.62074638Z stderr F I1116 11:38:39.619480       1 shared_informer.go:320] Caches are synced for ReplicaSet
+2026-11-16T11:38:39.620748224Z stderr F I1116 11:38:39.619453       1 shared_informer.go:320] Caches are synced for disruption
+2026-11-16T11:38:39.620750082Z stderr F I1116 11:38:39.619553       1 shared_informer.go:320] Caches are synced for crt configmap
+2026-11-16T11:38:39.62075195Z stderr F I1116 11:38:39.619784       1 shared_informer.go:320] Caches are synced for ClusterRoleAggregator
+2026-11-16T11:38:39.620753542Z stderr F I1116 11:38:39.620056       1 shared_informer.go:320] Caches are synced for PVC protection
+2026-11-16T11:38:39.620755195Z stderr F I1116 11:38:39.620382       1 shared_informer.go:320] Caches are synced for PV protection
+2026-11-16T11:38:39.620756646Z stderr F I1116 11:38:39.620487       1 shared_informer.go:320] Caches are synced for ReplicationController
+2026-11-16T11:38:39.620760918Z stderr F I1116 11:38:39.620527       1 shared_informer.go:320] Caches are synced for TTL
+2026-11-16T11:38:39.620796074Z stderr F I1116 11:38:39.620644       1 shared_informer.go:320] Caches are synced for endpoint_slice
+2026-11-16T11:38:39.623216627Z stderr F I1116 11:38:39.622905       1 shared_informer.go:320] Caches are synced for job
+2026-11-16T11:38:39.623235652Z stderr F I1116 11:38:39.622963       1 shared_informer.go:320] Caches are synced for endpoint_slice_mirroring
+2026-11-16T11:38:39.626584751Z stderr F I1116 11:38:39.626409       1 shared_informer.go:320] Caches are synced for resource quota
+2026-11-16T11:38:39.626632978Z stderr F I1116 11:38:39.626427       1 shared_informer.go:320] Caches are synced for deployment
+2026-11-16T11:38:39.635116593Z stderr F I1116 11:38:39.634865       1 shared_informer.go:320] Caches are synced for certificate-csrapproving
+2026-11-16T11:38:39.637480085Z stderr F I1116 11:38:39.637252       1 shared_informer.go:320] Caches are synced for HPA
+2026-11-16T11:38:39.668346013Z stderr F I1116 11:38:39.668093       1 shared_informer.go:320] Caches are synced for taint
+2026-11-16T11:38:39.668367423Z stderr F I1116 11:38:39.668237       1 node_lifecycle_controller.go:1234] "Initializing eviction metric for zone" logger="node-lifecycle-controller" zone=""
+2026-11-16T11:38:39.668437519Z stderr F I1116 11:38:39.668330       1 node_lifecycle_controller.go:886] "Missing timestamp for Node. Assuming now as a timestamp" logger="node-lifecycle-controller" node="mlops-lab11-control-plane"
+2026-11-16T11:38:39.668441061Z stderr F I1116 11:38:39.668396       1 node_lifecycle_controller.go:1038] "Controller detected that all Nodes are not-Ready. Entering master disruption mode" logger="node-lifecycle-controller"
+2026-11-16T11:38:39.669676128Z stderr F I1116 11:38:39.668774       1 shared_informer.go:320] Caches are synced for legacy-service-account-token-cleaner
+2026-11-16T11:38:39.669692145Z stderr F I1116 11:38:39.669205       1 shared_informer.go:320] Caches are synced for GC
+2026-11-16T11:38:39.670030997Z stderr F I1116 11:38:39.669871       1 shared_informer.go:320] Caches are synced for TTL after finished
+2026-11-16T11:38:39.670040659Z stderr F I1116 11:38:39.669889       1 shared_informer.go:320] Caches are synced for expand
+2026-11-16T11:38:39.670209597Z stderr F I1116 11:38:39.670159       1 shared_informer.go:320] Caches are synced for bootstrap_signer
+2026-11-16T11:38:39.670661127Z stderr F I1116 11:38:39.670515       1 shared_informer.go:320] Caches are synced for endpoint
+2026-11-16T11:38:39.670730306Z stderr F I1116 11:38:39.670630       1 shared_informer.go:320] Caches are synced for daemon sets
+2026-11-16T11:38:39.672479288Z stderr F I1116 11:38:39.672258       1 shared_informer.go:320] Caches are synced for stateful set
+2026-11-16T11:38:39.672512516Z stderr F I1116 11:38:39.672305       1 shared_informer.go:320] Caches are synced for resource quota
+2026-11-16T11:38:39.672515007Z stderr F I1116 11:38:39.672319       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kubelet-serving
+2026-11-16T11:38:39.673785158Z stderr F I1116 11:38:39.673522       1 shared_informer.go:320] Caches are synced for namespace
+2026-11-16T11:38:39.673803047Z stderr F I1116 11:38:39.673560       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kubelet-client
+2026-11-16T11:38:39.674570003Z stderr F I1116 11:38:39.674368       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kube-apiserver-client
+2026-11-16T11:38:39.675681856Z stderr F I1116 11:38:39.675518       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-legacy-unknown
+2026-11-16T11:38:39.6789393Z stderr F I1116 11:38:39.677823       1 shared_informer.go:320] Caches are synced for node
+2026-11-16T11:38:39.678975771Z stderr F I1116 11:38:39.677953       1 range_allocator.go:177] "Sending events to api server" logger="node-ipam-controller"
+2026-11-16T11:38:39.678978143Z stderr F I1116 11:38:39.678010       1 range_allocator.go:183] "Starting range CIDR allocator" logger="node-ipam-controller"
+2026-11-16T11:38:39.678998625Z stderr F I1116 11:38:39.678018       1 shared_informer.go:313] Waiting for caches to sync for cidrallocator
+2026-11-16T11:38:39.679000818Z stderr F I1116 11:38:39.678025       1 shared_informer.go:320] Caches are synced for cidrallocator
+2026-11-16T11:38:39.679002504Z stderr F I1116 11:38:39.678732       1 shared_informer.go:320] Caches are synced for persistent volume
+2026-11-16T11:38:39.6813251Z stderr F I1116 11:38:39.681112       1 shared_informer.go:320] Caches are synced for garbage collector
+2026-11-16T11:38:39.686471672Z stderr F I1116 11:38:39.686186       1 range_allocator.go:428] "Set node PodCIDR" logger="node-ipam-controller" node="mlops-lab11-control-plane" podCIDRs=["10.244.0.0/24"]
+2026-11-16T11:38:39.686547329Z stderr F I1116 11:38:39.686247       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:38:39.686552954Z stderr F I1116 11:38:39.686275       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:38:40.375393592Z stderr F I1116 11:38:40.375202       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:38:40.801879786Z stderr F I1116 11:38:40.801660       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="373.666973ms"
+2026-11-16T11:38:40.814739959Z stderr F I1116 11:38:40.814504       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="10.613301ms"
+2026-11-16T11:38:40.814770242Z stderr F I1116 11:38:40.814652       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="79.982µs"
+2026-11-16T11:38:40.819990832Z stderr F I1116 11:38:40.815124       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="387.155574ms"
+2026-11-16T11:38:40.829859791Z stderr F I1116 11:38:40.829460       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="14.284631ms"
+2026-11-16T11:38:40.830330941Z stderr F I1116 11:38:40.830075       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="91.83µs"
+2026-11-16T11:38:40.83396783Z stderr F I1116 11:38:40.833704       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="73.297µs"
+2026-11-16T11:38:54.447484173Z stderr F I1116 11:38:54.447181       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:38:54.456065375Z stderr F I1116 11:38:54.455854       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:38:54.464069859Z stderr F I1116 11:38:54.463677       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="57.016µs"
+2026-11-16T11:38:54.464113112Z stderr F I1116 11:38:54.464001       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="54.258µs"
+2026-11-16T11:38:54.468092465Z stderr F I1116 11:38:54.467877       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="66.251µs"
+2026-11-16T11:38:54.479823769Z stderr F I1116 11:38:54.479583       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="54.668µs"
+2026-11-16T11:38:54.491184337Z stderr F I1116 11:38:54.490993       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="71.247µs"
+2026-11-16T11:38:54.501475089Z stderr F I1116 11:38:54.501284       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="61.863µs"
+2026-11-16T11:38:54.668600681Z stderr F I1116 11:38:54.667696       1 node_lifecycle_controller.go:1057] "Controller detected that some Nodes are Ready. Exiting master disruption mode" logger="node-lifecycle-controller"
+2026-11-16T11:38:57.157627835Z stderr F I1116 11:38:57.157240       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="166.94µs"
+2026-11-16T11:38:57.176619129Z stderr F I1116 11:38:57.176407       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="7.529743ms"
+2026-11-16T11:38:57.176647427Z stderr F I1116 11:38:57.176515       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="local-path-storage/local-path-provisioner-7dc846544d" duration="38.47µs"
+2026-11-16T11:38:57.188765979Z stderr F I1116 11:38:57.188542       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="7.722868ms"
+2026-11-16T11:38:57.188874627Z stderr F I1116 11:38:57.188683       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="46.183µs"
+2026-11-16T11:38:57.222000532Z stderr F I1116 11:38:57.221744       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="26.459708ms"
+2026-11-16T11:38:57.222030402Z stderr F I1116 11:38:57.221894       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-668d6bf9bc" duration="68.065µs"
+2026-11-16T11:39:09.674547539Z stderr F E1116 11:39:09.674283       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:39:09.684457686Z stderr F I1116 11:39:09.684243       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:39:39.679927294Z stderr F E1116 11:39:39.679690       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:39:39.688895267Z stderr F I1116 11:39:39.688547       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:40:09.683176349Z stderr F E1116 11:40:09.682917       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:40:09.695581023Z stderr F I1116 11:40:09.695344       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:40:39.686711009Z stderr F E1116 11:40:39.686496       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:40:39.699591519Z stderr F I1116 11:40:39.699367       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:41:09.690414194Z stderr F E1116 11:41:09.690177       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:41:09.703338681Z stderr F I1116 11:41:09.703137       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:41:39.694918561Z stderr F E1116 11:41:39.694589       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:41:39.708463865Z stderr F I1116 11:41:39.708223       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:42:09.698496879Z stderr F E1116 11:42:09.698208       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:42:09.712787409Z stderr F I1116 11:42:09.712490       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:42:28.488146262Z stderr F I1116 11:42:28.487926       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:42:39.701291053Z stderr F E1116 11:42:39.701109       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:42:39.714888875Z stderr F I1116 11:42:39.714724       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:43:09.705017255Z stderr F E1116 11:43:09.704784       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:43:09.719547166Z stderr F I1116 11:43:09.719335       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:43:39.707138432Z stderr F E1116 11:43:39.706950       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:43:39.72383628Z stderr F I1116 11:43:39.723648       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:44:08.245425987Z stderr F I1116 11:44:08.244909       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="19.272344ms"
+2026-11-16T11:44:08.255010403Z stderr F I1116 11:44:08.254653       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="9.118501ms"
+2026-11-16T11:44:08.255055781Z stderr F I1116 11:44:08.254775       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="69.442µs"
+2026-11-16T11:44:08.258977937Z stderr F I1116 11:44:08.258799       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="73.034µs"
+2026-11-16T11:44:08.446222157Z stderr F I1116 11:44:08.445855       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="18.383169ms"
+2026-11-16T11:44:08.454212183Z stderr F I1116 11:44:08.454014       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="8.105053ms"
+2026-11-16T11:44:08.454366125Z stderr F I1116 11:44:08.454226       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="90.448µs"
+2026-11-16T11:44:08.45673061Z stderr F I1116 11:44:08.456496       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="53.177µs"
+2026-11-16T11:44:09.710350194Z stderr F E1116 11:44:09.710104       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:44:09.728843673Z stderr F I1116 11:44:09.728632       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:44:39.714958545Z stderr F E1116 11:44:39.714615       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:44:39.736405901Z stderr F I1116 11:44:39.736241       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:45:09.71888675Z stderr F E1116 11:45:09.718622       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:45:09.740455352Z stderr F I1116 11:45:09.740267       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:45:39.722311628Z stderr F E1116 11:45:39.722099       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:45:39.745034944Z stderr F I1116 11:45:39.744701       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:46:01.106486419Z stderr F I1116 11:46:01.106307       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="131.988µs"
+2026-11-16T11:46:03.112189804Z stderr F I1116 11:46:03.111989       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="209.658µs"
+2026-11-16T11:46:09.725314649Z stderr F E1116 11:46:09.725105       1 resource_quota_controller.go:446] "Unhandled Error" err="unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: stale GroupVersion discovery: metrics.k8s.io/v1beta1" logger="UnhandledError"
+2026-11-16T11:46:09.750012184Z stderr F I1116 11:46:09.749652       1 garbagecollector.go:787] "failed to discover some groups" logger="garbage-collector-controller" groups="map[\"metrics.k8s.io/v1beta1\":\"stale GroupVersion discovery: metrics.k8s.io/v1beta1\"]"
+2026-11-16T11:46:12.697113052Z stderr F I1116 11:46:12.696909       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:46:24.13049498Z stderr F I1116 11:46:24.130248       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="8.379351ms"
+2026-11-16T11:46:24.130593325Z stderr F I1116 11:46:24.130432       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-8467fcc7b7" duration="67.961µs"
+2026-11-16T11:46:24.167688018Z stderr F I1116 11:46:24.167453       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="29.144355ms"
+2026-11-16T11:46:24.178305211Z stderr F I1116 11:46:24.178097       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="10.58068ms"
+2026-11-16T11:46:24.178332583Z stderr F I1116 11:46:24.178203       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="44.611µs"
+2026-11-16T11:46:24.44734509Z stderr F I1116 11:46:24.447107       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="62.059µs"
+2026-11-16T11:46:25.171580385Z stderr F I1116 11:46:25.171314       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="51.798µs"
+2026-11-16T11:46:25.177247097Z stderr F I1116 11:46:25.176990       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/metrics-server-6f7dd4c4c4" duration="64.271µs"
+2026-11-16T11:48:12.335832571Z stderr F I1116 11:48:12.335430       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="35.861685ms"
+2026-11-16T11:48:12.344970136Z stderr F I1116 11:48:12.344755       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="9.271832ms"
+2026-11-16T11:48:12.344999159Z stderr F I1116 11:48:12.344830       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="42.808µs"
+2026-11-16T11:48:12.34645807Z stderr F I1116 11:48:12.346236       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="52.245µs"
+2026-11-16T11:48:12.357123767Z stderr F I1116 11:48:12.356866       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="70.952µs"
+2026-11-16T11:48:13.307282026Z stderr F I1116 11:48:13.307034       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/prometheus-5885576bc6" duration="25.549928ms"
+2026-11-16T11:48:13.316623968Z stderr F I1116 11:48:13.316144       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/prometheus-5885576bc6" duration="9.01492ms"
+2026-11-16T11:48:13.316657054Z stderr F I1116 11:48:13.316277       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/prometheus-5885576bc6" duration="72.745µs"
+2026-11-16T11:48:13.349336036Z stderr F I1116 11:48:13.349136       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="25.784945ms"
+2026-11-16T11:48:13.358684246Z stderr F I1116 11:48:13.358502       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="9.241758ms"
+2026-11-16T11:48:13.358910748Z stderr F I1116 11:48:13.358777       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="223.632µs"
+2026-11-16T11:48:13.360980046Z stderr F I1116 11:48:13.360812       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="30.404µs"
+2026-11-16T11:48:13.403650252Z stderr F I1116 11:48:13.403489       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/grafana-594ffcbd79" duration="16.212866ms"
+2026-11-16T11:48:13.412105167Z stderr F I1116 11:48:13.411738       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="51.526µs"
+2026-11-16T11:48:13.437139006Z stderr F I1116 11:48:13.436973       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/grafana-594ffcbd79" duration="33.432647ms"
+2026-11-16T11:48:13.451878507Z stderr F I1116 11:48:13.451695       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="54.499µs"
+2026-11-16T11:48:13.460325294Z stderr F I1116 11:48:13.459831       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/grafana-594ffcbd79" duration="22.809046ms"
+2026-11-16T11:48:13.460415138Z stderr F I1116 11:48:13.459950       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/grafana-594ffcbd79" duration="61.217µs"
+2026-11-16T11:48:35.527273541Z stderr F I1116 11:48:35.526991       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:48:36.654481784Z stderr F I1116 11:48:36.654266       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="73.765µs"
+2026-11-16T11:48:36.673285276Z stderr F I1116 11:48:36.673064       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="8.201296ms"
+2026-11-16T11:48:36.673312539Z stderr F I1116 11:48:36.673165       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="52.225µs"
+2026-11-16T11:48:36.688221631Z stderr F I1116 11:48:36.688041       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="12.172018ms"
+2026-11-16T11:48:36.688271525Z stderr F I1116 11:48:36.688183       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="105.906µs"
+2026-11-16T11:48:39.694092252Z stderr F I1116 11:48:39.693889       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="5.573989ms"
+2026-11-16T11:48:39.694121713Z stderr F I1116 11:48:39.694019       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/api-69b554984" duration="44.819µs"
+2026-11-16T11:53:40.929581734Z stderr F I1116 11:53:40.929421       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:54:16.278835767Z stderr F I1116 11:54:16.278563       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/prometheus-5885576bc6" duration="8.719907ms"
+2026-11-16T11:54:16.27888928Z stderr F I1116 11:54:16.278704       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/prometheus-5885576bc6" duration="57.276µs"
+2026-11-16T11:54:41.854110922Z stderr F I1116 11:54:41.853869       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:56:00.547524375Z stderr F I1116 11:56:00.547205       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="10.368864ms"
+2026-11-16T11:56:00.547565816Z stderr F I1116 11:56:00.547307       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="57.208µs"
+2026-11-16T11:56:01.552907193Z stderr F I1116 11:56:01.552733       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="9.910953ms"
+2026-11-16T11:56:01.55298Z stderr F I1116 11:56:01.552856       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="56.042µs"
+2026-11-16T11:56:02.548357558Z stderr F I1116 11:56:02.548187       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="145.076µs"
+2026-11-16T11:56:03.567083327Z stderr F I1116 11:56:03.566866       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="75.786µs"
+2026-11-16T11:56:14.13589662Z stderr F I1116 11:56:14.135490       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T11:56:19.606798765Z stderr F I1116 11:56:19.606638       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="73.833µs"
+2026-11-16T11:56:32.006823955Z stderr F I1116 11:56:32.006589       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="132.397µs"
+2026-11-16T11:56:45.671287595Z stderr F I1116 11:56:45.671105       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="76.98µs"
+2026-11-16T11:56:56.998714134Z stderr F I1116 11:56:56.997919       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="87.558µs"
+2026-11-16T11:57:33.82444625Z stderr F I1116 11:57:33.824238       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="65.139µs"
+2026-11-16T11:57:45.024091991Z stderr F I1116 11:57:45.023645       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="101.113µs"
+2026-11-16T11:59:06.12121347Z stderr F I1116 11:59:06.121017       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="137.468µs"
+2026-11-16T11:59:18.995290326Z stderr F I1116 11:59:18.994943       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="179.884µs"
+2026-11-16T12:00:08.198620837Z stderr F I1116 12:00:08.198286       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"
+2026-11-16T12:01:50.767909465Z stderr F I1116 12:01:50.766401       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="17.756755ms"
+2026-11-16T12:01:50.767946902Z stderr F I1116 12:01:50.767180       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="285.513µs"
+2026-11-16T12:01:51.813991013Z stderr F I1116 12:01:51.813775       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="20.324007ms"
+2026-11-16T12:01:51.814035664Z stderr F I1116 12:01:51.813920       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="63.787µs"
+2026-11-16T12:02:06.010777075Z stderr F I1116 12:02:06.010352       1 replica_set.go:679] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="lab11/kube-state-6d8c8b889" duration="128.143µs"
+2026-11-16T12:05:14.619756289Z stderr F I1116 12:05:14.619474       1 range_allocator.go:247] "Successfully synced" logger="node-ipam-controller" key="mlops-lab11-control-plane"

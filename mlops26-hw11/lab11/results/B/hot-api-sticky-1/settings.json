@@ -1,0 +1,8 @@
+{
+  "epoch": 1794835137.7689672,
+  "service": "api-sticky",
+  "keep_alive": false,
+  "backend_mode": "simulated",
+  "cache_start": "empty; complete Pod replacement; backend warm",
+  "attempts_per_request": 1
+}

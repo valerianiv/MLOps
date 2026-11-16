@@ -1,0 +1,17 @@
+2026-11-16T12:25:26.884037181Z stderr F I1116 12:25:26.883450       1 wrapper.go:120] "Starting kube-state-metrics"
+2026-11-16T12:25:26.884364303Z stderr F W1116 12:25:26.884134       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-11-16T12:25:26.885208143Z stderr F I1116 12:25:26.884895       1 server.go:200] "Used resources" resources=["horizontalpodautoscalers","pods","deployments"]
+2026-11-16T12:25:26.885582812Z stderr F I1116 12:25:26.885340       1 types.go:201] "Using namespaces" nameSpaces=["lab11"]
+2026-11-16T12:25:26.885594605Z stderr F I1116 12:25:26.885455       1 server.go:233] "Metric allow-denylisting" allowDenyStatus="Excluding the following lists that were on denylist: "
+2026-11-16T12:25:26.953053281Z stderr F W1116 12:25:26.952662       1 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2026-11-16T12:25:26.971839203Z stderr F I1116 12:25:26.971363       1 utils.go:70] "Tested communication with server"
+2026-11-16T12:25:26.987446378Z stderr F I1116 12:25:26.987074       1 utils.go:75] "Run with Kubernetes cluster version" major="1" minor="32" gitVersion="v1.32.2" gitTreeState="clean" gitCommit="67a30c0adcf52bd3f56ff0893ce19966be12991f" platform="linux/amd64"
+2026-11-16T12:25:26.987481392Z stderr F I1116 12:25:26.987120       1 utils.go:76] "Communication with server successful"
+2026-11-16T12:25:26.988729044Z stderr F I1116 12:25:26.988517       1 server.go:361] "Started metrics server" metricsServerAddress="[::]:8080"
+2026-11-16T12:25:26.988740787Z stderr F I1116 12:25:26.988538       1 metrics_handler.go:110] "Autosharding disabled"
+2026-11-16T12:25:26.988743852Z stderr F I1116 12:25:26.988524       1 server.go:350] "Started kube-state-metrics self metrics server" telemetryAddress="[::]:8081"
+2026-11-16T12:25:26.989498957Z stderr F I1116 12:25:26.989257       1 tls_config.go:347] "Listening on" address="[::]:8080"
+2026-11-16T12:25:26.989507477Z stderr F I1116 12:25:26.989388       1 tls_config.go:350] "TLS is disabled." http2=false address="[::]:8080"
+2026-11-16T12:25:26.989599722Z stderr F I1116 12:25:26.989262       1 tls_config.go:347] "Listening on" address="[::]:8081"
+2026-11-16T12:25:26.989750813Z stderr F I1116 12:25:26.989571       1 tls_config.go:350] "TLS is disabled." http2=false address="[::]:8081"
+2026-11-16T12:25:26.989773685Z stderr F I1116 12:25:26.989630       1 builder.go:283] "Active resources" activeStoreNames="deployments,horizontalpodautoscalers,pods"

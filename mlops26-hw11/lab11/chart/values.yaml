@@ -1,0 +1,23 @@
+image: lab11-api:1.0.0
+replicas: 2
+modelVersion: A
+warmup: 20
+brokenProbes: false
+neverReady: false
+concurrency: 1
+maxQueue: 32
+queueTimeout: 30
+cacheSize: 32
+hitIterations: 15000
+missIterations: 180000
+resources:
+  requests:
+    cpu: 200m
+    memory: 96Mi
+  limits:
+    cpu: 700m
+    memory: 256Mi
+hpa:
+  enabled: false
+  cpu: 55
+  stabilization: 60

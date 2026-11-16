@@ -1,0 +1,8 @@
+Validation on preparation machine: Windows, CPython 3.12.14
+python -m unittest discover -s tests -v
+8 tests passed (11.309 seconds): warmup and loaded hash; broken probes; abort/refusal accounting; dialogue isolation/version B; artifact mismatch; queue overflow; deterministic schedules and outcome totals; forced process exit interrupts a live HTTP stream.
+Helm 3.17.2: lint passed; template rendered with HPA disabled and enabled.
+Monitoring YAML + embedded Prometheus configs + dashboard JSON parsed.
+Shell scripts: bash -n passed.
+Kubernetes, Docker build, Linux installation, HPA, alerts, network affinity and rollout were NOT executed here.
+Report integration fixture: four standalone SVG charts and consolidated CSV generated successfully. Synthetic fixture was kept outside deliverables.

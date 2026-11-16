@@ -1,0 +1,19 @@
+{
+  "planned": 100,
+  "outcomes": {
+    "completed": 97,
+    "rejected": 3
+  },
+  "completed": 97,
+  "sent": 100,
+  "ttfc_p50": 0.08816619299977901,
+  "ttfc_p95": 19.322676150599936,
+  "error_fraction": 0.030000000000000027,
+  "max_dispatch_lag": 0.0014102873103638558,
+  "by_pod": {
+    "api-57877cf4b6-t22qs": 32,
+    "api-b65558868-lj9sg": 35,
+    "api-57877cf4b6-l9sfb": 13,
+    "api-b65558868-wsf5c": 20
+  }
+}

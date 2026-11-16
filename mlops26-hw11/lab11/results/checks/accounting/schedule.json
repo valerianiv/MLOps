@@ -1,0 +1,24 @@
+[
+  [
+    {
+      "offset": 0,
+      "request_id": "injected-abort",
+      "body": {
+        "prompt": "abort",
+        "chunks": 8,
+        "fail_after": 2
+      }
+    },
+    {
+      "offset": 1,
+      "request_id": "invalid-body",
+      "body": {
+        "prompt": "",
+        "chunks": 0
+      }
+    }
+  ],
+  [],
+  [],
+  []
+]

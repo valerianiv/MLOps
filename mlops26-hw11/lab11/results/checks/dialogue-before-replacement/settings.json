@@ -1,0 +1,8 @@
+{
+  "epoch": 1794832702.3233795,
+  "service": "10.244.0.20",
+  "keep_alive": false,
+  "backend_mode": "simulated",
+  "cache_start": "not reset; see phase actions",
+  "attempts_per_request": 1
+}

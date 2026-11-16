@@ -1,0 +1,62 @@
+[
+  [
+    {
+      "offset": 0,
+      "request_id": "dialogue-0",
+      "body": {
+        "prompt": "continue",
+        "history": [
+          "CONTROL-0"
+        ],
+        "chunks": 2,
+        "chunk_delay": 0.01,
+        "work": 1
+      }
+    }
+  ],
+  [
+    {
+      "offset": 0,
+      "request_id": "dialogue-1",
+      "body": {
+        "prompt": "continue",
+        "history": [
+          "CONTROL-1"
+        ],
+        "chunks": 2,
+        "chunk_delay": 0.01,
+        "work": 1
+      }
+    }
+  ],
+  [
+    {
+      "offset": 0,
+      "request_id": "dialogue-2",
+      "body": {
+        "prompt": "continue",
+        "history": [
+          "CONTROL-2"
+        ],
+        "chunks": 2,
+        "chunk_delay": 0.01,
+        "work": 1
+      }
+    }
+  ],
+  [
+    {
+      "offset": 0,
+      "request_id": "dialogue-3",
+      "body": {
+        "prompt": "continue",
+        "history": [
+          "CONTROL-3"
+        ],
+        "chunks": 2,
+        "chunk_delay": 0.01,
+        "work": 1
+      }
+    }
+  ]
+]

@@ -1,0 +1,52 @@
+Load: dialogue-before-replacement; service=10.244.0.20; planned=4; epoch in ~10s
+Load: dialogue-recovery; service=10.244.0.21; planned=4; epoch in ~10s
+PASS warmup rejects direct readiness
+PASS replacement preserves artifact version
+PASS dialogue isolation
+Load: accounting; service=api; planned=2; epoch in ~10s
+PASS refusal and incomplete stream accounting
+Load: broken; service=api; planned=140; epoch in ~10s
+PASS warmup-broken
+Load: fixed; service=api; planned=140; epoch in ~10s
+PASS warmup-fixed
+Load: rollout-A-B; service=api; planned=100; epoch in ~10s
+FAIL graceful rollout has no lost responses
+PASS never-ready release excluded
+Load: rollback-to-A; service=api; planned=16; epoch in ~10s
+PASS loaded version after rollback
+Load: forced-kill; service=10.244.0.33; planned=1; epoch in ~10s
+PASS forced kill is counted as aborted
+Load: after-kill; service=api; planned=6; epoch in ~10s
+PASS service recovers after process kill
+Load: uniform-api-1; service=api; planned=720; epoch in ~10s
+uniform api 1 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 0.42600165049998395, "ttfc_p95": 1.5714484622498728, "error_fraction": 0.0, "max_dispatch_lag": 0.002981930296300561, "by_pod": {"api-669544ddd4-cg6bc": 385, "api-669544ddd4-mnk7g": 335}}
+Load: uniform-api-2; service=api; planned=720; epoch in ~10s
+uniform api 2 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 1.3814115565000975, "ttfc_p95": 8.823491555050099, "error_fraction": 0.0, "max_dispatch_lag": 0.007477825001842575, "by_pod": {"api-559d557b58-rhx2h": 372, "api-559d557b58-4cmtd": 348}}
+Load: uniform-api-3; service=api; planned=720; epoch in ~10s
+uniform api 3 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 0.4992265400001088, "ttfc_p95": 1.513861410749973, "error_fraction": 0.0, "max_dispatch_lag": 0.0019034833480873203, "by_pod": {"api-6f96485465-vjcl2": 373, "api-6f96485465-b44q7": 347}}
+Load: uniform-api-sticky-1; service=api-sticky; planned=720; epoch in ~10s
+uniform api-sticky 1 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 0.16357903099992654, "ttfc_p95": 0.17743915415021547, "error_fraction": 0.0, "max_dispatch_lag": 0.002086700221298088, "by_pod": {"api-7b65b79ff8-474rw": 360, "api-7b65b79ff8-krvbd": 360}}
+Load: uniform-api-sticky-2; service=api-sticky; planned=720; epoch in ~10s
+uniform api-sticky 2 {"planned": 720, "outcomes": {"completed": 617, "rejected": 103}, "completed": 617, "sent": 720, "ttfc_p50": 9.148831879000227, "ttfc_p95": 9.445047820200035, "error_fraction": 0.1430555555555556, "max_dispatch_lag": 0.001240319229054876, "by_pod": {"api-648754c744-ht4gd": 540, "api-648754c744-4t5ng": 180}}
+Load: uniform-api-sticky-3; service=api-sticky; planned=720; epoch in ~10s
+uniform api-sticky 3 {"planned": 720, "outcomes": {"completed": 616, "rejected": 104}, "completed": 616, "sent": 720, "ttfc_p50": 9.171634603999792, "ttfc_p95": 9.454605479249949, "error_fraction": 0.1444444444444445, "max_dispatch_lag": 0.001250836958661239, "by_pod": {"api-6d75f95df-8rjsf": 540, "api-6d75f95df-f6h7v": 180}}
+Load: hot-api-1; service=api; planned=720; epoch in ~10s
+hot api 1 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 0.3750297439999031, "ttfc_p95": 1.3828632743999139, "error_fraction": 0.0, "max_dispatch_lag": 0.0015953904307934863, "by_pod": {"api-bcd68f5b6-mxdvw": 353, "api-bcd68f5b6-ghhsb": 367}}
+Load: hot-api-2; service=api; planned=720; epoch in ~10s
+hot api 2 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 0.41750291999983347, "ttfc_p95": 1.4856598485999932, "error_fraction": 0.0, "max_dispatch_lag": 0.001500896582911082, "by_pod": {"api-86576c47cd-9lzvk": 341, "api-86576c47cd-ksrvx": 379}}
+Load: hot-api-3; service=api; planned=720; epoch in ~10s
+hot api 3 {"planned": 720, "outcomes": {"completed": 720}, "completed": 720, "sent": 720, "ttfc_p50": 0.3782424189998892, "ttfc_p95": 1.9982449363500558, "error_fraction": 0.0, "max_dispatch_lag": 0.0009939328306245443, "by_pod": {"api-77b86d6997-f7xbk": 374, "api-77b86d6997-tkhnr": 346}}
+Load: hot-api-sticky-1; service=api-sticky; planned=720; epoch in ~10s
+hot api-sticky 1 {"planned": 720, "outcomes": {"completed": 528, "rejected": 192}, "completed": 528, "sent": 720, "ttfc_p50": 9.388921446500262, "ttfc_p95": 9.545123144000149, "error_fraction": 0.2666666666666667, "max_dispatch_lag": 0.0023337394527516153, "by_pod": {"api-85ccbb6785-qbkqx": 624, "api-85ccbb6785-vx78d": 96}}
+Load: hot-api-sticky-2; service=api-sticky; planned=720; epoch in ~10s
+hot api-sticky 2 {"planned": 720, "outcomes": {"completed": 481, "rejected": 239}, "completed": 481, "sent": 720, "ttfc_p50": 9.426330057000087, "ttfc_p95": 9.54736338199973, "error_fraction": 0.3319444444444445, "max_dispatch_lag": 0.00776439984474564, "by_pod": {"api-6c5ddbc9dd-xdjk7": 672, "api-6c5ddbc9dd-dn6kl": 48}}
+Load: hot-api-sticky-3; service=api-sticky; planned=720; epoch in ~10s
+hot api-sticky 3 {"planned": 720, "outcomes": {"completed": 530, "rejected": 190}, "completed": 530, "sent": 720, "ttfc_p50": 9.35055959950023, "ttfc_p95": 9.515615546999971, "error_fraction": 0.26388888888888884, "max_dispatch_lag": 0.0011758055397876888, "by_pod": {"api-64b645c658-b7plc": 624, "api-64b645c658-dqsfx": 96}}
+Load: scale-out; service=api; planned=4320; epoch in ~10s
+PASS HPA reaches 3 ready replicas
+PASS HPA returns to 2 ready replicas
+Load: sticky-hot-after-scale; service=api-sticky; planned=720; epoch in ~10s
+Load: alert-stimulus; service=api; planned=3360; epoch in ~10s
+Load: alert-recovery; service=api; planned=100; epoch in ~10s
+PASS LabHighTTFC pending/firing/recovered
+PASS LabRefusals pending/firing/recovered

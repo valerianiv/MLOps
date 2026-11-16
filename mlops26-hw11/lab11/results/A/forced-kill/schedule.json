@@ -1,0 +1,16 @@
+[
+  [
+    {
+      "offset": 0,
+      "request_id": "forced-kill",
+      "body": {
+        "prompt": "long",
+        "chunks": 40,
+        "chunk_delay": 1
+      }
+    }
+  ],
+  [],
+  [],
+  []
+]
