@@ -2,7 +2,20 @@
 <style>body{font:16px/1.6 system-ui;max-width:1120px;margin:40px auto;padding:0 24px;color:#172033}h1,h2{line-height:1.2}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:8px;border-bottom:1px solid #cbd5e1;text-align:left}img{width:100%}.missing{background:#fff1d6;padding:16px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f9;padding:16px}a{color:#1d4ed8}@media print{body{margin:0}h2{break-after:avoid}img,tr{break-inside:avoid}}</style>
 <h1>ДЗ 11. Сервис работает, пользователи ждут</h1>
 <p><b>backend_mode=simulated.</b> Части ответа имитатора не являются токенами модели. Используются TTFC и inter-chunk latency.</p>
-<p class="missing">Автор, группа, ссылка на итоговый репозиторий и коммит: заполнить перед сдачей. Привязку кейса к лекции подтвердить по видео.</p>
+
+<p>
+  <strong>Автор:</strong> Ивличева Валерия<br>
+  <strong>Группа:</strong> ИУ6-75Б<br>
+  <strong>Репозиторий:</strong>
+  <a href="https://github.com/valerianiv/MLOps/tree/main/mlops26-hw11/lab11">
+    valerianiv/MLOps — mlops26-hw11/lab11
+  </a><br>
+  <strong>Проверенная версия до правок оформления:</strong>
+  <a href="https://github.com/valerianiv/MLOps/commit/f1cfe19b5a7ab36cd12ff0a5f2806e13874aff02">
+    f1cfe19b5a7ab36cd12ff0a5f2806e13874aff02
+  </a>.
+</p>
+
 <h2>Сводка измерений</h2>
 <table><tr><th>Прогон</th><th>Запланировано</th><th>Успешно</th><th>p50 TTFC, с</th><th>p95 TTFC, с</th><th>Доля неуспеха</th><th>Макс. lag, с</th><th>Исходы</th></tr><tr><td>A/after-kill</td><td>6</td><td>6</td><td>0.07141712449993065</td><td>0.11568194874962501</td><td>0.0</td><td>0.0009335091399407247</td><td>{&#x27;completed&#x27;: 6}</td></tr><tr><td>A/broken</td><td>140</td><td>120</td><td>0.04549427849997301</td><td>0.09480053994998343</td><td>0.1428571428571429</td><td>0.0010853374378712033</td><td>{&#x27;completed&#x27;: 120, &#x27;rejected&#x27;: 20}</td></tr><tr><td>A/fixed</td><td>140</td><td>140</td><td>0.04433394650050104</td><td>0.09408672830018076</td><td>0.0</td><td>0.0012321217145654373</td><td>{&#x27;completed&#x27;: 140}</td></tr><tr><td>A/forced-kill</td><td>1</td><td>0</td><td>None</td><td>None</td><td>1.0</td><td>0.0009207739349221811</td><td>{&#x27;aborted&#x27;: 1}</td></tr><tr><td>A/rollback-to-A</td><td>16</td><td>16</td><td>0.0919317295001747</td><td>0.1260710280002968</td><td>0.0</td><td>0.0012943206957061193</td><td>{&#x27;completed&#x27;: 16}</td></tr><tr><td>A/rollout-A-B</td><td>100</td><td>100</td><td>0.08861802799992802</td><td>26.27011191395017</td><td>0.0</td><td>0.0012258372025826247</td><td>{&#x27;completed&#x27;: 100}</td></tr><tr><td>B/hot-api-1</td><td>720</td><td>720</td><td>0.3750297439999031</td><td>1.3828632743999139</td><td>0.0</td><td>0.0015953904307934863</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/hot-api-2</td><td>720</td><td>720</td><td>0.41750291999983347</td><td>1.4856598485999932</td><td>0.0</td><td>0.001500896582911082</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/hot-api-3</td><td>720</td><td>720</td><td>0.3782424189998892</td><td>1.9982449363500558</td><td>0.0</td><td>0.0009939328306245443</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/hot-api-sticky-1</td><td>720</td><td>528</td><td>9.388921446500262</td><td>9.545123144000149</td><td>0.2666666666666667</td><td>0.0023337394527516153</td><td>{&#x27;completed&#x27;: 528, &#x27;rejected&#x27;: 192}</td></tr><tr><td>B/hot-api-sticky-2</td><td>720</td><td>481</td><td>9.426330057000087</td><td>9.54736338199973</td><td>0.3319444444444445</td><td>0.00776439984474564</td><td>{&#x27;completed&#x27;: 481, &#x27;rejected&#x27;: 239}</td></tr><tr><td>B/hot-api-sticky-3</td><td>720</td><td>530</td><td>9.35055959950023</td><td>9.515615546999971</td><td>0.26388888888888884</td><td>0.0011758055397876888</td><td>{&#x27;completed&#x27;: 530, &#x27;rejected&#x27;: 190}</td></tr><tr><td>B/uniform-api-1</td><td>720</td><td>720</td><td>0.42600165049998395</td><td>1.5714484622498728</td><td>0.0</td><td>0.002981930296300561</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/uniform-api-2</td><td>720</td><td>720</td><td>1.3814115565000975</td><td>8.823491555050099</td><td>0.0</td><td>0.007477825001842575</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/uniform-api-3</td><td>720</td><td>720</td><td>0.4992265400001088</td><td>1.513861410749973</td><td>0.0</td><td>0.0019034833480873203</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/uniform-api-sticky-1</td><td>720</td><td>720</td><td>0.16357903099992654</td><td>0.17743915415021547</td><td>0.0</td><td>0.002086700221298088</td><td>{&#x27;completed&#x27;: 720}</td></tr><tr><td>B/uniform-api-sticky-2</td><td>720</td><td>617</td><td>9.148831879000227</td><td>9.445047820200035</td><td>0.1430555555555556</td><td>0.001240319229054876</td><td>{&#x27;completed&#x27;: 617, &#x27;rejected&#x27;: 103}</td></tr><tr><td>B/uniform-api-sticky-3</td><td>720</td><td>616</td><td>9.171634603999792</td><td>9.454605479249949</td><td>0.1444444444444445</td><td>0.001250836958661239</td><td>{&#x27;completed&#x27;: 616, &#x27;rejected&#x27;: 104}</td></tr><tr><td>C/alert-recovery</td><td>100</td><td>100</td><td>0.012626752999949531</td><td>0.017753048649956325</td><td>0.0</td><td>0.0008574760258852621</td><td>{&#x27;completed&#x27;: 100}</td></tr><tr><td>C/alert-stimulus</td><td>3360</td><td>85</td><td>3.8146590869991996</td><td>4.525359399199624</td><td>0.9747023809523809</td><td>0.0030691912352267536</td><td>{&#x27;rejected&#x27;: 3275, &#x27;completed&#x27;: 85}</td></tr><tr><td>C/scale-out</td><td>4320</td><td>924</td><td>18.9556535024999</td><td>20.692550105799405</td><td>0.7861111111111111</td><td>0.022064773320380482</td><td>{&#x27;completed&#x27;: 924, &#x27;rejected&#x27;: 3396}</td></tr><tr><td>C/sticky-hot-after-scale</td><td>720</td><td>420</td><td>13.047163990500394</td><td>13.224273426349374</td><td>0.41666666666666663</td><td>0.0035802622714982135</td><td>{&#x27;completed&#x27;: 420, &#x27;rejected&#x27;: 300}</td></tr><tr><td>checks/accounting</td><td>2</td><td>0</td><td>None</td><td>None</td><td>1.0</td><td>0.0007467827019809192</td><td>{&#x27;aborted&#x27;: 1, &#x27;rejected&#x27;: 1}</td></tr><tr><td>checks/dialogue-before-replacement</td><td>4</td><td>4</td><td>0.26573342999995475</td><td>0.39462032269993863</td><td>0.0</td><td>0.0013852966271770129</td><td>{&#x27;completed&#x27;: 4}</td></tr><tr><td>checks/dialogue-recovery</td><td>4</td><td>4</td><td>0.25845961050004007</td><td>0.3839541459499741</td><td>0.0</td><td>0.0018556161962806073</td><td>{&#x27;completed&#x27;: 4}</td></tr></table>
 <h2>Собственные проверки</h2>
@@ -81,6 +94,59 @@
   &quot;observations&quot;: &quot;sum(increase(lab_ttfc_seconds_count[128s]))&quot;,
   &quot;buckets&quot;: &quot;sum by(le)(increase(lab_ttfc_seconds_bucket[128s]))&quot;
 }</pre>
-<h3>Оставшееся оформление</h3><p>Перед сдачей заполнить ФИО, группу, ссылку на свой репозиторий и коммит. По видеолекции указать компанию, таймкод и первичную публикацию, затем связать кейс с ревью. Публикация репозитория выполняется автором работы. Наличие 15 PASS не заменяет эти пункты.</p>
+
+<h3>Источники и ограничения</h3>
+<p>
+  Автор: Ивличева Валерия, ИУ6-75Б.
+  Кейс лекции — Google Cloud, около 08:23,
+  слайд 70/224 «Результаты нагрузки Google».
+  Первичная публикация и связь с результатами работы
+  приведены в разделе ревью.
+</p>
+<p>
+  Собственные результаты относятся к CPU-имитатору.
+  GKE Inference Gateway и настоящий KV-cache
+  в этой работе не воспроизводились.
+</p>
+<p>
+  В evidence/final-inventory.json сохранена ошибка расчёта
+  Docker disk usage. Повторный замер сохраняется отдельно;
+  исходный файл остаётся свидетельством первоначальной попытки.
+</p>
+
 </section>
+
+<section id="trace-details">
+<h2>Разбор распределения запросов по Pod</h2>
+<p>
+  В hot-api-sticky-1 распределение составило 624/96 запросов.
+  Среднее ожидание очереди среди успешных ответов —
+  8,58 с на горячей реплике и 0,03 с на другой.
+  При обычном Service в hot-api-1 распределение составило
+  367/353, все запросы завершились.
+</p>
+<p>
+  В uniform-api-sticky-1 перекоса не возникло:
+  распределение 360/360, среднее ожидание около 0,07 с
+  на каждой реплике. Четыре клиента распределились
+  по два на Pod.
+</p>
+<p>
+  Во втором равномерном прогоне ClientIP три клиента
+  оказались закреплены за одной репликой:
+  распределение 540/180, среднее ожидание на горячей
+  реплике среди успешных ответов — около 8,06 с.
+  Таким образом, результат ClientIP зависит от назначения
+  клиентов репликам даже при равномерном входном трафике.
+</p>
+<h2>Фактический возврат HPA к двум репликам</h2>
+<p>
+  По results/C/scale-down.json наблюдаемое ожидание
+  после завершения нагрузки составило 89,10 с.
+  Настроенное окно стабилизации — 60 с.
+  Фактическое ожидание также включает работу контроллеров
+  и завершение Pod.
+</p>
+</section>
+
 </html>
