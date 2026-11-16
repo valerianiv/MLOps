@@ -1,0 +1,38 @@
+{
+  "checks": 15,
+  "passed": 15,
+  "failed": [],
+  "rollout_before": {
+    "planned": 100,
+    "completed": 97,
+    "outcomes": {
+      "completed": 97,
+      "rejected": 3
+    },
+    "p95_ttfc": 19.322676150599936,
+    "fail_fraction": 0.030000000000000027,
+    "versions": {
+      "A": 45,
+      "B": 55
+    }
+  },
+  "rollout_after": {
+    "planned": 100,
+    "completed": 100,
+    "outcomes": {
+      "completed": 100
+    },
+    "p95_ttfc": 26.27011191395017,
+    "fail_fraction": 0.0,
+    "versions": {
+      "A": 42,
+      "B": 58
+    }
+  },
+  "warnings": [],
+  "remaining_editorial_items": [
+    "author and group",
+    "repository and commit",
+    "lecture company, timestamp and primary source"
+  ]
+}

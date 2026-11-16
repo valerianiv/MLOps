@@ -1,0 +1,124 @@
+---
+# Source: lab11/templates/api.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+data:
+  MODEL_VERSION: "A"
+  WARMUP_SECONDS: "20"
+  BROKEN_PROBES: "false"
+  NEVER_READY: "false"
+  CONCURRENCY: "1"
+  MAX_QUEUE: "32"
+  QUEUE_TIMEOUT: "30"
+  CACHE_SIZE: "32"
+  HIT_ITERATIONS: "15000"
+  MISS_ITERATIONS: "180000"
+---
+# Source: lab11/templates/api.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: api}
+spec:
+  selector: {app: api}
+  ports: [{name: http, port: 8080, targetPort: http}]
+  sessionAffinity: None
+---
+# Source: lab11/templates/api.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: api-sticky}
+spec:
+  selector: {app: api}
+  ports: [{name: http, port: 8080, targetPort: http}]
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP: {timeoutSeconds: 10800}
+---
+# Source: lab11/templates/api.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  revisionHistoryLimit: 4
+  minReadySeconds: 3
+  progressDeadlineSeconds: 240
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels: {app: api}
+  template:
+    metadata:
+      labels: {app: api}
+      annotations:
+        configuration: "2210a6cf2534d575c86ce20486a37c02e3d8383df40d18058bf7f4fa1a780047"
+    spec:
+      terminationGracePeriodSeconds: 90
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+      containers:
+        - name: api
+          image: "lab11-api:1.0.0"
+          imagePullPolicy: IfNotPresent
+          ports: [{name: http, containerPort: 8080}]
+          envFrom: [{configMapRef: {name: api-config}}]
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef: {fieldPath: metadata.name}
+          resources:
+            limits:
+              cpu: 700m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 96Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+          lifecycle:
+            preStop:
+              httpGet: {path: /drain, port: http}
+          startupProbe:
+            httpGet: {path: /startup, port: http}
+            periodSeconds: 2
+            timeoutSeconds: 2
+            failureThreshold: 90
+          readinessProbe:
+            httpGet: {path: /ready, port: http}
+            periodSeconds: 1
+            timeoutSeconds: 2
+            failureThreshold: 1
+          livenessProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+---
+# Source: lab11/templates/api.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: api}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: api}
+  minReplicas: 2
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: 55}
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies: [{type: Pods, value: 1, periodSeconds: 15}]
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies: [{type: Pods, value: 1, periodSeconds: 15}]

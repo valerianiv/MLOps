@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64.sha256sum",
+    "status": 200,
+    "bytes": 83,
+    "preview": "a6875aaea358acf0ac07786b1a6755d08fd640f4c79b7a2e46681cc13f49a04b  kind-linux-amd64\n"
+  },
+  {
+    "url": "https://get.helm.sh/helm-v3.17.2-linux-amd64.tar.gz.sha256sum",
+    "status": 200,
+    "bytes": 98,
+    "preview": "90c28792a1eb5fb0b50028e39ebf826531ebfcf73f599050dbd79bab2f277241  helm-v3.17.2-linux-amd64.tar.gz\n"
+  },
+  {
+    "url": "https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.7.2/components.yaml",
+    "status": 200,
+    "bytes": 4307,
+    "preview": "apiVersion: v1\nkind: ServiceAccount\nmetadata:\n  labels:\n    k8s-app: metrics-server\n  name: metrics-server\n  namespace: kube-system\n---\napiVersion: rb"
+  }
+]

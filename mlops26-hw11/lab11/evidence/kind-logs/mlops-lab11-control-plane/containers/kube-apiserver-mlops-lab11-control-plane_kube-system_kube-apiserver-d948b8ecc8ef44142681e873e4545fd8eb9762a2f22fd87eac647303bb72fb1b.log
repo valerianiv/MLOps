@@ -1,0 +1,248 @@
+2026-11-16T11:38:29.026439948Z stderr F W1116 11:38:29.026168       1 registry.go:256] calling componentGlobalsRegistry.AddFlags more than once, the registry will be set by the latest flags
+2026-11-16T11:38:29.026757411Z stderr F I1116 11:38:29.026657       1 options.go:238] external host was not specified, using 172.19.0.2
+2026-11-16T11:38:29.028695119Z stderr F I1116 11:38:29.028608       1 server.go:143] Version: v1.32.2
+2026-11-16T11:38:29.028708049Z stderr F I1116 11:38:29.028645       1 server.go:145] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-11-16T11:38:29.42575773Z stderr F W1116 11:38:29.425346       1 logging.go:55] [core] [Channel #1 SubChannel #2]grpc: addrConn.createTransport failed to connect to {Addr: "127.0.0.1:2379", ServerName: "127.0.0.1:2379", }. Err: connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:2379: connect: connection refused"
+2026-11-16T11:38:29.426008672Z stderr F W1116 11:38:29.425890       1 logging.go:55] [core] [Channel #3 SubChannel #4]grpc: addrConn.createTransport failed to connect to {Addr: "127.0.0.1:2379", ServerName: "127.0.0.1:2379", }. Err: connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:2379: connect: connection refused"
+2026-11-16T11:38:29.427286581Z stderr F I1116 11:38:29.427136       1 shared_informer.go:313] Waiting for caches to sync for node_authorizer
+2026-11-16T11:38:29.43628584Z stderr F I1116 11:38:29.436033       1 shared_informer.go:313] Waiting for caches to sync for *generic.policySource[*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicy,*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicyBinding,k8s.io/apiserver/pkg/admission/plugin/policy/validating.Validator]
+2026-11-16T11:38:29.444540767Z stderr F I1116 11:38:29.444416       1 plugins.go:157] Loaded 13 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,MutatingAdmissionPolicy,MutatingAdmissionWebhook.
+2026-11-16T11:38:29.444560623Z stderr F I1116 11:38:29.444455       1 plugins.go:160] Loaded 13 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,PodSecurity,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,ClusterTrustBundleAttest,CertificateSubjectRestriction,ValidatingAdmissionPolicy,ValidatingAdmissionWebhook,ResourceQuota.
+2026-11-16T11:38:29.444767292Z stderr F I1116 11:38:29.444693       1 instance.go:233] Using reconciler: lease
+2026-11-16T11:38:29.445668273Z stderr F W1116 11:38:29.445551       1 logging.go:55] [core] [Channel #5 SubChannel #6]grpc: addrConn.createTransport failed to connect to {Addr: "127.0.0.1:2379", ServerName: "127.0.0.1:2379", }. Err: connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:2379: connect: connection refused"
+2026-11-16T11:38:30.466594371Z stderr F I1116 11:38:30.466356       1 handler.go:286] Adding GroupVersion apiextensions.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.466625635Z stderr F W1116 11:38:30.466393       1 genericapiserver.go:767] Skipping API apiextensions.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.582225778Z stderr F I1116 11:38:30.581900       1 handler.go:286] Adding GroupVersion  v1 to ResourceManager
+2026-11-16T11:38:30.582390055Z stderr F I1116 11:38:30.582156       1 apis.go:106] API group "internal.apiserver.k8s.io" is not enabled, skipping.
+2026-11-16T11:38:30.691365614Z stderr F I1116 11:38:30.691196       1 apis.go:106] API group "storagemigration.k8s.io" is not enabled, skipping.
+2026-11-16T11:38:30.788406383Z stderr F I1116 11:38:30.788209       1 apis.go:106] API group "resource.k8s.io" is not enabled, skipping.
+2026-11-16T11:38:30.800724936Z stderr F I1116 11:38:30.800440       1 handler.go:286] Adding GroupVersion authentication.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.800766506Z stderr F W1116 11:38:30.800486       1 genericapiserver.go:767] Skipping API authentication.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.800788633Z stderr F W1116 11:38:30.800493       1 genericapiserver.go:767] Skipping API authentication.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.801025726Z stderr F I1116 11:38:30.800858       1 handler.go:286] Adding GroupVersion authorization.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.801030719Z stderr F W1116 11:38:30.800883       1 genericapiserver.go:767] Skipping API authorization.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.801634457Z stderr F I1116 11:38:30.801450       1 handler.go:286] Adding GroupVersion autoscaling v2 to ResourceManager
+2026-11-16T11:38:30.802105664Z stderr F I1116 11:38:30.801958       1 handler.go:286] Adding GroupVersion autoscaling v1 to ResourceManager
+2026-11-16T11:38:30.802110261Z stderr F W1116 11:38:30.801995       1 genericapiserver.go:767] Skipping API autoscaling/v2beta1 because it has no resources.
+2026-11-16T11:38:30.802111492Z stderr F W1116 11:38:30.801999       1 genericapiserver.go:767] Skipping API autoscaling/v2beta2 because it has no resources.
+2026-11-16T11:38:30.80301603Z stderr F I1116 11:38:30.802915       1 handler.go:286] Adding GroupVersion batch v1 to ResourceManager
+2026-11-16T11:38:30.803020351Z stderr F W1116 11:38:30.802942       1 genericapiserver.go:767] Skipping API batch/v1beta1 because it has no resources.
+2026-11-16T11:38:30.803663326Z stderr F I1116 11:38:30.803511       1 handler.go:286] Adding GroupVersion certificates.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.803667483Z stderr F W1116 11:38:30.803542       1 genericapiserver.go:767] Skipping API certificates.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.803668562Z stderr F W1116 11:38:30.803546       1 genericapiserver.go:767] Skipping API certificates.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.803953461Z stderr F I1116 11:38:30.803864       1 handler.go:286] Adding GroupVersion coordination.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.803965404Z stderr F W1116 11:38:30.803876       1 genericapiserver.go:767] Skipping API coordination.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.803966611Z stderr F W1116 11:38:30.803880       1 genericapiserver.go:767] Skipping API coordination.k8s.io/v1alpha2 because it has no resources.
+2026-11-16T11:38:30.804476017Z stderr F I1116 11:38:30.804347       1 handler.go:286] Adding GroupVersion discovery.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.804481385Z stderr F W1116 11:38:30.804377       1 genericapiserver.go:767] Skipping API discovery.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.805507206Z stderr F I1116 11:38:30.805356       1 handler.go:286] Adding GroupVersion networking.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.805525665Z stderr F W1116 11:38:30.805369       1 genericapiserver.go:767] Skipping API networking.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.80552759Z stderr F W1116 11:38:30.805372       1 genericapiserver.go:767] Skipping API networking.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.805817933Z stderr F I1116 11:38:30.805726       1 handler.go:286] Adding GroupVersion node.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.805821556Z stderr F W1116 11:38:30.805749       1 genericapiserver.go:767] Skipping API node.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.805822687Z stderr F W1116 11:38:30.805752       1 genericapiserver.go:767] Skipping API node.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.806444068Z stderr F I1116 11:38:30.806315       1 handler.go:286] Adding GroupVersion policy v1 to ResourceManager
+2026-11-16T11:38:30.806449279Z stderr F W1116 11:38:30.806340       1 genericapiserver.go:767] Skipping API policy/v1beta1 because it has no resources.
+2026-11-16T11:38:30.807734646Z stderr F I1116 11:38:30.807583       1 handler.go:286] Adding GroupVersion rbac.authorization.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.807760842Z stderr F W1116 11:38:30.807611       1 genericapiserver.go:767] Skipping API rbac.authorization.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.807762779Z stderr F W1116 11:38:30.807615       1 genericapiserver.go:767] Skipping API rbac.authorization.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.808176476Z stderr F I1116 11:38:30.808062       1 handler.go:286] Adding GroupVersion scheduling.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.808189273Z stderr F W1116 11:38:30.808091       1 genericapiserver.go:767] Skipping API scheduling.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.808190381Z stderr F W1116 11:38:30.808095       1 genericapiserver.go:767] Skipping API scheduling.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.810157323Z stderr F I1116 11:38:30.809960       1 handler.go:286] Adding GroupVersion storage.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.810169192Z stderr F W1116 11:38:30.810003       1 genericapiserver.go:767] Skipping API storage.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.810170606Z stderr F W1116 11:38:30.810019       1 genericapiserver.go:767] Skipping API storage.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.811482537Z stderr F I1116 11:38:30.811221       1 handler.go:286] Adding GroupVersion flowcontrol.apiserver.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.811494961Z stderr F W1116 11:38:30.811275       1 genericapiserver.go:767] Skipping API flowcontrol.apiserver.k8s.io/v1beta3 because it has no resources.
+2026-11-16T11:38:30.811496569Z stderr F W1116 11:38:30.811281       1 genericapiserver.go:767] Skipping API flowcontrol.apiserver.k8s.io/v1beta2 because it has no resources.
+2026-11-16T11:38:30.81149772Z stderr F W1116 11:38:30.811283       1 genericapiserver.go:767] Skipping API flowcontrol.apiserver.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.815314436Z stderr F I1116 11:38:30.815112       1 handler.go:286] Adding GroupVersion apps v1 to ResourceManager
+2026-11-16T11:38:30.815334957Z stderr F W1116 11:38:30.815200       1 genericapiserver.go:767] Skipping API apps/v1beta2 because it has no resources.
+2026-11-16T11:38:30.815336069Z stderr F W1116 11:38:30.815208       1 genericapiserver.go:767] Skipping API apps/v1beta1 because it has no resources.
+2026-11-16T11:38:30.817269119Z stderr F I1116 11:38:30.817092       1 handler.go:286] Adding GroupVersion admissionregistration.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.817279851Z stderr F W1116 11:38:30.817124       1 genericapiserver.go:767] Skipping API admissionregistration.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.81728113Z stderr F W1116 11:38:30.817129       1 genericapiserver.go:767] Skipping API admissionregistration.k8s.io/v1alpha1 because it has no resources.
+2026-11-16T11:38:30.817774962Z stderr F I1116 11:38:30.817666       1 handler.go:286] Adding GroupVersion events.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.817779344Z stderr F W1116 11:38:30.817691       1 genericapiserver.go:767] Skipping API events.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:30.825651063Z stderr F I1116 11:38:30.825441       1 handler.go:286] Adding GroupVersion apiregistration.k8s.io v1 to ResourceManager
+2026-11-16T11:38:30.825674404Z stderr F W1116 11:38:30.825485       1 genericapiserver.go:767] Skipping API apiregistration.k8s.io/v1beta1 because it has no resources.
+2026-11-16T11:38:31.115946991Z stderr F I1116 11:38:31.115437       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+2026-11-16T11:38:31.115988569Z stderr F I1116 11:38:31.115504       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+2026-11-16T11:38:31.115991664Z stderr F I1116 11:38:31.115679       1 secure_serving.go:213] Serving securely on [::]:6443
+2026-11-16T11:38:31.115993897Z stderr F I1116 11:38:31.115773       1 dynamic_serving_content.go:135] "Starting controller" name="serving-cert::/etc/kubernetes/pki/apiserver.crt::/etc/kubernetes/pki/apiserver.key"
+2026-11-16T11:38:31.116036696Z stderr F I1116 11:38:31.115902       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-11-16T11:38:31.116160153Z stderr F I1116 11:38:31.116057       1 controller.go:80] Starting OpenAPI V3 AggregationController
+2026-11-16T11:38:31.116165937Z stderr F I1116 11:38:31.116124       1 system_namespaces_controller.go:66] Starting system namespaces controller
+2026-11-16T11:38:31.116171318Z stderr F I1116 11:38:31.116143       1 remote_available_controller.go:411] Starting RemoteAvailability controller
+2026-11-16T11:38:31.116172977Z stderr F I1116 11:38:31.116153       1 cache.go:32] Waiting for caches to sync for RemoteAvailability controller
+2026-11-16T11:38:31.116274457Z stderr F I1116 11:38:31.116176       1 dynamic_serving_content.go:135] "Starting controller" name="aggregator-proxy-cert::/etc/kubernetes/pki/front-proxy-client.crt::/etc/kubernetes/pki/front-proxy-client.key"
+2026-11-16T11:38:31.116491409Z stderr F I1116 11:38:31.116319       1 controller.go:119] Starting legacy_token_tracking_controller
+2026-11-16T11:38:31.116497897Z stderr F I1116 11:38:31.116360       1 shared_informer.go:313] Waiting for caches to sync for configmaps
+2026-11-16T11:38:31.116500018Z stderr F I1116 11:38:31.116387       1 apiservice_controller.go:100] Starting APIServiceRegistrationController
+2026-11-16T11:38:31.116502155Z stderr F I1116 11:38:31.116391       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+2026-11-16T11:38:31.116610732Z stderr F I1116 11:38:31.116471       1 customresource_discovery_controller.go:292] Starting DiscoveryController
+2026-11-16T11:38:31.135130004Z stderr F I1116 11:38:31.132524       1 local_available_controller.go:156] Starting LocalAvailability controller
+2026-11-16T11:38:31.13516691Z stderr F I1116 11:38:31.132567       1 cache.go:32] Waiting for caches to sync for LocalAvailability controller
+2026-11-16T11:38:31.135169983Z stderr F I1116 11:38:31.132592       1 controller.go:78] Starting OpenAPI AggregationController
+2026-11-16T11:38:31.135171847Z stderr F I1116 11:38:31.132621       1 apf_controller.go:377] Starting API Priority and Fairness config controller
+2026-11-16T11:38:31.135174473Z stderr F I1116 11:38:31.116048       1 aggregator.go:169] waiting for initial CRD sync...
+2026-11-16T11:38:31.135176019Z stderr F I1116 11:38:31.132771       1 gc_controller.go:78] Starting apiserver lease garbage collector
+2026-11-16T11:38:31.135178549Z stderr F I1116 11:38:31.132527       1 cluster_authentication_trust_controller.go:462] Starting cluster_authentication_trust_controller controller
+2026-11-16T11:38:31.135181001Z stderr F I1116 11:38:31.133010       1 shared_informer.go:313] Waiting for caches to sync for cluster_authentication_trust_controller
+2026-11-16T11:38:31.135182682Z stderr F I1116 11:38:31.133011       1 crdregistration_controller.go:114] Starting crd-autoregister controller
+2026-11-16T11:38:31.135184246Z stderr F I1116 11:38:31.133647       1 shared_informer.go:313] Waiting for caches to sync for crd-autoregister
+2026-11-16T11:38:31.13518577Z stderr F I1116 11:38:31.133665       1 controller.go:142] Starting OpenAPI controller
+2026-11-16T11:38:31.135187394Z stderr F I1116 11:38:31.133692       1 controller.go:90] Starting OpenAPI V3 controller
+2026-11-16T11:38:31.135188972Z stderr F I1116 11:38:31.133705       1 naming_controller.go:294] Starting NamingConditionController
+2026-11-16T11:38:31.135190548Z stderr F I1116 11:38:31.133720       1 establishing_controller.go:81] Starting EstablishingController
+2026-11-16T11:38:31.1351922Z stderr F I1116 11:38:31.133732       1 nonstructuralschema_controller.go:195] Starting NonStructuralSchemaConditionController
+2026-11-16T11:38:31.135193761Z stderr F I1116 11:38:31.133743       1 apiapproval_controller.go:189] Starting KubernetesAPIApprovalPolicyConformantConditionController
+2026-11-16T11:38:31.135195507Z stderr F I1116 11:38:31.133754       1 crd_finalizer.go:269] Starting CRDFinalizer
+2026-11-16T11:38:31.135211504Z stderr F I1116 11:38:31.133819       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+2026-11-16T11:38:31.135213239Z stderr F I1116 11:38:31.133956       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+2026-11-16T11:38:31.213936016Z stderr F E1116 11:38:31.213755       1 controller.go:145] "Failed to ensure lease exists, will retry" err="namespaces \"kube-system\" not found" interval="200ms"
+2026-11-16T11:38:31.217136328Z stderr F I1116 11:38:31.216953       1 cache.go:39] Caches are synced for RemoteAvailability controller
+2026-11-16T11:38:31.217153066Z stderr F I1116 11:38:31.217014       1 shared_informer.go:320] Caches are synced for configmaps
+2026-11-16T11:38:31.217155746Z stderr F I1116 11:38:31.217038       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+2026-11-16T11:38:31.217157389Z stderr F I1116 11:38:31.217068       1 handler_discovery.go:451] Starting ResourceDiscoveryManager
+2026-11-16T11:38:31.227681748Z stderr F I1116 11:38:31.227488       1 shared_informer.go:320] Caches are synced for node_authorizer
+2026-11-16T11:38:31.233331877Z stderr F I1116 11:38:31.233178       1 cache.go:39] Caches are synced for LocalAvailability controller
+2026-11-16T11:38:31.233355707Z stderr F I1116 11:38:31.233224       1 apf_controller.go:382] Running API Priority and Fairness config worker
+2026-11-16T11:38:31.233359974Z stderr F I1116 11:38:31.233237       1 apf_controller.go:385] Running API Priority and Fairness periodic rebalancing process
+2026-11-16T11:38:31.233366792Z stderr F I1116 11:38:31.233198       1 shared_informer.go:320] Caches are synced for cluster_authentication_trust_controller
+2026-11-16T11:38:31.233943722Z stderr F I1116 11:38:31.233749       1 shared_informer.go:320] Caches are synced for crd-autoregister
+2026-11-16T11:38:31.233955321Z stderr F I1116 11:38:31.233787       1 aggregator.go:171] initial CRD sync complete...
+2026-11-16T11:38:31.233957069Z stderr F I1116 11:38:31.233795       1 autoregister_controller.go:144] Starting autoregister controller
+2026-11-16T11:38:31.233959178Z stderr F I1116 11:38:31.233801       1 cache.go:32] Waiting for caches to sync for autoregister controller
+2026-11-16T11:38:31.233960904Z stderr F I1116 11:38:31.233806       1 cache.go:39] Caches are synced for autoregister controller
+2026-11-16T11:38:31.236387504Z stderr F I1116 11:38:31.236156       1 shared_informer.go:320] Caches are synced for *generic.policySource[*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicy,*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicyBinding,k8s.io/apiserver/pkg/admission/plugin/policy/validating.Validator]
+2026-11-16T11:38:31.236416126Z stderr F I1116 11:38:31.236202       1 policy_source.go:240] refreshing policies
+2026-11-16T11:38:31.271749928Z stderr F E1116 11:38:31.271538       1 controller.go:148] "Unhandled Error" err="while syncing ConfigMap \"kube-system/kube-apiserver-legacy-service-account-token-tracking\", err: namespaces \"kube-system\" not found" logger="UnhandledError"
+2026-11-16T11:38:31.319791994Z stderr F I1116 11:38:31.319205       1 controller.go:615] quota admission added evaluator for: namespaces
+2026-11-16T11:38:31.417739615Z stderr F I1116 11:38:31.417502       1 controller.go:615] quota admission added evaluator for: leases.coordination.k8s.io
+2026-11-16T11:38:32.140686419Z stderr F I1116 11:38:32.140322       1 storage_scheduling.go:95] created PriorityClass system-node-critical with value 2000001000
+2026-11-16T11:38:32.146365223Z stderr F I1116 11:38:32.146181       1 storage_scheduling.go:95] created PriorityClass system-cluster-critical with value 2000000000
+2026-11-16T11:38:32.146392406Z stderr F I1116 11:38:32.146220       1 storage_scheduling.go:111] all system priority classes are created successfully or already exist.
+2026-11-16T11:38:32.742970596Z stderr F I1116 11:38:32.742739       1 controller.go:615] quota admission added evaluator for: roles.rbac.authorization.k8s.io
+2026-11-16T11:38:32.790329168Z stderr F I1116 11:38:32.790126       1 controller.go:615] quota admission added evaluator for: rolebindings.rbac.authorization.k8s.io
+2026-11-16T11:38:32.84142574Z stderr F I1116 11:38:32.841120       1 alloc.go:330] "allocated clusterIPs" service="default/kubernetes" clusterIPs={"IPv4":"10.96.0.1"}
+2026-11-16T11:38:32.855599657Z stderr F W1116 11:38:32.855384       1 lease.go:265] Resetting endpoints for master service "kubernetes" to [172.19.0.2]
+2026-11-16T11:38:32.856746627Z stderr F I1116 11:38:32.856582       1 controller.go:615] quota admission added evaluator for: endpoints
+2026-11-16T11:38:32.863133691Z stderr F I1116 11:38:32.862898       1 controller.go:615] quota admission added evaluator for: endpointslices.discovery.k8s.io
+2026-11-16T11:38:34.064687909Z stderr F I1116 11:38:34.064446       1 controller.go:615] quota admission added evaluator for: serviceaccounts
+2026-11-16T11:38:34.074701021Z stderr F I1116 11:38:34.074479       1 controller.go:615] quota admission added evaluator for: deployments.apps
+2026-11-16T11:38:34.087625699Z stderr F I1116 11:38:34.087273       1 alloc.go:330] "allocated clusterIPs" service="kube-system/kube-dns" clusterIPs={"IPv4":"10.96.0.10"}
+2026-11-16T11:38:34.098207577Z stderr F I1116 11:38:34.098077       1 controller.go:615] quota admission added evaluator for: daemonsets.apps
+2026-11-16T11:38:40.421658278Z stderr F I1116 11:38:40.421193       1 controller.go:615] quota admission added evaluator for: replicasets.apps
+2026-11-16T11:38:40.671782087Z stderr F I1116 11:38:40.671558       1 controller.go:615] quota admission added evaluator for: controllerrevisions.apps
+2026-11-16T11:38:55.584029544Z stderr F I1116 11:38:55.583867       1 handler.go:286] Adding GroupVersion metrics.k8s.io v1beta1 to ResourceManager
+2026-11-16T11:38:55.591717654Z stderr F W1116 11:38:55.591532       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:38:55.591740647Z stderr F E1116 11:38:55.591597       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T11:38:55.59174495Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:38:55.591746909Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:38:55.591748746Z stderr F  > logger="UnhandledError"
+2026-11-16T11:38:55.593132985Z stderr F E1116 11:38:55.592975       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:38:56.58439589Z stderr F W1116 11:38:56.584118       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:38:56.584422556Z stderr F W1116 11:38:56.584118       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:38:56.584424835Z stderr F E1116 11:38:56.584246       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:38:56.584427252Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:38:56.584428892Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:38:56.584431273Z stderr F  > logger="UnhandledError"
+2026-11-16T11:38:56.584433233Z stderr F E1116 11:38:56.584244       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:38:56.585678365Z stderr F I1116 11:38:56.585496       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:38:56.585699561Z stderr F I1116 11:38:56.585555       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:39:31.213341032Z stderr F E1116 11:39:31.213072       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:39:56.58277681Z stderr F W1116 11:39:56.582391       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:39:56.582814064Z stderr F W1116 11:39:56.582477       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:39:56.582820443Z stderr F E1116 11:39:56.582511       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:39:56.582823519Z stderr F E1116 11:39:56.582559       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:39:56.582827549Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:39:56.582830035Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:39:56.582833107Z stderr F  > logger="UnhandledError"
+2026-11-16T11:39:56.584214406Z stderr F I1116 11:39:56.583960       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:39:56.584234092Z stderr F I1116 11:39:56.584065       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:40:31.208617634Z stderr F E1116 11:40:31.208374       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:41:31.20382514Z stderr F E1116 11:41:31.203547       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:41:56.576239491Z stderr F W1116 11:41:56.575914       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:41:56.576273285Z stderr F E1116 11:41:56.575969       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:41:56.576275313Z stderr F W1116 11:41:56.576089       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:41:56.576285637Z stderr F E1116 11:41:56.576168       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:41:56.576299061Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:41:56.576301339Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:41:56.576303579Z stderr F  > logger="UnhandledError"
+2026-11-16T11:41:56.577814562Z stderr F I1116 11:41:56.577534       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:41:56.577841942Z stderr F I1116 11:41:56.577651       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:42:31.199449129Z stderr F E1116 11:42:31.199023       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:43:31.146812242Z stderr F W1116 11:43:31.146479       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:43:31.146854408Z stderr F E1116 11:43:31.146669       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T11:43:31.146858206Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:43:31.146881069Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:43:31.146882431Z stderr F  > logger="UnhandledError"
+2026-11-16T11:43:31.148313549Z stderr F E1116 11:43:31.148131       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:43:31.194817786Z stderr F E1116 11:43:31.194391       1 handler_proxy.go:143] error resolving kube-system/metrics-server: service "metrics-server" not found
+2026-11-16T11:43:32.149275149Z stderr F W1116 11:43:32.149064       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:43:32.14930131Z stderr F W1116 11:43:32.149127       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:43:32.149302875Z stderr F E1116 11:43:32.149150       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:43:32.149304505Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:43:32.149305597Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:43:32.149306905Z stderr F  > logger="UnhandledError"
+2026-11-16T11:43:32.149308403Z stderr F E1116 11:43:32.149151       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:43:32.150503132Z stderr F I1116 11:43:32.150323       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:43:32.150508263Z stderr F I1116 11:43:32.150379       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:44:08.202274148Z stderr F I1116 11:44:08.202083       1 alloc.go:330] "allocated clusterIPs" service="kube-system/metrics-server" clusterIPs={"IPv4":"10.96.155.123"}
+2026-11-16T11:44:08.208447245Z stderr F W1116 11:44:08.208206       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:44:08.20847922Z stderr F E1116 11:44:08.208272       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T11:44:08.208483597Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:44:08.208486069Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:44:08.208493077Z stderr F  > logger="UnhandledError"
+2026-11-16T11:44:08.216919264Z stderr F W1116 11:44:08.216637       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:44:08.217020362Z stderr F E1116 11:44:08.216722       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T11:44:08.217029722Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:44:08.217032074Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:44:08.21703616Z stderr F  > logger="UnhandledError"
+2026-11-16T11:44:09.210057711Z stderr F W1116 11:44:09.209851       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:44:09.21008871Z stderr F E1116 11:44:09.209906       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:44:09.210090461Z stderr F W1116 11:44:09.209920       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:44:09.210093548Z stderr F E1116 11:44:09.209960       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:44:09.210115396Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:44:09.21011671Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:44:09.210118915Z stderr F  > logger="UnhandledError"
+2026-11-16T11:44:09.211376467Z stderr F I1116 11:44:09.211140       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:44:09.211441031Z stderr F I1116 11:44:09.211301       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:45:09.207373888Z stderr F W1116 11:45:09.207078       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:45:09.207410744Z stderr F E1116 11:45:09.207206       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:45:09.207417347Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:45:09.207420179Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:45:09.207422857Z stderr F  > logger="UnhandledError"
+2026-11-16T11:45:09.20742543Z stderr F W1116 11:45:09.207276       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:45:09.207455216Z stderr F E1116 11:45:09.207318       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:45:09.208674789Z stderr F I1116 11:45:09.208466       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:45:09.208704917Z stderr F I1116 11:45:09.208511       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:46:24.133646086Z stderr F E1116 11:46:24.133425       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T11:46:24.133679638Z stderr F W1116 11:46:24.133540       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:46:24.133711037Z stderr F E1116 11:46:24.133600       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T11:46:24.13371653Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:46:24.133719213Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:46:24.133722216Z stderr F  > logger="UnhandledError"
+2026-11-16T11:46:24.135512302Z stderr F E1116 11:46:24.135320       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": dial tcp 10.96.155.123:443: connect: connection refused" logger="UnhandledError"
+2026-11-16T11:46:25.136278129Z stderr F W1116 11:46:25.135996       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:46:25.136308061Z stderr F W1116 11:46:25.136032       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:46:25.136310404Z stderr F E1116 11:46:25.136047       1 controller.go:113] "Unhandled Error" err="loading OpenAPI spec for \"v1beta1.metrics.k8s.io\" failed with: Error, could not get list of group versions for APIService" logger="UnhandledError"
+2026-11-16T11:46:25.136327826Z stderr F E1116 11:46:25.136067       1 controller.go:102] "Unhandled Error" err=<
+2026-11-16T11:46:25.136330183Z stderr F 	loading OpenAPI spec for "v1beta1.metrics.k8s.io" failed with: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:46:25.136331227Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:46:25.136332552Z stderr F  > logger="UnhandledError"
+2026-11-16T11:46:25.137654279Z stderr F I1116 11:46:25.137399       1 controller.go:126] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:46:25.137669191Z stderr F I1116 11:46:25.137486       1 controller.go:109] OpenAPI AggregationController: action for item v1beta1.metrics.k8s.io: Rate Limited Requeue.
+2026-11-16T11:46:25.532239475Z stderr F W1116 11:46:25.531965       1 handler_proxy.go:99] no RequestInfo found in the context
+2026-11-16T11:46:25.532310571Z stderr F E1116 11:46:25.532142       1 controller.go:146] "Unhandled Error" err=<
+2026-11-16T11:46:25.532325277Z stderr F 	Error updating APIService "v1beta1.metrics.k8s.io" with err: failed to download v1beta1.metrics.k8s.io: failed to retrieve openAPI spec, http error: ResponseCode: 503, Body: service unavailable
+2026-11-16T11:46:25.532327472Z stderr F 	, Header: map[Content-Type:[text/plain; charset=utf-8] X-Content-Type-Options:[nosniff]]
+2026-11-16T11:46:25.53232904Z stderr F  > logger="UnhandledError"
+2026-11-16T11:46:25.532330541Z stderr F E1116 11:46:25.532178       1 remote_available_controller.go:448] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: failing or missing response from https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1: Get \"https://10.96.155.123:443/apis/metrics.k8s.io/v1beta1\": EOF" logger="UnhandledError"
+2026-11-16T11:46:25.540849817Z stderr F I1116 11:46:25.540640       1 handler.go:286] Adding GroupVersion metrics.k8s.io v1beta1 to ResourceManager
+2026-11-16T11:48:12.276803384Z stderr F I1116 11:48:12.276607       1 alloc.go:330] "allocated clusterIPs" service="lab11/api" clusterIPs={"IPv4":"10.96.36.255"}
+2026-11-16T11:48:12.28318565Z stderr F I1116 11:48:12.282840       1 alloc.go:330] "allocated clusterIPs" service="lab11/api-sticky" clusterIPs={"IPv4":"10.96.234.205"}
+2026-11-16T11:48:13.290189224Z stderr F I1116 11:48:13.289999       1 alloc.go:330] "allocated clusterIPs" service="lab11/prometheus" clusterIPs={"IPv4":"10.96.239.190"}
+2026-11-16T11:48:13.346514279Z stderr F I1116 11:48:13.346173       1 alloc.go:330] "allocated clusterIPs" service="lab11/kube-state" clusterIPs={"IPv4":"10.96.46.232"}
+2026-11-16T11:48:13.403122111Z stderr F I1116 11:48:13.402753       1 alloc.go:330] "allocated clusterIPs" service="lab11/grafana" clusterIPs={"IPv4":"10.96.107.217"}
