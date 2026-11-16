@@ -1,0 +1,206 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata: {name: observer, namespace: lab11}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata: {name: lab11-observer}
+rules:
+  - apiGroups: ['']
+    resources: [nodes, nodes/proxy, pods, services, endpoints]
+    verbs: [get, list, watch]
+  - apiGroups: [apps]
+    resources: [deployments, replicasets, daemonsets, statefulsets]
+    verbs: [get, list, watch]
+  - apiGroups: [autoscaling]
+    resources: [horizontalpodautoscalers]
+    verbs: [get, list, watch]
+  - apiGroups: [batch]
+    resources: [jobs, cronjobs]
+    verbs: [get, list, watch]
+  - apiGroups: [policy]
+    resources: [poddisruptionbudgets]
+    verbs: [get, list, watch]
+  - apiGroups: [networking.k8s.io]
+    resources: [ingresses, networkpolicies]
+    verbs: [get, list, watch]
+  - apiGroups: [storage.k8s.io]
+    resources: [storageclasses, volumeattachments]
+    verbs: [get, list, watch]
+  - apiGroups: [certificates.k8s.io]
+    resources: [certificatesigningrequests]
+    verbs: [get, list, watch]
+  - apiGroups: [admissionregistration.k8s.io]
+    resources: [mutatingwebhookconfigurations, validatingwebhookconfigurations]
+    verbs: [get, list, watch]
+  - apiGroups: [coordination.k8s.io]
+    resources: [leases]
+    verbs: [get, list, watch]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata: {name: lab11-observer}
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: ClusterRole, name: lab11-observer}
+subjects: [{kind: ServiceAccount, name: observer, namespace: lab11}]
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: prometheus, namespace: lab11}
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 5s
+      evaluation_interval: 5s
+    rule_files: [/etc/prometheus/rules.yml]
+    scrape_configs:
+      - job_name: api
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces: {names: [lab11]}
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            action: keep
+            regex: api
+          - source_labels: [__meta_kubernetes_pod_container_port_name]
+            action: keep
+            regex: http
+          - source_labels: [__meta_kubernetes_pod_name]
+            target_label: pod
+      - job_name: kube-state
+        static_configs: [{targets: ['kube-state:8080']}]
+      - job_name: cadvisor
+        kubernetes_sd_configs: [{role: node}]
+        scheme: https
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+        tls_config: {ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt}
+        relabel_configs:
+          - target_label: __address__
+            replacement: kubernetes.default.svc:443
+          - source_labels: [__meta_kubernetes_node_name]
+            target_label: __metrics_path__
+            replacement: /api/v1/nodes/${1}/proxy/metrics/cadvisor
+        metric_relabel_configs:
+          - source_labels: [namespace]
+            action: keep
+            regex: lab11
+  rules.yml: |
+    groups:
+      - name: lab11
+        rules:
+          - alert: LabHighTTFC
+            expr: (histogram_quantile(0.95, sum by (le) (rate(lab_ttfc_seconds_bucket[1m]))) > 0.8) and (sum(increase(lab_ttfc_seconds_count[1m])) >= 10)
+            for: 20s
+            labels: {severity: warning}
+            annotations: {summary: 'p95 TTFC above 0.8s, minimum 10 completions/min'}
+          - alert: LabRefusals
+            expr: (sum(rate(lab_requests_total{outcome!="completed"}[1m])) / clamp_min(sum(rate(lab_requests_total[1m])), 0.001) > 0.05) and (sum(increase(lab_requests_total[1m])) >= 20)
+            for: 20s
+            labels: {severity: warning}
+            annotations: {summary: 'Non-completed requests above 5%, minimum 20/min'}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: prometheus, namespace: lab11}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: prometheus}}
+  template:
+    metadata: {labels: {app: prometheus}}
+    spec:
+      serviceAccountName: observer
+      containers:
+        - name: prometheus
+          image: prom/prometheus:v3.2.1
+          args: [--config.file=/etc/prometheus/prometheus.yml, --storage.tsdb.path=/prometheus, --storage.tsdb.retention.time=6h, --storage.tsdb.retention.size=384MB]
+          ports: [{containerPort: 9090}]
+          resources: {requests: {cpu: 100m, memory: 192Mi}, limits: {cpu: 500m, memory: 512Mi}}
+          volumeMounts: [{name: config, mountPath: /etc/prometheus}, {name: data, mountPath: /prometheus}]
+      volumes:
+        - name: config
+          configMap: {name: prometheus}
+        - name: data
+          emptyDir: {sizeLimit: 512Mi}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: prometheus, namespace: lab11}
+spec: {selector: {app: prometheus}, ports: [{port: 9090}]}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: kube-state, namespace: lab11}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: kube-state}}
+  template:
+    metadata: {labels: {app: kube-state}}
+    spec:
+      serviceAccountName: observer
+      containers:
+        - name: kube-state
+          image: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0
+          args: ["--namespaces=lab11", "--resources=pods,deployments,horizontalpodautoscalers"]
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 30m, memory: 32Mi}, limits: {cpu: 200m, memory: 96Mi}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: kube-state, namespace: lab11}
+spec: {selector: {app: kube-state}, ports: [{port: 8080}]}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: grafana-config, namespace: lab11}
+data:
+  datasource.yaml: |
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        uid: prometheus
+        type: prometheus
+        access: proxy
+        url: http://prometheus:9090
+        isDefault: true
+  dashboards.yaml: |
+    apiVersion: 1
+    providers:
+      - name: lab11
+        options: {path: /var/lib/grafana/dashboards}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: grafana, namespace: lab11}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: grafana}}
+  template:
+    metadata: {labels: {app: grafana}}
+    spec:
+      securityContext: {fsGroup: 472}
+      containers:
+        - name: grafana
+          image: grafana/grafana:11.6.0
+          env:
+            - {name: GF_AUTH_ANONYMOUS_ENABLED, value: 'true'}
+            - {name: GF_AUTH_ANONYMOUS_ORG_ROLE, value: Viewer}
+            - {name: GF_AUTH_DISABLE_LOGIN_FORM, value: 'true'}
+            - {name: GF_ANALYTICS_REPORTING_ENABLED, value: 'false'}
+          ports: [{containerPort: 3000}]
+          resources: {requests: {cpu: 50m, memory: 96Mi}, limits: {cpu: 300m, memory: 256Mi}}
+          volumeMounts:
+            - {name: config, mountPath: /etc/grafana/provisioning/datasources/datasource.yaml, subPath: datasource.yaml}
+            - {name: config, mountPath: /etc/grafana/provisioning/dashboards/dashboards.yaml, subPath: dashboards.yaml}
+            - {name: dashboard, mountPath: /var/lib/grafana/dashboards}
+            - {name: data, mountPath: /var/lib/grafana}
+      volumes:
+        - name: config
+          configMap: {name: grafana-config}
+        - name: dashboard
+          configMap: {name: grafana-dashboard}
+        - name: data
+          emptyDir: {sizeLimit: 128Mi}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: grafana, namespace: lab11}
+spec: {selector: {app: grafana}, ports: [{port: 3000}]}

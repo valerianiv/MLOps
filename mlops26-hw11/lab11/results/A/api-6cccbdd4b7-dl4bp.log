@@ -1,0 +1,18 @@
+2026-11-16T14:13:37.053730736Z INFO:     Started server process [1]
+2026-11-16T14:13:37.053769269Z INFO:     Waiting for application startup.
+2026-11-16T14:13:37.056648319Z INFO:     Application startup complete.
+2026-11-16T14:13:37.056669078Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-16T14:13:57.118112656Z {"event": "warmup_complete", "wall": 1794838437.1178515, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "artifact_sha256": "df38b7ce299d0a1f99bf6e36149624c63b92b9edad8942c42ca2440a2f94c196"}
+2026-11-16T14:14:53.831026173Z {"event": "received", "wall": 1794838493.8306963, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000001", "client_ip": "10.244.0.11", "warm": true}
+2026-11-16T14:14:54.188770139Z {"event": "terminal", "wall": 1794838494.1883757, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000001", "outcome": "completed", "queue_seconds": 0.00011120499948447105, "duration": 0.3576952409994192, "ttfc": 0.09679793899977085, "chunks": 8, "cache_hit": false}
+2026-11-16T14:14:55.298664422Z {"event": "received", "wall": 1794838495.2982655, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000004", "client_ip": "10.244.0.12", "warm": true}
+2026-11-16T14:14:55.649357376Z {"event": "terminal", "wall": 1794838495.6490774, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000004", "outcome": "completed", "queue_seconds": 0.00012216899995109998, "duration": 0.3508219229997849, "ttfc": 0.08541094100019109, "chunks": 8, "cache_hit": false}
+2026-11-16T14:14:55.799646037Z {"event": "received", "wall": 1794838495.7991672, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000005", "client_ip": "10.244.0.11", "warm": true}
+2026-11-16T14:14:56.142836467Z {"event": "terminal", "wall": 1794838496.142622, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000005", "outcome": "completed", "queue_seconds": 0.0002812470002027112, "duration": 0.3434863009997571, "ttfc": 0.09114247100023931, "chunks": 8, "cache_hit": false}
+2026-11-16T14:14:56.298748650Z {"event": "received", "wall": 1794838496.2981482, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000006", "client_ip": "10.244.0.4", "warm": true}
+2026-11-16T14:14:56.634656491Z {"event": "terminal", "wall": 1794838496.6344523, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated", "request_id": "req-000006", "outcome": "completed", "queue_seconds": 0.00011417099995014723, "duration": 0.33632411300004605, "ttfc": 0.08892161899984785, "chunks": 8, "cache_hit": false}
+2026-11-16T14:14:57.627111127Z {"event": "drain_started", "wall": 1794838497.6269784, "pod": "api-6cccbdd4b7-dl4bp", "version": "A", "backend_mode": "simulated"}
+2026-11-16T14:15:05.674774864Z INFO:     Shutting down
+2026-11-16T14:15:05.775937702Z INFO:     Waiting for application shutdown.
+2026-11-16T14:15:05.775994099Z INFO:     Application shutdown complete.
+2026-11-16T14:15:05.776136793Z INFO:     Finished server process [1]

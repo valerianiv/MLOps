@@ -1,0 +1,3 @@
+{
+  "note": "Ordinary Service is the candidate fix. Confirm using all 3 runs: TTFC, errors, queues and distribution. A missing expected skew is also a result; inspect client_ip and connection-close traces."
+}

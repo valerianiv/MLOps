@@ -1,0 +1,19 @@
+2026-11-16T12:36:53.142906294Z INFO:     Started server process [1]
+2026-11-16T12:36:53.142972693Z INFO:     Waiting for application startup.
+2026-11-16T12:36:53.146208968Z INFO:     Application startup complete.
+2026-11-16T12:36:53.146644730Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-16T12:36:58.286167505Z {"event": "warmup_complete", "wall": 1794832618.2854235, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "artifact_sha256": "df38b7ce299d0a1f99bf6e36149624c63b92b9edad8942c42ca2440a2f94c196"}
+2026-11-16T12:38:22.359605872Z {"event": "received", "wall": 1794832702.3589425, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-0", "client_ip": "10.244.0.12", "warm": true}
+2026-11-16T12:38:22.382571550Z {"event": "received", "wall": 1794832702.3823783, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-1", "client_ip": "10.244.0.11", "warm": true}
+2026-11-16T12:38:22.385603294Z {"event": "received", "wall": 1794832702.3854332, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-3", "client_ip": "10.244.0.5", "warm": true}
+2026-11-16T12:38:22.385849132Z {"event": "received", "wall": 1794832702.3857458, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-2", "client_ip": "10.244.0.4", "warm": true}
+2026-11-16T12:38:22.468966813Z {"event": "terminal", "wall": 1794832702.4688084, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-0", "outcome": "completed", "queue_seconds": 0.00017645399998400535, "duration": 0.1098968149999564, "ttfc": 0.09490986000014345, "chunks": 2, "cache_hit": false}
+2026-11-16T12:38:22.555783491Z {"event": "terminal", "wall": 1794832702.555568, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-1", "outcome": "completed", "queue_seconds": 0.08683222100012244, "duration": 0.1732150630000433, "ttfc": 0.1575085649999437, "chunks": 2, "cache_hit": false}
+2026-11-16T12:38:22.655359439Z {"event": "terminal", "wall": 1794832702.6551857, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-3", "outcome": "completed", "queue_seconds": 0.17037286699996912, "duration": 0.26976658600005976, "ttfc": 0.2542518120001205, "chunks": 2, "cache_hit": false}
+2026-11-16T12:38:22.748365862Z {"event": "terminal", "wall": 1794832702.7481346, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated", "request_id": "dialogue-2", "outcome": "completed", "queue_seconds": 0.2696993540000676, "duration": 0.3624003810000431, "ttfc": 0.3465680990000237, "chunks": 2, "cache_hit": false}
+2026-11-16T12:38:22.953288524Z {"event": "drain_started", "wall": 1794832702.9529016, "pod": "api-754d69c577-hdcb7", "version": "A", "backend_mode": "simulated"}
+2026-11-16T12:38:30.990913606Z INFO:     Shutting down
+2026-11-16T12:38:31.091614229Z INFO:     Waiting for application shutdown.
+2026-11-16T12:38:31.091652392Z INFO:     Application shutdown complete.
+2026-11-16T12:38:31.091655407Z INFO:     Finished server process [1]
+error: error from server (NotFound): pods "api-754d69c577-hdcb7" not found in namespace "lab11"

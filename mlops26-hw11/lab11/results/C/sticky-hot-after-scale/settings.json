@@ -1,0 +1,8 @@
+{
+  "epoch": 1794836070.4005606,
+  "service": "api-sticky",
+  "keep_alive": false,
+  "backend_mode": "simulated",
+  "cache_start": "not reset; see phase actions",
+  "attempts_per_request": 1
+}

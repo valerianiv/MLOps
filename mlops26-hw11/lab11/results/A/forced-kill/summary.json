@@ -1,0 +1,15 @@
+{
+  "planned": 1,
+  "outcomes": {
+    "aborted": 1
+  },
+  "completed": 0,
+  "sent": 1,
+  "ttfc_p50": null,
+  "ttfc_p95": null,
+  "error_fraction": 1.0,
+  "max_dispatch_lag": 0.0009207739349221811,
+  "by_pod": {
+    "api-696b995cb5-mtwlw": 1
+  }
+}

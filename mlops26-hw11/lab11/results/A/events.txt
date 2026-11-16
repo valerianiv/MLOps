@@ -1,0 +1,245 @@
+LAST SEEN   TYPE      REASON                         OBJECT                        MESSAGE
+60m         Normal    Scheduled                      pod/api-6c5ddbc9dd-dn6kl      Successfully assigned lab11/api-6c5ddbc9dd-dn6kl to mlops-lab11-control-plane
+51m         Normal    Scheduled                      pod/api-7f8c574b5f-m9j4r      Successfully assigned lab11/api-7f8c574b5f-m9j4r to mlops-lab11-control-plane
+9m47s       Normal    Scheduled                      pod/api-7cf4bc8446-n98dq      Successfully assigned lab11/api-7cf4bc8446-n98dq to mlops-lab11-control-plane
+9m47s       Normal    Scheduled                      pod/api-b4596f8d8-97zkw       Successfully assigned lab11/api-b4596f8d8-97zkw to mlops-lab11-control-plane
+2m18s       Normal    Scheduled                      pod/api-77445968c-4zxpd       Successfully assigned lab11/api-77445968c-4zxpd to mlops-lab11-control-plane
+53m         Normal    Scheduled                      pod/api-7f8c574b5f-r7xrz      Successfully assigned lab11/api-7f8c574b5f-r7xrz to mlops-lab11-control-plane
+9m40s       Normal    Scheduled                      pod/api-b4596f8d8-dv6vm       Successfully assigned lab11/api-b4596f8d8-dv6vm to mlops-lab11-control-plane
+3m53s       Normal    Scheduled                      pod/api-5f8c8c5f44-rfnz7      Successfully assigned lab11/api-5f8c8c5f44-rfnz7 to mlops-lab11-control-plane
+44m         Normal    Scheduled                      pod/api-b658878fd-c2p78       Successfully assigned lab11/api-b658878fd-c2p78 to mlops-lab11-control-plane
+9m10s       Normal    Scheduled                      pod/api-b4596f8d8-965fm       Successfully assigned lab11/api-b4596f8d8-965fm to mlops-lab11-control-plane
+83s         Normal    Scheduled                      pod/api-696b995cb5-mtwlw      Successfully assigned lab11/api-696b995cb5-mtwlw to mlops-lab11-control-plane
+59m         Normal    Scheduled                      pod/api-6c5ddbc9dd-xdjk7      Successfully assigned lab11/api-6c5ddbc9dd-xdjk7 to mlops-lab11-control-plane
+5m8s        Normal    Scheduled                      pod/api-696b995cb5-gzcrp      Successfully assigned lab11/api-696b995cb5-gzcrp to mlops-lab11-control-plane
+53m         Normal    Scheduled                      pod/api-7f8c574b5f-zj5dx      Successfully assigned lab11/api-7f8c574b5f-zj5dx to mlops-lab11-control-plane
+7m38s       Normal    Scheduled                      pod/api-6cccbdd4b7-dl4bp      Successfully assigned lab11/api-6cccbdd4b7-dl4bp to mlops-lab11-control-plane
+53m         Normal    Scheduled                      pod/api-867dcdbb4f-9fd7v      Successfully assigned lab11/api-867dcdbb4f-9fd7v to mlops-lab11-control-plane
+6m15s       Normal    Scheduled                      pod/api-6cccbdd4b7-gnv7t      Successfully assigned lab11/api-6cccbdd4b7-gnv7t to mlops-lab11-control-plane
+44m         Normal    Scheduled                      pod/api-b658878fd-pb7xh       Successfully assigned lab11/api-b658878fd-pb7xh to mlops-lab11-control-plane
+56m         Normal    Scheduled                      pod/api-64b645c658-b7plc      Successfully assigned lab11/api-64b645c658-b7plc to mlops-lab11-control-plane
+4m43s       Normal    Scheduled                      pod/api-696b995cb5-4w2wh      Successfully assigned lab11/api-696b995cb5-4w2wh to mlops-lab11-control-plane
+44m         Normal    Scheduled                      pod/api-ffd655d5c-qlt6b       Successfully assigned lab11/api-ffd655d5c-qlt6b to mlops-lab11-control-plane
+3m28s       Normal    Scheduled                      pod/api-5f8c8c5f44-84st8      Successfully assigned lab11/api-5f8c8c5f44-84st8 to mlops-lab11-control-plane
+8m3s        Normal    Scheduled                      pod/api-6cccbdd4b7-r8ttm      Successfully assigned lab11/api-6cccbdd4b7-r8ttm to mlops-lab11-control-plane
+109s        Normal    Scheduled                      pod/api-696b995cb5-x76xs      Successfully assigned lab11/api-696b995cb5-x76xs to mlops-lab11-control-plane
+46m         Normal    Scheduled                      pod/api-7f8c574b5f-96lgp      Successfully assigned lab11/api-7f8c574b5f-96lgp to mlops-lab11-control-plane
+56m         Normal    Scheduled                      pod/api-64b645c658-dqsfx      Successfully assigned lab11/api-64b645c658-dqsfx to mlops-lab11-control-plane
+8m3s        Normal    Scheduled                      pod/api-8597775cbd-tfj25      Successfully assigned lab11/api-8597775cbd-tfj25 to mlops-lab11-control-plane
+60m         Normal    SuccessfulCreate               replicaset/api-6c5ddbc9dd     Created pod: api-6c5ddbc9dd-dn6kl
+60m         Normal    Created                        pod/api-6c5ddbc9dd-dn6kl      Created container: api
+60m         Normal    Started                        pod/api-6c5ddbc9dd-dn6kl      Started container api
+60m         Normal    Pulled                         pod/api-6c5ddbc9dd-dn6kl      Container image "lab11-api:1.0.0" already present on machine
+59m         Warning   Unhealthy                      pod/api-6c5ddbc9dd-dn6kl      Startup probe failed: HTTP probe failed with statuscode: 503
+59m         Normal    SuccessfulCreate               replicaset/api-6c5ddbc9dd     Created pod: api-6c5ddbc9dd-xdjk7
+59m         Normal    Killing                        pod/api-85ccbb6785-vx78d      Stopping container api
+59m         Normal    Pulled                         pod/api-6c5ddbc9dd-xdjk7      Container image "lab11-api:1.0.0" already present on machine
+59m         Normal    Created                        pod/api-6c5ddbc9dd-xdjk7      Created container: api
+59m         Normal    Started                        pod/api-6c5ddbc9dd-xdjk7      Started container api
+59m         Normal    SuccessfulDelete               replicaset/api-85ccbb6785     Deleted pod: api-85ccbb6785-vx78d
+59m         Warning   Unhealthy                      pod/api-85ccbb6785-vx78d      Readiness probe failed: HTTP probe failed with statuscode: 503
+59m         Warning   Unhealthy                      pod/api-6c5ddbc9dd-xdjk7      Startup probe failed: HTTP probe failed with statuscode: 503
+59m         Normal    Killing                        pod/api-85ccbb6785-qbkqx      Stopping container api
+59m         Normal    SuccessfulDelete               replicaset/api-85ccbb6785     Deleted pod: api-85ccbb6785-qbkqx
+59m         Warning   Unhealthy                      pod/api-85ccbb6785-qbkqx      Readiness probe failed: HTTP probe failed with statuscode: 503
+56m         Normal    SuccessfulCreate               replicaset/api-64b645c658     Created pod: api-64b645c658-b7plc
+56m         Normal    Pulled                         pod/api-64b645c658-b7plc      Container image "lab11-api:1.0.0" already present on machine
+56m         Normal    Created                        pod/api-64b645c658-b7plc      Created container: api
+56m         Normal    Started                        pod/api-64b645c658-b7plc      Started container api
+56m         Warning   Unhealthy                      pod/api-64b645c658-b7plc      Startup probe failed: HTTP probe failed with statuscode: 503
+56m         Normal    Created                        pod/api-64b645c658-dqsfx      Created container: api
+56m         Normal    Started                        pod/api-64b645c658-dqsfx      Started container api
+56m         Normal    Pulled                         pod/api-64b645c658-dqsfx      Container image "lab11-api:1.0.0" already present on machine
+56m         Normal    Killing                        pod/api-6c5ddbc9dd-xdjk7      Stopping container api
+56m         Normal    SuccessfulCreate               replicaset/api-64b645c658     Created pod: api-64b645c658-dqsfx
+56m         Normal    SuccessfulDelete               replicaset/api-6c5ddbc9dd     Deleted pod: api-6c5ddbc9dd-xdjk7
+56m         Warning   Unhealthy                      pod/api-6c5ddbc9dd-xdjk7      Readiness probe failed: HTTP probe failed with statuscode: 503
+56m         Warning   Unhealthy                      pod/api-6c5ddbc9dd-xdjk7      Readiness probe failed: Get "http://10.244.0.56:8080/ready": dial tcp 10.244.0.56:8080: connect: connection refused
+55m         Warning   Unhealthy                      pod/api-64b645c658-dqsfx      Startup probe failed: HTTP probe failed with statuscode: 503
+55m         Normal    SuccessfulDelete               replicaset/api-6c5ddbc9dd     Deleted pod: api-6c5ddbc9dd-dn6kl
+55m         Normal    Killing                        pod/api-6c5ddbc9dd-dn6kl      Stopping container api
+55m         Warning   Unhealthy                      pod/api-6c5ddbc9dd-dn6kl      Readiness probe failed: HTTP probe failed with statuscode: 503
+53m         Normal    SuccessfulDelete               replicaset/api-867dcdbb4f     Deleted pod: api-867dcdbb4f-9fd7v
+53m         Normal    SuccessfulCreate               replicaset/api-867dcdbb4f     Created pod: api-867dcdbb4f-9fd7v
+53m         Normal    Killing                        pod/api-64b645c658-b7plc      Stopping container api
+53m         Normal    SuccessfulCreate               replicaset/api-7f8c574b5f     Created pod: api-7f8c574b5f-zj5dx
+53m         Normal    SuccessfulDelete               replicaset/api-64b645c658     Deleted pod: api-64b645c658-b7plc
+53m         Normal    Created                        pod/api-7f8c574b5f-zj5dx      Created container: api
+53m         Normal    Killing                        pod/api-867dcdbb4f-9fd7v      Stopping container api
+53m         Normal    Pulled                         pod/api-867dcdbb4f-9fd7v      Container image "lab11-api:1.0.0" already present on machine
+53m         Warning   FailedPreStopHook              pod/api-867dcdbb4f-9fd7v      PreStopHook failed
+53m         Normal    Started                        pod/api-7f8c574b5f-zj5dx      Started container api
+53m         Normal    Started                        pod/api-867dcdbb4f-9fd7v      Started container api
+53m         Normal    Created                        pod/api-867dcdbb4f-9fd7v      Created container: api
+53m         Normal    Pulled                         pod/api-7f8c574b5f-zj5dx      Container image "lab11-api:1.0.0" already present on machine
+53m         Warning   Unhealthy                      pod/api-64b645c658-b7plc      Readiness probe failed: HTTP probe failed with statuscode: 503
+53m         Normal    SuccessfulRescale              horizontalpodautoscaler/api   New size: 2; reason: Current number of replicas below Spec.MinReplicas
+53m         Normal    SuccessfulCreate               replicaset/api-7f8c574b5f     Created pod: api-7f8c574b5f-r7xrz
+53m         Normal    Started                        pod/api-7f8c574b5f-r7xrz      Started container api
+53m         Normal    Created                        pod/api-7f8c574b5f-r7xrz      Created container: api
+53m         Normal    Pulled                         pod/api-7f8c574b5f-r7xrz      Container image "lab11-api:1.0.0" already present on machine
+53m         Warning   Unhealthy                      pod/api-7f8c574b5f-zj5dx      Startup probe failed: HTTP probe failed with statuscode: 503
+52m         Warning   Unhealthy                      pod/api-7f8c574b5f-r7xrz      Startup probe failed: HTTP probe failed with statuscode: 503
+52m         Normal    Killing                        pod/api-64b645c658-dqsfx      Stopping container api
+52m         Normal    SuccessfulDelete               replicaset/api-64b645c658     Deleted pod: api-64b645c658-dqsfx
+52m         Warning   Unhealthy                      pod/api-64b645c658-dqsfx      Readiness probe failed: HTTP probe failed with statuscode: 503
+52m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/api   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+52m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/api   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+51m         Normal    SuccessfulCreate               replicaset/api-7f8c574b5f     Created pod: api-7f8c574b5f-m9j4r
+51m         Normal    Started                        pod/api-7f8c574b5f-m9j4r      Started container api
+51m         Normal    Pulled                         pod/api-7f8c574b5f-m9j4r      Container image "lab11-api:1.0.0" already present on machine
+51m         Normal    Created                        pod/api-7f8c574b5f-m9j4r      Created container: api
+51m         Warning   Unhealthy                      pod/api-7f8c574b5f-m9j4r      Startup probe failed: HTTP probe failed with statuscode: 503
+46m         Normal    SuccessfulRescale              horizontalpodautoscaler/api   New size: 2; reason: All metrics below target
+46m         Normal    SuccessfulDelete               replicaset/api-7f8c574b5f     Deleted pod: api-7f8c574b5f-m9j4r
+46m         Normal    Killing                        pod/api-7f8c574b5f-m9j4r      Stopping container api
+46m         Warning   Unhealthy                      pod/api-7f8c574b5f-m9j4r      Readiness probe failed: HTTP probe failed with statuscode: 503
+46m         Normal    Started                        pod/api-7f8c574b5f-96lgp      Started container api
+46m         Normal    Created                        pod/api-7f8c574b5f-96lgp      Created container: api
+46m         Normal    SuccessfulRescale              horizontalpodautoscaler/api   New size: 3; reason: cpu resource utilization (percentage of request) above target
+46m         Normal    Pulled                         pod/api-7f8c574b5f-96lgp      Container image "lab11-api:1.0.0" already present on machine
+46m         Normal    SuccessfulCreate               replicaset/api-7f8c574b5f     Created pod: api-7f8c574b5f-96lgp
+45m         Warning   Unhealthy                      pod/api-7f8c574b5f-96lgp      Startup probe failed: HTTP probe failed with statuscode: 503
+44m         Normal    SuccessfulCreate               replicaset/api-b658878fd      Created pod: api-b658878fd-c2p78
+44m         Normal    ScalingReplicaSet              deployment/api                Scaled down replica set api-7f8c574b5f from 3 to 2
+44m         Normal    Created                        pod/api-b658878fd-c2p78       Created container: api
+44m         Normal    Killing                        pod/api-7f8c574b5f-96lgp      Stopping container api
+44m         Normal    SuccessfulCreate               replicaset/api-ffd655d5c      Created pod: api-ffd655d5c-qlt6b
+44m         Normal    SuccessfulDelete               replicaset/api-ffd655d5c      Deleted pod: api-ffd655d5c-qlt6b
+44m         Normal    SuccessfulDelete               replicaset/api-7f8c574b5f     Deleted pod: api-7f8c574b5f-96lgp
+44m         Normal    Pulled                         pod/api-b658878fd-c2p78       Container image "lab11-api:1.0.0" already present on machine
+44m         Normal    Started                        pod/api-b658878fd-c2p78       Started container api
+44m         Warning   Unhealthy                      pod/api-7f8c574b5f-96lgp      Readiness probe failed: HTTP probe failed with statuscode: 503
+44m         Warning   Unhealthy                      pod/api-7f8c574b5f-96lgp      Readiness probe failed: Get "http://10.244.0.63:8080/ready": dial tcp 10.244.0.63:8080: connect: connection refused
+44m         Warning   Unhealthy                      pod/api-b658878fd-c2p78       Startup probe failed: HTTP probe failed with statuscode: 503
+44m         Normal    SuccessfulDelete               replicaset/api-7f8c574b5f     Deleted pod: api-7f8c574b5f-r7xrz
+44m         Normal    Killing                        pod/api-7f8c574b5f-r7xrz      Stopping container api
+44m         Normal    SuccessfulCreate               replicaset/api-b658878fd      Created pod: api-b658878fd-pb7xh
+44m         Normal    Pulled                         pod/api-b658878fd-pb7xh       Container image "lab11-api:1.0.0" already present on machine
+44m         Normal    Created                        pod/api-b658878fd-pb7xh       Created container: api
+44m         Normal    Started                        pod/api-b658878fd-pb7xh       Started container api
+43m         Warning   Unhealthy                      pod/api-7f8c574b5f-r7xrz      Readiness probe failed: HTTP probe failed with statuscode: 503
+43m         Warning   Unhealthy                      pod/api-7f8c574b5f-r7xrz      Readiness probe failed: Get "http://10.244.0.61:8080/ready": dial tcp 10.244.0.61:8080: connect: connection refused
+43m         Warning   Unhealthy                      pod/api-b658878fd-pb7xh       Startup probe failed: HTTP probe failed with statuscode: 503
+43m         Normal    SuccessfulDelete               replicaset/api-7f8c574b5f     Deleted pod: api-7f8c574b5f-zj5dx
+43m         Normal    Killing                        pod/api-7f8c574b5f-zj5dx      Stopping container api
+43m         Warning   Unhealthy                      pod/api-7f8c574b5f-zj5dx      Readiness probe failed: HTTP probe failed with statuscode: 503
+9m47s       Normal    SuccessfulCreate               replicaset/api-7cf4bc8446     Created pod: api-7cf4bc8446-n98dq
+9m47s       Normal    SuccessfulDelete               replicaset/api-7cf4bc8446     Deleted pod: api-7cf4bc8446-n98dq
+9m47s       Normal    Pulled                         pod/api-b4596f8d8-97zkw       Container image "lab11-api:1.0.0" already present on machine
+9m47s       Normal    SuccessfulCreate               replicaset/api-b4596f8d8      Created pod: api-b4596f8d8-97zkw
+9m47s       Normal    ScalingReplicaSet              deployment/api                Scaled up replica set api-7cf4bc8446 from 0 to 1
+9m47s       Normal    ScalingReplicaSet              deployment/api                Scaled down replica set api-7cf4bc8446 from 1 to 0
+9m47s       Normal    ScalingReplicaSet              deployment/api                Scaled up replica set api-b4596f8d8 from 0 to 1
+9m46s       Normal    Started                        pod/api-b4596f8d8-97zkw       Started container api
+9m46s       Normal    Created                        pod/api-b4596f8d8-97zkw       Created container: api
+9m41s       Normal    Killing                        pod/api-b658878fd-c2p78       Stopping container api
+9m41s       Normal    SuccessfulDelete               replicaset/api-b658878fd      Deleted pod: api-b658878fd-c2p78
+9m41s       Normal    SuccessfulCreate               replicaset/api-b4596f8d8      Created pod: api-b4596f8d8-dv6vm
+9m41s       Normal    ScalingReplicaSet              deployment/api                Scaled down replica set api-b658878fd from 2 to 1
+9m41s       Normal    ScalingReplicaSet              deployment/api                Scaled up replica set api-b4596f8d8 from 1 to 2
+9m40s       Normal    Pulled                         pod/api-b4596f8d8-dv6vm       Container image "lab11-api:1.0.0" already present on machine
+9m40s       Normal    Created                        pod/api-b4596f8d8-dv6vm       Created container: api
+9m40s       Normal    Started                        pod/api-b4596f8d8-dv6vm       Started container api
+9m35s       Normal    Killing                        pod/api-b658878fd-pb7xh       Stopping container api
+9m35s       Normal    SuccessfulDelete               replicaset/api-b658878fd      Deleted pod: api-b658878fd-pb7xh
+9m35s       Normal    ScalingReplicaSet              deployment/api                Scaled down replica set api-b658878fd from 1 to 0
+9m33s       Warning   Unhealthy                      pod/api-b658878fd-c2p78       Readiness probe failed: HTTP probe failed with statuscode: 503
+9m27s       Warning   Unhealthy                      pod/api-b658878fd-pb7xh       Readiness probe failed: HTTP probe failed with statuscode: 503
+9m26s       Warning   Unhealthy                      pod/api-b658878fd-pb7xh       Readiness probe failed: Get "http://10.244.0.65:8080/ready": dial tcp 10.244.0.65:8080: connect: connection refused
+9m10s       Normal    Killing                        pod/api-b4596f8d8-97zkw       Stopping container api
+9m10s       Normal    Pulled                         pod/api-b4596f8d8-965fm       Container image "lab11-api:1.0.0" already present on machine
+9m10s       Normal    Created                        pod/api-b4596f8d8-965fm       Created container: api
+9m10s       Normal    Started                        pod/api-b4596f8d8-965fm       Started container api
+9m10s       Normal    SuccessfulCreate               replicaset/api-b4596f8d8      Created pod: api-b4596f8d8-965fm
+9m3s        Warning   Unhealthy                      pod/api-b4596f8d8-97zkw       Readiness probe failed: HTTP probe failed with statuscode: 503
+8m4s        Normal    ScalingReplicaSet              deployment/api                Scaled up replica set api-8597775cbd from 0 to 1
+8m4s        Normal    SuccessfulCreate               replicaset/api-8597775cbd     Created pod: api-8597775cbd-tfj25
+8m4s        Normal    SuccessfulDelete               replicaset/api-8597775cbd     Deleted pod: api-8597775cbd-tfj25
+8m3s        Normal    Pulled                         pod/api-6cccbdd4b7-r8ttm      Container image "lab11-api:1.0.0" already present on machine
+8m3s        Normal    Started                        pod/api-6cccbdd4b7-r8ttm      Started container api
+8m3s        Normal    Created                        pod/api-6cccbdd4b7-r8ttm      Created container: api
+8m3s        Normal    Killing                        pod/api-8597775cbd-tfj25      Stopping container api
+8m3s        Normal    SuccessfulCreate               replicaset/api-6cccbdd4b7     Created pod: api-6cccbdd4b7-r8ttm
+8m3s        Warning   FailedPreStopHook              pod/api-8597775cbd-tfj25      PreStopHook failed
+8m3s        Normal    Pulled                         pod/api-8597775cbd-tfj25      Container image "lab11-api:1.0.0" already present on machine
+8m3s        Normal    Created                        pod/api-8597775cbd-tfj25      Created container: api
+8m3s        Normal    Started                        pod/api-8597775cbd-tfj25      Started container api
+7m43s       Warning   Unhealthy                      pod/api-6cccbdd4b7-r8ttm      Startup probe failed: HTTP probe failed with statuscode: 503
+7m38s       Normal    Created                        pod/api-6cccbdd4b7-dl4bp      Created container: api
+7m38s       Normal    Pulled                         pod/api-6cccbdd4b7-dl4bp      Container image "lab11-api:1.0.0" already present on machine
+7m38s       Normal    Killing                        pod/api-b4596f8d8-dv6vm       Stopping container api
+7m38s       Normal    SuccessfulDelete               replicaset/api-b4596f8d8      Deleted pod: api-b4596f8d8-dv6vm
+7m38s       Normal    Started                        pod/api-6cccbdd4b7-dl4bp      Started container api
+7m38s       Normal    SuccessfulCreate               replicaset/api-6cccbdd4b7     Created pod: api-6cccbdd4b7-dl4bp
+7m31s       Warning   Unhealthy                      pod/api-b4596f8d8-dv6vm       Readiness probe failed: HTTP probe failed with statuscode: 503
+7m18s       Warning   Unhealthy                      pod/api-6cccbdd4b7-dl4bp      Startup probe failed: HTTP probe failed with statuscode: 503
+7m13s       Normal    SuccessfulDelete               replicaset/api-b4596f8d8      Deleted pod: api-b4596f8d8-965fm
+7m13s       Normal    Killing                        pod/api-b4596f8d8-965fm       Stopping container api
+7m5s        Warning   Unhealthy                      pod/api-b4596f8d8-965fm       Readiness probe failed: HTTP probe failed with statuscode: 503
+6m16s       Normal    Killing                        pod/api-6cccbdd4b7-dl4bp      Stopping container api
+6m16s       Normal    SuccessfulCreate               replicaset/api-6cccbdd4b7     Created pod: api-6cccbdd4b7-gnv7t
+6m15s       Normal    Started                        pod/api-6cccbdd4b7-gnv7t      Started container api
+6m15s       Normal    Created                        pod/api-6cccbdd4b7-gnv7t      Created container: api
+6m15s       Normal    Pulled                         pod/api-6cccbdd4b7-gnv7t      Container image "lab11-api:1.0.0" already present on machine
+6m9s        Warning   Unhealthy                      pod/api-6cccbdd4b7-dl4bp      Readiness probe failed: HTTP probe failed with statuscode: 503
+6m8s        Warning   Unhealthy                      pod/api-6cccbdd4b7-dl4bp      Readiness probe failed: Get "http://10.244.0.71:8080/ready": dial tcp 10.244.0.71:8080: connect: connection refused
+5m56s       Warning   Unhealthy                      pod/api-6cccbdd4b7-gnv7t      Startup probe failed: HTTP probe failed with statuscode: 503
+5m9s        Normal    SuccessfulCreate               replicaset/api-696b995cb5     Created pod: api-696b995cb5-gzcrp
+5m8s        Normal    Pulled                         pod/api-696b995cb5-gzcrp      Container image "lab11-api:1.0.0" already present on machine
+5m8s        Normal    Created                        pod/api-696b995cb5-gzcrp      Created container: api
+5m8s        Normal    Started                        pod/api-696b995cb5-gzcrp      Started container api
+4m49s       Warning   Unhealthy                      pod/api-696b995cb5-gzcrp      Startup probe failed: HTTP probe failed with statuscode: 503
+4m44s       Normal    Killing                        pod/api-6cccbdd4b7-gnv7t      Stopping container api
+4m44s       Normal    SuccessfulDelete               replicaset/api-6cccbdd4b7     Deleted pod: api-6cccbdd4b7-gnv7t
+4m43s       Normal    Started                        pod/api-696b995cb5-4w2wh      Started container api
+4m43s       Normal    Created                        pod/api-696b995cb5-4w2wh      Created container: api
+4m43s       Normal    Pulled                         pod/api-696b995cb5-4w2wh      Container image "lab11-api:1.0.0" already present on machine
+4m43s       Normal    SuccessfulCreate               replicaset/api-696b995cb5     Created pod: api-696b995cb5-4w2wh
+4m36s       Warning   Unhealthy                      pod/api-6cccbdd4b7-gnv7t      Readiness probe failed: HTTP probe failed with statuscode: 503
+4m23s       Warning   Unhealthy                      pod/api-696b995cb5-4w2wh      Startup probe failed: HTTP probe failed with statuscode: 503
+4m18s       Normal    SuccessfulDelete               replicaset/api-6cccbdd4b7     Deleted pod: api-6cccbdd4b7-r8ttm
+4m18s       Normal    Killing                        pod/api-6cccbdd4b7-r8ttm      Stopping container api
+4m18s       Normal    ScalingReplicaSet              deployment/api                (combined from similar events): Scaled down replica set api-6cccbdd4b7 from 1 to 0
+4m10s       Warning   Unhealthy                      pod/api-6cccbdd4b7-r8ttm      Readiness probe failed: HTTP probe failed with statuscode: 503
+3m54s       Normal    SuccessfulCreate               replicaset/api-5f8c8c5f44     Created pod: api-5f8c8c5f44-rfnz7
+3m53s       Normal    Started                        pod/api-5f8c8c5f44-rfnz7      Started container api
+3m53s       Normal    Created                        pod/api-5f8c8c5f44-rfnz7      Created container: api
+3m53s       Normal    Pulled                         pod/api-5f8c8c5f44-rfnz7      Container image "lab11-api:1.0.0" already present on machine
+3m33s       Warning   Unhealthy                      pod/api-5f8c8c5f44-rfnz7      Startup probe failed: HTTP probe failed with statuscode: 503
+3m28s       Normal    Created                        pod/api-5f8c8c5f44-84st8      Created container: api
+3m28s       Normal    SuccessfulCreate               replicaset/api-5f8c8c5f44     Created pod: api-5f8c8c5f44-84st8
+3m28s       Normal    Killing                        pod/api-696b995cb5-4w2wh      Stopping container api
+3m28s       Normal    Pulled                         pod/api-5f8c8c5f44-84st8      Container image "lab11-api:1.0.0" already present on machine
+3m28s       Normal    SuccessfulDelete               replicaset/api-696b995cb5     Deleted pod: api-696b995cb5-4w2wh
+3m28s       Normal    Started                        pod/api-5f8c8c5f44-84st8      Started container api
+3m21s       Warning   Unhealthy                      pod/api-696b995cb5-4w2wh      Readiness probe failed: HTTP probe failed with statuscode: 503
+3m14s       Warning   Unhealthy                      pod/api-696b995cb5-4w2wh      Readiness probe failed: Get "http://10.244.0.74:8080/ready": dial tcp 10.244.0.74:8080: connect: connection refused
+3m8s        Warning   Unhealthy                      pod/api-5f8c8c5f44-84st8      Startup probe failed: HTTP probe failed with statuscode: 503
+3m3s        Normal    Killing                        pod/api-696b995cb5-gzcrp      Stopping container api
+3m3s        Normal    SuccessfulDelete               replicaset/api-696b995cb5     Deleted pod: api-696b995cb5-gzcrp
+2m56s       Warning   Unhealthy                      pod/api-696b995cb5-gzcrp      Readiness probe failed: HTTP probe failed with statuscode: 503
+2m18s       Normal    Pulled                         pod/api-77445968c-4zxpd       Container image "lab11-api:1.0.0" already present on machine
+2m18s       Normal    Started                        pod/api-77445968c-4zxpd       Started container api
+2m18s       Normal    Created                        pod/api-77445968c-4zxpd       Created container: api
+2m18s       Normal    SuccessfulCreate               replicaset/api-77445968c      Created pod: api-77445968c-4zxpd
+110s        Warning   Unhealthy                      pod/api-77445968c-4zxpd       Startup probe failed: HTTP probe failed with statuscode: 503
+109s        Normal    Started                        pod/api-696b995cb5-x76xs      Started container api
+109s        Normal    Pulled                         pod/api-696b995cb5-x76xs      Container image "lab11-api:1.0.0" already present on machine
+109s        Normal    SuccessfulDelete               replicaset/api-77445968c      Deleted pod: api-77445968c-4zxpd
+109s        Normal    Created                        pod/api-696b995cb5-x76xs      Created container: api
+109s        Normal    Killing                        pod/api-77445968c-4zxpd       Stopping container api
+109s        Normal    SuccessfulCreate               replicaset/api-696b995cb5     Created pod: api-696b995cb5-x76xs
+89s         Warning   Unhealthy                      pod/api-696b995cb5-x76xs      Startup probe failed: HTTP probe failed with statuscode: 503
+84s         Normal    SuccessfulDelete               replicaset/api-5f8c8c5f44     Deleted pod: api-5f8c8c5f44-rfnz7
+84s         Normal    SuccessfulCreate               replicaset/api-696b995cb5     Created pod: api-696b995cb5-mtwlw
+84s         Normal    Killing                        pod/api-5f8c8c5f44-rfnz7      Stopping container api
+76s         Warning   Unhealthy                      pod/api-5f8c8c5f44-rfnz7      Readiness probe failed: HTTP probe failed with statuscode: 503
+59s         Normal    SuccessfulDelete               replicaset/api-5f8c8c5f44     Deleted pod: api-5f8c8c5f44-84st8
+59s         Normal    Killing                        pod/api-5f8c8c5f44-84st8      Stopping container api
+51s         Warning   Unhealthy                      pod/api-5f8c8c5f44-84st8      Readiness probe failed: HTTP probe failed with statuscode: 503
+16s         Warning   Unhealthy                      pod/api-696b995cb5-mtwlw      Readiness probe failed: Get "http://10.244.0.79:8080/ready": dial tcp 10.244.0.79:8080: connect: connection refused
+15s         Normal    Started                        pod/api-696b995cb5-mtwlw      Started container api
+15s         Normal    Created                        pod/api-696b995cb5-mtwlw      Created container: api
+15s         Normal    Pulled                         pod/api-696b995cb5-mtwlw      Container image "lab11-api:1.0.0" already present on machine
+2s          Warning   Unhealthy                      pod/api-696b995cb5-mtwlw      Startup probe failed: HTTP probe failed with statuscode: 503

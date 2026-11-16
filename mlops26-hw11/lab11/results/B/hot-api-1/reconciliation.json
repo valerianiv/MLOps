@@ -1,0 +1,185 @@
+{
+  "start": 1794834557.6724331,
+  "end": 1794834685.2303984,
+  "client_completed": 720,
+  "client_p95": 1.3828632743999139,
+  "promql": {
+    "p95": "histogram_quantile(0.95,sum by(le)(increase(lab_ttfc_seconds_bucket[128s])))",
+    "observations": "sum(increase(lab_ttfc_seconds_count[128s]))",
+    "buckets": "sum by(le)(increase(lab_ttfc_seconds_bucket[128s]))"
+  },
+  "limitation": "Same completed-response family and wall interval; increase extrapolates scrape boundaries. Network time and bucket interpolation differ. Inspect counts and terminal logs; not exact equality.",
+  "prometheus_p95": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1794834685.23,
+            "1.5088953957964129"
+          ]
+        }
+      ]
+    }
+  },
+  "prometheus_observations": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        }
+      ]
+    }
+  },
+  "prometheus_buckets": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {
+            "le": "0.01"
+          },
+          "value": [
+            1794834685.23,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "le": "0.025"
+          },
+          "value": [
+            1794834685.23,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "le": "0.05"
+          },
+          "value": [
+            1794834685.23,
+            "114.80689242913971"
+          ]
+        },
+        {
+          "metric": {
+            "le": "0.1"
+          },
+          "value": [
+            1794834685.23,
+            "134.97415771343168"
+          ]
+        },
+        {
+          "metric": {
+            "le": "0.2"
+          },
+          "value": [
+            1794834685.23,
+            "237.74833647573396"
+          ]
+        },
+        {
+          "metric": {
+            "le": "0.4"
+          },
+          "value": [
+            1794834685.23,
+            "380.83978078473626"
+          ]
+        },
+        {
+          "metric": {
+            "le": "0.8"
+          },
+          "value": [
+            1794834685.23,
+            "587.1034259388678"
+          ]
+        },
+        {
+          "metric": {
+            "le": "1.6"
+          },
+          "value": [
+            1794834685.23,
+            "701.6929139043835"
+          ]
+        },
+        {
+          "metric": {
+            "le": "3.2"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        },
+        {
+          "metric": {
+            "le": "6.4"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        },
+        {
+          "metric": {
+            "le": "12.8"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        },
+        {
+          "metric": {
+            "le": "25.6"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        },
+        {
+          "metric": {
+            "le": "51.2"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        },
+        {
+          "metric": {
+            "le": "102.4"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        },
+        {
+          "metric": {
+            "le": "+Inf"
+          },
+          "value": [
+            1794834685.23,
+            "724.8877647059431"
+          ]
+        }
+      ]
+    }
+  }
+}

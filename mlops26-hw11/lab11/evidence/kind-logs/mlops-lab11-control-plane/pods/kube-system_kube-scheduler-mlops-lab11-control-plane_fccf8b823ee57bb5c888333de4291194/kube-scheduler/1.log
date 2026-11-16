@@ -1,0 +1,14 @@
+2026-11-16T12:19:48.017007584Z stderr F I1116 12:19:48.016705       1 serving.go:386] Generated self-signed cert in-memory
+2026-11-16T12:19:49.930715Z stderr F W1116 12:19:49.918629       1 requestheader_controller.go:204] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+2026-11-16T12:19:49.930777629Z stderr F W1116 12:19:49.918695       1 authentication.go:397] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+2026-11-16T12:19:49.930781891Z stderr F W1116 12:19:49.918709       1 authentication.go:398] Continuing without authentication configuration. This may treat all requests as anonymous.
+2026-11-16T12:19:49.930787248Z stderr F W1116 12:19:49.918716       1 authentication.go:399] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+2026-11-16T12:19:49.981721075Z stderr F I1116 12:19:49.981061       1 server.go:166] "Starting Kubernetes Scheduler" version="v1.32.2"
+2026-11-16T12:19:49.981948109Z stderr F I1116 12:19:49.981126       1 server.go:168] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-11-16T12:19:49.984677794Z stderr F I1116 12:19:49.984461       1 configmap_cafile_content.go:205] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2026-11-16T12:19:49.984701445Z stderr F I1116 12:19:49.984516       1 secure_serving.go:213] Serving securely on 127.0.0.1:10259
+2026-11-16T12:19:49.984704467Z stderr F I1116 12:19:49.984528       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2026-11-16T12:19:49.98732821Z stderr F I1116 12:19:49.986600       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-11-16T12:19:50.085730283Z stderr F I1116 12:19:50.085481       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2026-11-16T12:19:50.085774991Z stderr F I1116 12:19:50.085661       1 leaderelection.go:257] attempting to acquire leader lease kube-system/kube-scheduler...
+2026-11-16T12:20:05.674323997Z stderr F I1116 12:20:05.673956       1 leaderelection.go:271] successfully acquired lease kube-system/kube-scheduler

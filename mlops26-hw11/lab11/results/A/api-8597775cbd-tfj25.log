@@ -1,0 +1,5 @@
+2026-11-16T14:13:11.420722753Z INFO:     Started server process [1]
+2026-11-16T14:13:11.420763628Z INFO:     Waiting for application startup.
+2026-11-16T14:13:11.423087341Z INFO:     Application startup complete.
+2026-11-16T14:13:11.423247788Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-16T14:13:31.512882276Z {"event": "warmup_complete", "wall": 1794838411.5125775, "pod": "api-8597775cbd-tfj25", "version": "A", "backend_mode": "simulated", "artifact_sha256": "df38b7ce299d0a1f99bf6e36149624c63b92b9edad8942c42ca2440a2f94c196"}

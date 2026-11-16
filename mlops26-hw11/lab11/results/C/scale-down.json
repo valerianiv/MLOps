@@ -1,0 +1,291 @@
+{
+  "load_start": 1794835762.0842779,
+  "load_end": 1794835971.2910113,
+  "observed_wait": 89.09685826301575,
+  "result": {
+    "wall": 1794836060.2164843,
+    "deployment": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "annotations": {
+          "deployment.kubernetes.io/revision": "25",
+          "meta.helm.sh/release-name": "lab11",
+          "meta.helm.sh/release-namespace": "lab11"
+        },
+        "creationTimestamp": "2026-11-16T11:48:12Z",
+        "generation": 28,
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm"
+        },
+        "name": "api",
+        "namespace": "lab11",
+        "resourceVersion": "12226",
+        "uid": "19dbb4b5-e087-48a2-924a-1a3ab3945892"
+      },
+      "spec": {
+        "minReadySeconds": 3,
+        "progressDeadlineSeconds": 240,
+        "replicas": 2,
+        "revisionHistoryLimit": 4,
+        "selector": {
+          "matchLabels": {
+            "app": "api"
+          }
+        },
+        "strategy": {
+          "rollingUpdate": {
+            "maxSurge": 1,
+            "maxUnavailable": 0
+          },
+          "type": "RollingUpdate"
+        },
+        "template": {
+          "metadata": {
+            "annotations": {
+              "configuration": "2210a6cf2534d575c86ce20486a37c02e3d8383df40d18058bf7f4fa1a780047",
+              "kubectl.kubernetes.io/restartedAt": "2026-11-16T16:27:49+03:00"
+            },
+            "creationTimestamp": null,
+            "labels": {
+              "app": "api"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "env": [
+                  {
+                    "name": "POD_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  }
+                ],
+                "envFrom": [
+                  {
+                    "configMapRef": {
+                      "name": "api-config"
+                    }
+                  }
+                ],
+                "image": "lab11-api:1.0.0",
+                "imagePullPolicy": "IfNotPresent",
+                "lifecycle": {
+                  "preStop": {
+                    "httpGet": {
+                      "path": "/drain",
+                      "port": "http",
+                      "scheme": "HTTP"
+                    }
+                  }
+                },
+                "livenessProbe": {
+                  "failureThreshold": 3,
+                  "httpGet": {
+                    "path": "/health",
+                    "port": "http",
+                    "scheme": "HTTP"
+                  },
+                  "periodSeconds": 10,
+                  "successThreshold": 1,
+                  "timeoutSeconds": 2
+                },
+                "name": "api",
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http",
+                    "protocol": "TCP"
+                  }
+                ],
+                "readinessProbe": {
+                  "failureThreshold": 1,
+                  "httpGet": {
+                    "path": "/ready",
+                    "port": "http",
+                    "scheme": "HTTP"
+                  },
+                  "periodSeconds": 1,
+                  "successThreshold": 1,
+                  "timeoutSeconds": 2
+                },
+                "resources": {
+                  "limits": {
+                    "cpu": "700m",
+                    "memory": "256Mi"
+                  },
+                  "requests": {
+                    "cpu": "200m",
+                    "memory": "96Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true
+                },
+                "startupProbe": {
+                  "failureThreshold": 90,
+                  "httpGet": {
+                    "path": "/startup",
+                    "port": "http",
+                    "scheme": "HTTP"
+                  },
+                  "periodSeconds": 2,
+                  "successThreshold": 1,
+                  "timeoutSeconds": 2
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File"
+              }
+            ],
+            "dnsPolicy": "ClusterFirst",
+            "restartPolicy": "Always",
+            "schedulerName": "default-scheduler",
+            "securityContext": {
+              "runAsNonRoot": true,
+              "runAsUser": 10001
+            },
+            "terminationGracePeriodSeconds": 90
+          }
+        }
+      },
+      "status": {
+        "availableReplicas": 2,
+        "conditions": [
+          {
+            "lastTransitionTime": "2026-11-16T11:48:12Z",
+            "lastUpdateTime": "2026-11-16T13:28:25Z",
+            "message": "ReplicaSet \"api-7f8c574b5f\" has successfully progressed.",
+            "reason": "NewReplicaSetAvailable",
+            "status": "True",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2026-11-16T13:30:15Z",
+            "lastUpdateTime": "2026-11-16T13:30:15Z",
+            "message": "Deployment has minimum availability.",
+            "reason": "MinimumReplicasAvailable",
+            "status": "True",
+            "type": "Available"
+          }
+        ],
+        "observedGeneration": 28,
+        "readyReplicas": 2,
+        "replicas": 2,
+        "updatedReplicas": 2
+      }
+    },
+    "hpa": {
+      "apiVersion": "autoscaling/v2",
+      "kind": "HorizontalPodAutoscaler",
+      "metadata": {
+        "annotations": {
+          "meta.helm.sh/release-name": "lab11",
+          "meta.helm.sh/release-namespace": "lab11"
+        },
+        "creationTimestamp": "2026-11-16T13:27:49Z",
+        "labels": {
+          "app.kubernetes.io/managed-by": "Helm"
+        },
+        "name": "api",
+        "namespace": "lab11",
+        "resourceVersion": "12212",
+        "uid": "23af99c8-c980-4d79-9b79-a109a643bc3a"
+      },
+      "spec": {
+        "behavior": {
+          "scaleDown": {
+            "policies": [
+              {
+                "periodSeconds": 15,
+                "type": "Pods",
+                "value": 1
+              }
+            ],
+            "selectPolicy": "Max",
+            "stabilizationWindowSeconds": 60
+          },
+          "scaleUp": {
+            "policies": [
+              {
+                "periodSeconds": 15,
+                "type": "Pods",
+                "value": 1
+              }
+            ],
+            "selectPolicy": "Max",
+            "stabilizationWindowSeconds": 0
+          }
+        },
+        "maxReplicas": 3,
+        "metrics": [
+          {
+            "resource": {
+              "name": "cpu",
+              "target": {
+                "averageUtilization": 55,
+                "type": "Utilization"
+              }
+            },
+            "type": "Resource"
+          }
+        ],
+        "minReplicas": 2,
+        "scaleTargetRef": {
+          "apiVersion": "apps/v1",
+          "kind": "Deployment",
+          "name": "api"
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2026-11-16T13:27:59Z",
+            "message": "the HPA controller was able to update the target scale to 2",
+            "reason": "SucceededRescale",
+            "status": "True",
+            "type": "AbleToScale"
+          },
+          {
+            "lastTransitionTime": "2026-11-16T13:28:59Z",
+            "message": "the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)",
+            "reason": "ValidMetricFound",
+            "status": "True",
+            "type": "ScalingActive"
+          },
+          {
+            "lastTransitionTime": "2026-11-16T13:34:20Z",
+            "message": "the desired replica count is less than the minimum replica count",
+            "reason": "TooFewReplicas",
+            "status": "True",
+            "type": "ScalingLimited"
+          }
+        ],
+        "currentMetrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 2,
+                "averageValue": "4m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ],
+        "currentReplicas": 3,
+        "desiredReplicas": 2,
+        "lastScaleTime": "2026-11-16T13:34:20Z"
+      }
+    }
+  }
+}
